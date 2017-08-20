@@ -95,9 +95,6 @@ fnPInvoke PInvoke_GetFunction(tMetaData *pMetaData, tMD_ImplMap *pImplMap) {
 
 	libName = MetaData_GetModuleRefName(pMetaData, pImplMap->importScope);
 
-#ifndef _WIN32
-	return (fnPInvoke)invokeJsFunc;
-#else 
 	
 	pLib = GetLib(libName);
 	if (pLib == NULL) {
@@ -105,10 +102,12 @@ fnPInvoke PInvoke_GetFunction(tMetaData *pMetaData, tMD_ImplMap *pImplMap) {
 		return NULL;
 	}
 
-	pProc = GetProcAddress(pLib->pLib, pImplMap->importName);
+#ifdef _WIN32
+    pProc = GetProcAddress(pLib->pLib, pImplMap->importName);
+#else
+    pProc = dlsym(pLib->pLib, pImplMap->importName);
 #endif
 	return pProc;
-
 }
 
 static void* ConvertStringToANSI(HEAP_PTR pHeapEntry) {
