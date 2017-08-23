@@ -624,12 +624,14 @@ cilCallVirtConstrained:
 
 					u32Value = GetUnalignedU32(pCIL, &cilOfs);
 					pCallMethod = MetaData_GetMethodDefFromDefRefOrSpec(pMetaData, u32Value, pMethodDef->pParentType->ppClassTypeArgs, pMethodDef->ppMethodTypeArgs);
-					if (pCallMethod->isFilled == 0) {
+
+                    if (pCallMethod->isFilled == 0) {
 						tMD_TypeDef *pTypeDef;
 						
 						pTypeDef = MetaData_GetTypeDefFromMethodDef(pCallMethod);
 						MetaData_Fill_TypeDef(pTypeDef, NULL, NULL);
 					}
+                    fprintf(stderr, "cil-call(0) %s::%s\n", pMethodDef->name, pCallMethod->name);
 
 					if (u32Value2 != 0) {
 						// There is a 'constrained' prefix
@@ -650,7 +652,8 @@ cilCallVirtConstrained:
 								// This method is implemented on this class, so make it a normal CALL op
 								op = CIL_CALL;
 								pCallMethod = pConstrainedType->pVTable[u32Value2];
-							}
+                                fprintf(stderr, "cil-call(1) %s\n", pCallMethod->name);
+                            }
 						} else {
 							if (pConstrainedType->isValueType) {
 								tMD_MethodDef *pImplMethod;
@@ -660,6 +663,7 @@ cilCallVirtConstrained:
 								if (pImplMethod->pParentType == pConstrainedType) {
 									op = CIL_CALL;
 									pCallMethod = pImplMethod;
+                                    fprintf(stderr, "cil-call(2) %s\n", pCallMethod->name);
 								} else {
 									pBoxCallType = pConstrainedType;
 								}
