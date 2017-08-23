@@ -193,7 +193,7 @@ U32 opcodeNumUses[JIT_OPCODE_MAXNUM];
 
 #else
 
-#define OPCODE_USE(op) //dprintfn("JIT op: 0x%03x (%s)", op, Sys_JIT_OpCodeName(op))
+#define OPCODE_USE(op) fprintf(stderr, "JIT op: 0x%03x (%s)\n", op, Sys_JIT_OpCodeName(op))
 
 #endif
 
