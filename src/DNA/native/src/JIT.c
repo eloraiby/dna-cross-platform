@@ -34,6 +34,8 @@
 #include "Heap.h"
 #include "PInvoke.h"
 
+#include <stdio.h>
+
 #define CorILMethod_TinyFormat 0x02
 #define CorILMethod_MoreSects 0x08
 
@@ -342,8 +344,8 @@ static U32* JITit(tMD_MethodDef *pMethodDef, U8 *pCIL, U32 codeSize, tParameter 
 
 		op = pCIL[cilOfs++];
 		//printf("Opcode: 0x%02x\n", op);
-		//U32 op2 = (op == CIL_EXTENDED) ? 0x100 + pCIL[cilOfs] : op;
-		//dprintfn("CIL op: 0x%03x (%s)", op2, Sys_CIL_OpCodeName(op2));
+        U32 op2 = (op == CIL_EXTENDED) ? 0x100 + pCIL[cilOfs] : op;
+        fprintf(stderr, "CIL op: 0x%03x (%s)\n", op2, Sys_CIL_OpCodeName(op2));
         if (pDebugMetadataEntry != NULL && sequencePointIndex < pDebugMetadataEntry->sequencePointsCount) {
             U32 spOffset = pDebugMetadataEntry->sequencePoints[sequencePointIndex];
             if (spOffset == pcilOfs) {
@@ -1539,10 +1541,12 @@ cilLeave:
 					break;
 
 				case CILX_LDLOC:
+                    Crash("LDLOC");
 					u32Value = GetUnalignedU16(pCIL, &cilOfs);
 					goto cilLdLoc;
 
 				case CILX_STLOC:
+                    Crash("STLOC");
 					u32Value = GetUnalignedU16(pCIL, &cilOfs);
 					goto cilStLoc;
 

@@ -1240,7 +1240,7 @@ allCallStart:
 		}
 
 		pCallMethod = (tMD_MethodDef*)GET_OP();
-		//dprintfn("Calling method: %s", Sys_GetMethodDesc(pCallMethod));
+        fprintf(stderr, "Calling method: %s\n", Sys_GetMethodDesc(pCallMethod));
 		heapPtr = NULL;
 
 		if (op == JIT_BOX_CALLVIRT) {
