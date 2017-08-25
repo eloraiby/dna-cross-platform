@@ -1085,7 +1085,7 @@ JIT_RETURN_start:
 		// Delete the current method state and go back to callers method state
 		MethodState_Delete(pThread, &pOldMethodState);
 	}
-    fprintf(stderr, "ret -> %s::%s\n", pCurrentMethodState->pMethod->pParentType->name, pCurrentMethodState->pMethod->name);
+    fprintf(stderr, "ret -> %s\n", Sys_GetMethodDesc(pCurrentMethodState->pMethod));
 	if (pCurrentMethodState->pNextDelegate == NULL) {
 		GO_NEXT();
 	}

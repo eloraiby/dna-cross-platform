@@ -171,8 +171,8 @@ tAsyncCall* System_Array_Internal_Copy(PTR pThis_, PTR pParams, PTR pReturnValue
 		// Do bounds check
 		if (srcIndex + length > pSrc->length || dstIndex + length > pDst->length) {
 			printf("[Array] Internal_Copy() Bounds check failed\n");
-			__debugbreak();
-		}
+            __debugbreak();
+        }
 #endif
 
 		elementSize = pSrcElementType->arrayElementSize;
@@ -248,9 +248,9 @@ HEAP_PTR SystemArray_NewVector(tMD_TypeDef *pArrayTypeDef, U32 length) {
 	U32 heapSize;
 	tSystemArray *pArray;
 
-	heapSize = sizeof(tSystemArray) + length * pArrayTypeDef->pArrayElementType->arrayElementSize;
-	pArray = (tSystemArray*)Heap_Alloc(pArrayTypeDef, heapSize);
-	pArray->length = length;
+    heapSize = sizeof(tSystemArray) + length * pArrayTypeDef->pArrayElementType->arrayElementSize;
+    pArray = (tSystemArray*)Heap_Alloc(pArrayTypeDef, heapSize);
+    pArray->length = length;
 	return (HEAP_PTR)pArray;
 }
 
