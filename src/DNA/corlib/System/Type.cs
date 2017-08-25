@@ -35,25 +35,15 @@ namespace System {
         [MethodImpl(MethodImplOptions.InternalCall)]
         extern public static Type GetTypeFromHandle(RuntimeTypeHandle handle);
 
-        public abstract Type BaseType {
-            get;
-        }
+        public abstract Type BaseType { get; }
 
-        public abstract bool IsEnum {
-            get;
-        }
+        public abstract bool IsEnum { get; }
 
-        public abstract string Namespace {
-            get;
-        }
+        public abstract string Namespace { get; }
 
-        public abstract string FullName {
-            get;
-        }
+        public abstract string FullName { get; }
 
-        public abstract bool IsGenericType {
-            get;
-        }
+        public abstract bool IsGenericType { get; }
 
         public abstract Type GetGenericTypeDefinition();
 
@@ -62,6 +52,10 @@ namespace System {
         public abstract Type GetElementType();
 
         public virtual bool IsArray => GetElementType() != null;
+
+        public virtual bool IsByRef => false;
+
+        public virtual bool IsPointer => false;
 
         extern public bool IsValueType {
             [MethodImpl(MethodImplOptions.InternalCall)]
@@ -83,12 +77,58 @@ namespace System {
                 } else {
                     return Type.EmptyTypes;
                 }
-
             }
         }
 
         public virtual bool IsGenericTypeDefinition {
             get { return false; }
+        }
+
+        public virtual bool IsSubclassOf(Type c) {
+            Type p = this;
+            if (p == c)
+                return false;
+            while (p != null) {
+                if (p == c)
+                    return true;
+                p = p.BaseType;
+            }
+            return false;
+        }
+
+        public virtual bool IsAssignableFrom(Type c)
+        {
+            if (c == null)
+                return false;
+
+            if (this == c)
+                return true;
+
+            // TODO:
+            // // For backward-compatibility, we need to special case for the types
+            // // whose UnderlyingSystemType are RuntimeType objects. 
+            // RuntimeType toType = this.UnderlyingSystemType as RuntimeType;
+            // if (toType != null)
+            //     return toType.IsAssignableFrom(c);
+
+            // If c is a subclass of this class, then c can be cast to this type.
+            if (c.IsSubclassOf(this))
+                return true;
+
+            // TODO:
+            // if (this.IsInterface) {
+            //     return c.ImplementInterface(this);
+            // }
+            // else if (IsGenericParameter) {
+            //     Type[] constraints = GetGenericParameterConstraints();
+            //     for (int i = 0; i < constraints.Length; i++) {
+            //         if (!constraints[i].IsAssignableFrom(c))
+            //             return false;
+            //     }
+            //     return true;
+            // }
+
+            return false;
         }
 
         public static Type GetType(string typeName) {
@@ -146,13 +186,11 @@ namespace System {
         [MethodImpl(MethodImplOptions.InternalCall)]
         extern private object GetMethodInternal(string name);
 
-        public static bool operator ==(Type t1, Type t2)
-        {
+        public static bool operator ==(Type t1, Type t2) {
             return t1?.FullName.Equals(t2?.FullName) == true;
         }
 
-        public static bool operator !=(Type t1, Type t2)
-        {
+        public static bool operator !=(Type t1, Type t2) {
             return t1?.FullName.Equals(t2?.FullName) == false;
         }
     }

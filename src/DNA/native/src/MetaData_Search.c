@@ -29,10 +29,13 @@
 U32 MetaData_CompareNameAndSig(STRING name, BLOB_ sigBlob, tMetaData *pSigMetaData, tMD_TypeDef **ppSigClassTypeArgs, tMD_TypeDef **ppSigMethodTypeArgs, tMD_MethodDef *pMethod, tMD_TypeDef **ppMethodClassTypeArgs, tMD_TypeDef **ppMethodMethodTypeArgs) {
 	if (strcmp(name, pMethod->name) == 0) {
 		SIG sig, thisSig;
-		U32 e, thisE, paramCount, i, isGeneric;
+		U32 e, thisE, paramCount, i, isGeneric, isSame;
 
 		sig = MetaData_GetBlob(sigBlob, NULL);
 		thisSig = MetaData_GetBlob(pMethod->signature, NULL);
+
+		// if signatures match
+		isSame = strcmp(sig, thisSig) == 0;
 
 		e = MetaData_DecodeSigEntry(&sig);
 		thisE = MetaData_DecodeSigEntry(&thisSig);
@@ -44,6 +47,9 @@ U32 MetaData_CompareNameAndSig(STRING name, BLOB_ sigBlob, tMetaData *pSigMetaDa
 		// If method has generic arguments, check the generic type argument count
 		isGeneric = e & SIG_CALLCONV_GENERIC;
 		if (isGeneric) {
+			if (isSame) {
+				return 1;
+			}
 			e = MetaData_DecodeSigEntry(&sig);
 			thisE = MetaData_DecodeSigEntry(&thisSig);
 			// Generic argument count
@@ -167,11 +173,10 @@ tMD_MethodDef* FindVirtualOverriddenMethod(tMD_TypeDef *pTypeDef, tMD_MethodDef 
 }
 
 static tMD_FieldDef* FindFieldInType(tMD_TypeDef *pTypeDef, STRING name) {
-	U32 i;
 
 	MetaData_Fill_TypeDef(pTypeDef, NULL, NULL);
 
-	for (i=0; i<pTypeDef->numFields; i++) {
+	for (U32 i=0; i<pTypeDef->numFields; i++) {
 		if (strcmp(pTypeDef->ppFields[i]->name, name) == 0) {
 			return pTypeDef->ppFields[i];
 		}
@@ -206,9 +211,8 @@ tMetaData* MetaData_GetResolutionScopeMetaData(tMetaData *pMetaData, IDX_TABLE r
 }
 
 tMD_TypeDef* MetaData_GetTypeDefFromName(tMetaData *pMetaData, STRING nameSpace, STRING name, tMD_TypeDef *pInNestedClass, U8 assertExists) {
-	U32 i;
 
-	for (i=1; i<=pMetaData->tables.numRows[MD_TABLE_TYPEDEF]; i++) {
+	for (U32 i=1; i<=pMetaData->tables.numRows[MD_TABLE_TYPEDEF]; i++) {
 		tMD_TypeDef *pTypeDef;
 
 		pTypeDef = (tMD_TypeDef*)MetaData_GetTableRow(pMetaData, MAKE_TABLE_INDEX(MD_TABLE_TYPEDEF, i));
@@ -287,10 +291,9 @@ tMD_TypeDef* MetaData_GetTypeDefFromDefRefOrSpec(tMetaData *pMetaData, IDX_TABLE
 
 tMD_TypeDef* MetaData_GetTypeDefFromMethodDef(tMD_MethodDef *pMethodDef) {
 	tMetaData *pMetaData;
-	U32 i;
 
 	pMetaData = pMethodDef->pMetaData;
-	for (i=pMetaData->tables.numRows[MD_TABLE_TYPEDEF]; i>0; i--) {
+	for (U32 i=pMetaData->tables.numRows[MD_TABLE_TYPEDEF]; i>0; i--) {
 		tMD_TypeDef *pTypeDef;
 
 		pTypeDef = (tMD_TypeDef*)MetaData_GetTableRow(pMetaData, MAKE_TABLE_INDEX(MD_TABLE_TYPEDEF, i));
@@ -305,10 +308,9 @@ tMD_TypeDef* MetaData_GetTypeDefFromMethodDef(tMD_MethodDef *pMethodDef) {
 
 tMD_TypeDef* MetaData_GetTypeDefFromFieldDef(tMD_FieldDef *pFieldDef) {
 	tMetaData *pMetaData;
-	U32 i;
 
 	pMetaData = pFieldDef->pMetaData;
-	for (i=pMetaData->tables.numRows[MD_TABLE_TYPEDEF]; i>0; i--) {
+	for (U32 i=pMetaData->tables.numRows[MD_TABLE_TYPEDEF]; i>0; i--) {
 		tMD_TypeDef *pTypeDef;
 
 		pTypeDef = (tMD_TypeDef*)MetaData_GetTableRow(pMetaData, MAKE_TABLE_INDEX(MD_TABLE_TYPEDEF, i));
@@ -377,10 +379,11 @@ tMD_MethodDef* MetaData_GetMethodDefFromDefRefOrSpec(tMetaData *pMetaData, IDX_T
 
 tMD_FieldDef* MetaData_GetFieldDefFromDefOrRef(tMetaData *pMetaData, IDX_TABLE token, tMD_TypeDef **ppClassTypeArgs, tMD_TypeDef **ppMethodTypeArgs) {
 	void *pTableEntry;
-
 	pTableEntry = MetaData_GetTableRow(pMetaData, token);
-	if (((tMDC_ToFieldDef*)pTableEntry)->pFieldDef != NULL) {
-		return ((tMDC_ToFieldDef*)pTableEntry)->pFieldDef;
+
+	tMD_FieldDef *pFieldDef = ((tMDC_ToFieldDef*)pTableEntry)->pFieldDef;
+	if (pFieldDef != NULL) {
+		return pFieldDef;
 	}
 
 	switch (TABLE_ID(token)) {
@@ -490,9 +493,8 @@ field:
 }
 
 tMD_ImplMap* MetaData_GetImplMap(tMetaData *pMetaData, IDX_TABLE memberForwardedToken) {
-	U32 i;
 
-	for (i=pMetaData->tables.numRows[MD_TABLE_IMPLMAP]; i >= 1; i--) {
+	for (U32 i=pMetaData->tables.numRows[MD_TABLE_IMPLMAP]; i >= 1; i--) {
 		tMD_ImplMap *pImplMap = (tMD_ImplMap*)MetaData_GetTableRow(pMetaData, MAKE_TABLE_INDEX(MD_TABLE_IMPLMAP, i));
 		if (pImplMap->memberForwarded == memberForwardedToken) {
 			return pImplMap;
