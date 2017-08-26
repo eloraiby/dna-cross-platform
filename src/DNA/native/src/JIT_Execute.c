@@ -193,7 +193,7 @@ U32 opcodeNumUses[JIT_OPCODE_MAXNUM];
 
 #else
 
-#define OPCODE_USE(op) fprintf(stderr, "JIT op: 0x%03x (%s) - 0x%02X\n", op, Sys_JIT_OpCodeName(op), u32Value)
+#define OPCODE_USE(op) fprintf(stdout, "JIT op: 0x%03x (%s) - 0x%02X\n", op, Sys_JIT_OpCodeName(op), u32Value)
 
 #endif
 
@@ -1085,7 +1085,7 @@ JIT_RETURN_start:
 		// Delete the current method state and go back to callers method state
 		MethodState_Delete(pThread, &pOldMethodState);
 	}
-    fprintf(stderr, "ret -> %s\n", Sys_GetMethodDesc(pCurrentMethodState->pMethod));
+    fprintf(stdout, "ret -> %s\n", Sys_GetMethodDesc(pCurrentMethodState->pMethod));
 	if (pCurrentMethodState->pNextDelegate == NULL) {
 		GO_NEXT();
 	}
@@ -1241,7 +1241,7 @@ allCallStart:
 		}
 
 		pCallMethod = (tMD_MethodDef*)GET_OP();
-        fprintf(stderr, "Calling method: %s\n", Sys_GetMethodDesc(pCallMethod));
+        fprintf(stdout, "Calling method: %s\n", Sys_GetMethodDesc(pCallMethod));
 		heapPtr = NULL;
 
 		if (op == JIT_BOX_CALLVIRT) {

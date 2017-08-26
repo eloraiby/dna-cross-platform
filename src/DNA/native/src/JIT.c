@@ -345,7 +345,7 @@ static U32* JITit(tMD_MethodDef *pMethodDef, U8 *pCIL, U32 codeSize, tParameter 
 		op = pCIL[cilOfs++];
 		//printf("Opcode: 0x%02x\n", op);
         U32 op2 = (op == CIL_EXTENDED) ? 0x100 + pCIL[cilOfs] : op;
-        fprintf(stderr, "CIL op: 0x%03x (%s)\n", op2, Sys_CIL_OpCodeName(op2));
+        fprintf(stdout, "CIL op: 0x%03x (%s)\n", op2, Sys_CIL_OpCodeName(op2));
         if (pDebugMetadataEntry != NULL && sequencePointIndex < pDebugMetadataEntry->sequencePointsCount) {
             U32 spOffset = pDebugMetadataEntry->sequencePoints[sequencePointIndex];
             if (spOffset == pcilOfs) {
@@ -631,7 +631,7 @@ cilCallVirtConstrained:
 						pTypeDef = MetaData_GetTypeDefFromMethodDef(pCallMethod);
 						MetaData_Fill_TypeDef(pTypeDef, NULL, NULL);
 					}
-                    fprintf(stderr, "cil-call(0) %s::%s\n", pMethodDef->name, pCallMethod->name);
+                    fprintf(stdout, "cil-call(0) %s::%s\n", pMethodDef->name, pCallMethod->name);
 
 					if (u32Value2 != 0) {
 						// There is a 'constrained' prefix
@@ -664,7 +664,7 @@ cilCallVirtConstrained:
 							if (pImplMethod->pParentType == pConstrainedType) {
 								op = CIL_CALL;
 								pCallMethod = pConstrainedType->pVTable[u32Value2];
-                                fprintf(stderr, "cil-call(1) %s\n", pCallMethod->name);
+                                fprintf(stdout, "cil-call(1) %s\n", pCallMethod->name);
                             } else {
                                 pBoxCallType = pConstrainedType;
                             }
