@@ -205,7 +205,7 @@ U32 opcodeNumUses[JIT_OPCODE_MAXNUM];
 #define GET_LABEL(var, label) var = &&label
 
 #define GO_NEXT() \
-	CHECK_FOR_BREAKPOINT(); \
+    CHECK_FOR_BREAKPOINT(); \
 	goto **(void**)(pCurOp++)
 
 #else
@@ -252,24 +252,24 @@ U32 JIT_Execute(tThread *pThread, U32 numInst) {
 
 	// Local copies of thread state variables, to speed up execution
 	// Pointer to next op-code
-	U32 *pOps;
-	I32 *pOpSequencePoints;
-	register U32 *pCurOp;
+    U32 *pOps = NULL;
+    I32 *pOpSequencePoints = NULL;
+    U32 *pCurOp = NULL;
 	// Pointer to eval-stack position
-	register PTR pCurEvalStack;
-	PTR pTempPtr;
+    PTR pCurEvalStack = NULL;
+    PTR pTempPtr = NULL;
 
-	U32 op;
+    U32 op = 0;
 	// General purpose variables
 	//I32 i32Value;
-	U32 u32Value; //, u32Value2;
+    U32 u32Value = 0; //, u32Value2;
 	//U64 u64Value;
 	//double dValue;
 	//float fValue;
 	//uConvDouble convDouble;
-	U32 ofs;
-	HEAP_PTR heapPtr;
-	PTR pMem;
+    U32 ofs = 0;
+    HEAP_PTR heapPtr = NULL;
+    PTR pMem = NULL;
 
 	if (pThread == NULL) {
 		void *pAddr;
@@ -1627,7 +1627,7 @@ JIT_BLE_UN_F64F64_end:
 	GO_NEXT_CHECK();
 
 JIT_BLT_I32I32_start:
-	OPCODE_USE(JIT_BLT_I32I32);
+    OPCODE_USE(JIT_BLT_I32I32);
 	{
 		U32 v1, v2;
 		U32 ofs;
@@ -1638,7 +1638,11 @@ JIT_BLT_I32I32_start:
 		}
 	}
 JIT_BLT_I32I32_end:
-	GO_NEXT_CHECK();
+    if (--numInst == 0) goto done;
+    //CHECK_FOR_BREAKPOINT();
+    goto **(void**)(pCurOp++);
+
+//	GO_NEXT_CHECK();
 
 JIT_BLT_I64I64_start:
 	OPCODE_USE(JIT_BLT_I64I64);

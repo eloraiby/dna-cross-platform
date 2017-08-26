@@ -150,7 +150,9 @@ static U32 GetUnalignedU32(U8 *pCIL, U32 *pCILOfs) {
 	b = pCIL[(*pCILOfs)++];
 	c = pCIL[(*pCILOfs)++];
 	d = pCIL[(*pCILOfs)++];
-	return a | (b << 8) | (c << 16) | (d << 24);
+    U32 res = a | (b << 8) | (c << 16) | (d << 24);
+    fprintf(stdout, "GetUnalignedU32: 0x%03x\n", res);
+    return res;//a | (b << 8) | (c << 16) | (d << 24);
 }
 
 static tTypeStack* DeepCopyTypeStack(tTypeStack *pToCopy) {

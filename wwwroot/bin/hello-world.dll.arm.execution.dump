@@ -1,9 +1,12 @@
 MethodState_Direct: Main
 CIL op: 0x000 (nop)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70000001
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x08c (box)
+GetUnalignedU32: 0x100000e
 CIL op: 0x028 (call)
+GetUnalignedU32: 0xa00000c
 cil-call(0) Main::WriteLine
 CIL op: 0x000 (nop)
 CIL op: 0x02a (ret)
@@ -17,11 +20,13 @@ MethodState_Direct: WriteLine
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x08d (newarr)
+GetUnalignedU32: 0x200004f
 CIL op: 0x025 (dup)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x0a2 (stelem.ref)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60000ec
 cil-call(0) WriteLine::WriteLine
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x01
@@ -37,8 +42,10 @@ MethodState_Direct: WriteLine
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60002bc
 cil-call(0) WriteLine::Format
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60000df
 cil-call(0) WriteLine::WriteLine
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x01
@@ -50,6 +57,7 @@ CIL op: 0x014 (ldnull)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60002bd
 cil-call(0) Format::Format
 CIL op: 0x02a (ret)
 JIT op: 0x010 (LOAD_NULL) - 0x01
@@ -59,13 +67,16 @@ JIT op: 0x007 (CALL_O) - 0x01
 Calling method: System.String.Format(IFormatProvider,String,Array)
 MethodState_Direct: Format
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x6000433
 CIL op: 0x025 (dup)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60002ed
 cil-call(0) Format::FormatHelper
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000245
 cil-call(0) Format::ToString
 CIL op: 0x02a (ret)
 JIT op: 0x008 (NEWOBJECT) - 0x01
@@ -73,7 +84,9 @@ MethodState_Direct: .ctor
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x020 (ldc.i4)
+GetUnalignedU32: 0x7fffffff
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000435
 cil-call(0) .ctor::.ctor
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x01
@@ -84,21 +97,28 @@ Calling method: System.Text.StringBuilder..ctor(Int32,Int32)
 MethodState_Direct: .ctor
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000240
 cil-call(0) .ctor::.ctor
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x018 (ldc.i4.2)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60001f6
 cil-call(0) .ctor::Max
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x4000186
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x4000185
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x4000186
 CIL op: 0x08d (newarr)
+GetUnalignedU32: 0x2000018
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x4000187
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x01
 JIT op: 0x007 (CALL_O) - 0x01
@@ -151,6 +171,7 @@ CIL op: 0x02c (brfalse.s)
 CIL op: 0x005 (ldarg.3)
 CIL op: 0x02d (brtrue.s)
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x6000024
 CIL op: 0x07a (throw)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x00a (stloc.0)
@@ -158,9 +179,11 @@ CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x00b (stloc.1)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a0
 cil-call(0) FormatHelper::get_Length
 CIL op: 0x00c (stloc.2)
 CIL op: 0x038 (br)
+GetUnalignedU32: 0x14c
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x025 (dup)
@@ -168,11 +191,13 @@ CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x058 (add)
 CIL op: 0x00a (stloc.0)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a1
 cil-call(0) FormatHelper::get_Chars
 CIL op: 0x00d (stloc.3)
 CIL op: 0x009 (ldloc.3)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x040 (bne.un)
+GetUnalignedU32: 0x103
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x007 (ldloc.1)
@@ -182,11 +207,13 @@ CIL op: 0x059 (sub)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x059 (sub)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000445
 cil-call(0) FormatHelper::Append
 CIL op: 0x026 (pop)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a1
 cil-call(0) FormatHelper::get_Chars
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x033 (bne.un.s)
@@ -197,6 +224,7 @@ CIL op: 0x058 (add)
 CIL op: 0x00a (stloc.0)
 CIL op: 0x00b (stloc.1)
 CIL op: 0x038 (br)
+GetUnalignedU32: 0x114
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x012 (ldloca.s)
 CIL op: 0x012 (ldloca.s)
@@ -204,6 +232,7 @@ CIL op: 0x012 (ldloca.s)
 CIL op: 0x012 (ldloca.s)
 CIL op: 0x012 (ldloca.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60002ec
 cil-call(0) FormatHelper::ParseFormatSpecifier
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x005 (ldarg.3)
@@ -211,7 +240,9 @@ CIL op: 0x08e (ldlen)
 CIL op: 0x069 (conv.i4)
 CIL op: 0x032 (blt.s)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70001076
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x6000177
 CIL op: 0x07a (throw)
 CIL op: 0x005 (ldarg.3)
 CIL op: 0x011 (ldloc.s)
@@ -223,15 +254,20 @@ CIL op: 0x003 (ldarg.1)
 CIL op: 0x02c (brfalse.s)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x0d0 (ldtoken)
+GetUnalignedU32: 0x2000038
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000384
 cil-call(0) FormatHelper::GetTypeFromHandle
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60001a3
 cil-call(0) FormatHelper::GetFormat
 CIL op: 0x075 (isinst)
+GetUnalignedU32: 0x2000038
 CIL op: 0x013 (stloc.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x02d (brtrue.s)
 CIL op: 0x07e (ldsfld)
+GetUnalignedU32: 0x400011c
 CIL op: 0x013 (stloc.s)
 CIL op: 0x02b (br.s)
 CIL op: 0x011 (ldloc.s)
@@ -241,32 +277,39 @@ CIL op: 0x011 (ldloc.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60001a0
 cil-call(0) FormatHelper::Format
 CIL op: 0x013 (stloc.s)
 CIL op: 0x02b (br.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x075 (isinst)
+GetUnalignedU32: 0x200003c
 CIL op: 0x02c (brfalse.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x074 (castclass)
+GetUnalignedU32: 0x200003c
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60001a4
 cil-call(0) FormatHelper::ToString
 CIL op: 0x013 (stloc.s)
 CIL op: 0x02b (br.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000245
 cil-call(0) FormatHelper::ToString
 CIL op: 0x013 (stloc.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a0
 cil-call(0) FormatHelper::get_Length
 CIL op: 0x031 (ble.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a0
 cil-call(0) FormatHelper::get_Length
 CIL op: 0x059 (sub)
 CIL op: 0x013 (stloc.s)
@@ -275,12 +318,14 @@ CIL op: 0x02c (brfalse.s)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000444
 cil-call(0) FormatHelper::Append
 CIL op: 0x026 (pop)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000447
 cil-call(0) FormatHelper::Append
 CIL op: 0x026 (pop)
 CIL op: 0x02b (br.s)
@@ -288,17 +333,20 @@ CIL op: 0x002 (ldarg.0)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000447
 cil-call(0) FormatHelper::Append
 CIL op: 0x026 (pop)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000444
 cil-call(0) FormatHelper::Append
 CIL op: 0x026 (pop)
 CIL op: 0x02b (br.s)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000444
 cil-call(0) FormatHelper::Append
 CIL op: 0x026 (pop)
 CIL op: 0x006 (ldloc.0)
@@ -313,6 +361,7 @@ CIL op: 0x02f (bge.s)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a1
 cil-call(0) FormatHelper::get_Chars
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x033 (bne.un.s)
@@ -325,6 +374,7 @@ CIL op: 0x059 (sub)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x059 (sub)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000445
 cil-call(0) FormatHelper::Append
 CIL op: 0x026 (pop)
 CIL op: 0x006 (ldloc.0)
@@ -335,11 +385,14 @@ CIL op: 0x00a (stloc.0)
 CIL op: 0x00b (stloc.1)
 CIL op: 0x02b (br.s)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70001143
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x6000177
 CIL op: 0x07a (throw)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x008 (ldloc.2)
 CIL op: 0x03f (blt)
+GetUnalignedU32: 0xfffffead
 CIL op: 0x007 (ldloc.1)
 CIL op: 0x008 (ldloc.2)
 CIL op: 0x02f (bge.s)
@@ -350,6 +403,7 @@ CIL op: 0x008 (ldloc.2)
 CIL op: 0x007 (ldloc.1)
 CIL op: 0x059 (sub)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000445
 cil-call(0) FormatHelper::Append
 CIL op: 0x026 (pop)
 CIL op: 0x02a (ret)
@@ -367,6 +421,7 @@ Calling method: System.String.get_Length()
 MethodState_Direct: get_Length
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x400011d
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
 JIT op: 0x13b (LOADFIELD_4) - 0x00
@@ -702,63 +757,12 @@ CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x032 (blt.s)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a0
 cil-call(0) Append::get_Length
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x005 (ldarg.3)
 CIL op: 0x058 (add)
 CIL op: 0x02f (bge.s)
 CIL op: 0x073 (newobj)
-CIL op: 0x07a (throw)
-CIL op: 0x002 (ldarg.0)
-CIL op: 0x005 (ldarg.3)
-CIL op: 0x028 (call)
-cil-call(0) Append::EnsureSpace
-CIL op: 0x016 (ldc.i4.0)
-CIL op: 0x00a (stloc.0)
-CIL op: 0x02b (br.s)
-CIL op: 0x002 (ldarg.0)
-CIL op: 0x07b (ldfld)
-CIL op: 0x002 (ldarg.0)
-CIL op: 0x002 (ldarg.0)
-CIL op: 0x07b (ldfld)
-CIL op: 0x00b (stloc.1)
-CIL op: 0x007 (ldloc.1)
-CIL op: 0x017 (ldc.i4.1)
-CIL op: 0x058 (add)
-CIL op: 0x07d (stfld)
-CIL op: 0x007 (ldloc.1)
-CIL op: 0x003 (ldarg.1)
-CIL op: 0x004 (ldarg.2)
-CIL op: 0x006 (ldloc.0)
-CIL op: 0x058 (add)
-CIL op: 0x06f (callvirt)
-cil-call(0) Append::get_Chars
-CIL op: 0x09d (stelem.i2)
-CIL op: 0x006 (ldloc.0)
-CIL op: 0x017 (ldc.i4.1)
-CIL op: 0x058 (add)
-CIL op: 0x00a (stloc.0)
-CIL op: 0x006 (ldloc.0)
-CIL op: 0x005 (ldarg.3)
-CIL op: 0x032 (blt.s)
-CIL op: 0x002 (ldarg.0)
-CIL op: 0x02a (ret)
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x04
-JIT op: 0x0ab (BRANCH_TRUE) - 0x04
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x04
-JIT op: 0x138 (LOAD_I4_0) - 0x04
-JIT op: 0x094 (BLT_I32I32) - 0x04
-JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x04
-JIT op: 0x138 (LOAD_I4_0) - 0x04
-JIT op: 0x094 (BLT_I32I32) - 0x04
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x04
-JIT op: 0x005 (CALLVIRT_O) - 0x04
-Calling method: System.String.get_Length()
-MethodState_Direct: get_Length
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
-JIT op: 0x13b (LOADFIELD_4) - 0x04
-JIT op: 0x001 (RETURN) - 0x04
-ret -> System.Text.StringBuilder.Append(String,Int32,Int32)
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x04
-JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x04
-JIT op: 0x080 (ADD_I32I32) 
+GetUnalignedU32: 0x6000028
+CIL o
