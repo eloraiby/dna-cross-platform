@@ -810,8 +810,6 @@ cilBrFalseTrue:
             case CIL_BGT_UN_S:
             case CIL_BLE_UN_S:
             case CIL_BLT_UN_S:
-                //{ I8 i8 = pCIL[cilOfs++];
-                //  u32Value = i8; }
                 u32Value = (I8)pCIL[cilOfs++];
 				u32Value2 = CIL_BEQ_S;
 				goto cilBrCond;
