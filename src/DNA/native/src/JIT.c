@@ -827,7 +827,9 @@ cilBrFalseTrue:
                 dprintfn("CIL_BLE_UN_S", 0);
             case CIL_BLT_UN_S:
                 dprintfn("CIL_BLT_UN_S", 0);
-				u32Value = (I8)pCIL[cilOfs++];
+                { U8 i8 = pCIL[cilOfs++];
+                  u32Value = i8 & 0xFF; }
+                //u32Value = (I8)pCIL[cilOfs++];
 				u32Value2 = CIL_BEQ_S;
 				goto cilBrCond;
 
@@ -1940,6 +1942,12 @@ void JIT_Prepare(tMD_MethodDef *pMethodDef, U32 genCombinedOpcodes) {
 
 	// JIT the CIL code
 	I32 *pSequencePoints;
+    dprintfn("JITTING: codeSize: %d", codeSize);
+    dprintf("[", 0);
+    for(size_t i = 0; i < codeSize; ++i) {
+        dprintf(" 0x%02x", pCIL[i]);
+    }
+    dprintfn(" ]", 0);
 	pJITted->pOps = JITit(pMethodDef, pCIL, codeSize, pLocals, pJITted, genCombinedOpcodes, &pSequencePoints);
 	pJITted->pOpSequencePoints = pSequencePoints;
 
