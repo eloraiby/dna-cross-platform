@@ -740,12 +740,15 @@ cilCallAll:
 				break;
 
 			case CIL_BR_S: // unconditional branch
+                dprintfn("CIL_BR_S", 0);
 				u32Value = (I8)pCIL[cilOfs++];
 				goto cilBr;
 
 			case CIL_BR:
+                dprintfn("CIL_BR", 0);
 				u32Value = GetUnalignedU32(pCIL, &cilOfs);
 cilBr:
+                dprintfn("cilBr", 0);
 				// Put a temporary CIL offset value into the JITted code. This will be updated later
 				u32Value = cilOfs + (I32)u32Value;
 				MayCopyTypeStack();
@@ -776,16 +779,21 @@ cilBr:
 				break;
 
 			case CIL_BRFALSE_S:
-			case CIL_BRTRUE_S:
+                dprintfn("CIL_BRFALSETRUE_S", 0);
+            case CIL_BRTRUE_S:
+                dprintfn("CIL_BRTRUE_S", 0);
 				u32Value = (I8)pCIL[cilOfs++];
 				u32Value2 = (op - CIL_BRFALSE_S);
 				goto cilBrFalseTrue;
 
 			case CIL_BRFALSE:
-			case CIL_BRTRUE:
-				u32Value = GetUnalignedU32(pCIL, &cilOfs);
+                dprintfn("CIL_BRFALSE", 0);
+            case CIL_BRTRUE:
+                dprintfn("CIL_BRTRUE", 0);
+                u32Value = GetUnalignedU32(pCIL, &cilOfs);
 				u32Value2 = (op - CIL_BRFALSE);
 cilBrFalseTrue:
+                dprintfn("cilBrFalseTrue", 0);
 				pStackType = PopStackType();
 				if (pStackType->stackSize > 8) {
 					Crash("JITit(): Cannot perform branch operation on type: %s", pStackType->name);
@@ -800,32 +808,53 @@ cilBrFalseTrue:
 				break;
 
 			case CIL_BEQ_S:
-			case CIL_BGE_S:
-			case CIL_BGT_S:
-			case CIL_BLE_S:
-			case CIL_BLT_S:
-			case CIL_BNE_UN_S:
-			case CIL_BGE_UN_S:
-			case CIL_BGT_UN_S:
-			case CIL_BLE_UN_S:
-			case CIL_BLT_UN_S:
+                dprintfn("CIL_BEQ_S", 0);
+            case CIL_BGE_S:
+                dprintfn("CIL_BGE_S", 0);
+            case CIL_BGT_S:
+                dprintfn("CIL_BGT_S", 0);
+            case CIL_BLE_S:
+                dprintfn("CIL_BLE_S", 0);
+            case CIL_BLT_S:
+                dprintfn("CIL_BLT_S", 0);
+            case CIL_BNE_UN_S:
+                dprintfn("CIL_BNE_UN_S", 0);
+            case CIL_BGE_UN_S:
+                dprintfn("CIL_BGE_UN_S", 0);
+            case CIL_BGT_UN_S:
+                dprintfn("CIL_BGT_UN_S", 0);
+            case CIL_BLE_UN_S:
+                dprintfn("CIL_BLE_UN_S", 0);
+            case CIL_BLT_UN_S:
+                dprintfn("CIL_BLT_UN_S", 0);
 				u32Value = (I8)pCIL[cilOfs++];
 				u32Value2 = CIL_BEQ_S;
 				goto cilBrCond;
 
 			case CIL_BEQ:
-			case CIL_BGE:
-			case CIL_BGT:
-			case CIL_BLE:
-			case CIL_BLT:
-			case CIL_BNE_UN:
-			case CIL_BGE_UN:
-			case CIL_BGT_UN:
-			case CIL_BLE_UN:
-			case CIL_BLT_UN:
+                dprintfn("CIL_BEQ", 0);
+            case CIL_BGE:
+                dprintfn("CIL_BGE", 0);
+            case CIL_BGT:
+                dprintfn("CIL_BGT", 0);
+            case CIL_BLE:
+                dprintfn("CIL_BLE", 0);
+            case CIL_BLT:
+                dprintfn("CIL_BLT", 0);
+            case CIL_BNE_UN:
+                dprintfn("CIL_BNE_UN", 0);
+            case CIL_BGE_UN:
+                dprintfn("CIL_BGE_UN", 0);
+            case CIL_BGT_UN:
+                dprintfn("CIL_BGT_UN", 0);
+            case CIL_BLE_UN:
+                dprintfn("CIL_BLE_UN", 0);
+            case CIL_BLT_UN:
+                dprintfn("CIL_BLT_UN", 0);
 				u32Value = GetUnalignedU32(pCIL, &cilOfs);
 				u32Value2 = CIL_BEQ;
 cilBrCond:
+                dprintfn("cilBrCond", 0);
 				pTypeB = PopStackType();
 				pTypeA = PopStackType();
 				u32Value = cilOfs + (I32)u32Value;

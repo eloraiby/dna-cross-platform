@@ -136,6 +136,15 @@ MethodState_Direct: Max
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x030 (bgt.s)
+CIL_BGT_S
+CIL_BLE_S
+CIL_BLT_S
+CIL_BNE_UN_S
+CIL_BGE_UN_S
+CIL_BGT_UN_S
+CIL_BLE_UN_S
+CIL_BLT_UN_S
+cilBrCond
 codeSize: 8 - idx value: 6 - true
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x02a (ret)
@@ -169,9 +178,14 @@ Calling method: System.StringHelper.FormatHelper(StringBuilder,IFormatProvider,S
 MethodState_Direct: FormatHelper
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x02c (brfalse.s)
+CIL_BRFALSETRUE_S
+CIL_BRTRUE_S
+cilBrFalseTrue
 codeSize: 384 - idx value: 6 - true
 CIL op: 0x005 (ldarg.3)
 CIL op: 0x02d (brtrue.s)
+CIL_BRTRUE_S
+cilBrFalseTrue
 codeSize: 384 - idx value: 12 - true
 CIL op: 0x073 (newobj)
 GetUnalignedU32: 0x6000024
@@ -186,7 +200,9 @@ GetUnalignedU32: 0x60002a0
 cil-call(0) FormatHelper::get_Length
 CIL op: 0x00c (stloc.2)
 CIL op: 0x038 (br)
+CIL_BR
 GetUnalignedU32: 0x14c
+cilBr
 codeSize: 384 - idx value: 360 - true
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x006 (ldloc.0)
@@ -201,7 +217,13 @@ CIL op: 0x00d (stloc.3)
 CIL op: 0x009 (ldloc.3)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x040 (bne.un)
+CIL_BNE_UN
+CIL_BGE_UN
+CIL_BGT_UN
+CIL_BLE_UN
+CIL_BLT_UN
 GetUnalignedU32: 0x103
+cilBrCond
 codeSize: 384 - idx value: 307 - true
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x004 (ldarg.2)
@@ -222,6 +244,12 @@ GetUnalignedU32: 0x60002a1
 cil-call(0) FormatHelper::get_Chars
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x033 (bne.un.s)
+CIL_BNE_UN_S
+CIL_BGE_UN_S
+CIL_BGT_UN_S
+CIL_BLE_UN_S
+CIL_BLT_UN_S
+cilBrCond
 codeSize: 384 - idx value: 84 - true
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x025 (dup)
@@ -230,7 +258,9 @@ CIL op: 0x058 (add)
 CIL op: 0x00a (stloc.0)
 CIL op: 0x00b (stloc.1)
 CIL op: 0x038 (br)
+CIL_BR
 GetUnalignedU32: 0x114
+cilBr
 codeSize: 384 - idx value: 360 - true
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x012 (ldloca.s)
@@ -246,6 +276,13 @@ CIL op: 0x005 (ldarg.3)
 CIL op: 0x08e (ldlen)
 CIL op: 0x069 (conv.i4)
 CIL op: 0x032 (blt.s)
+CIL_BLT_S
+CIL_BNE_UN_S
+CIL_BGE_UN_S
+CIL_BGT_UN_S
+CIL_BLE_UN_S
+CIL_BLT_UN_S
+cilBrCond
 codeSize: 384 - idx value: 118 - true
 CIL op: 0x072 (ldstr)
 GetUnalignedU32: 0x70001076
@@ -260,6 +297,9 @@ CIL op: 0x014 (ldnull)
 CIL op: 0x013 (stloc.s)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x02c (brfalse.s)
+CIL_BRFALSETRUE_S
+CIL_BRTRUE_S
+cilBrFalseTrue
 codeSize: 384 - idx value: 153 - true
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x0d0 (ldtoken)
@@ -275,14 +315,21 @@ GetUnalignedU32: 0x2000038
 CIL op: 0x013 (stloc.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x02d (brtrue.s)
+CIL_BRTRUE_S
+cilBrFalseTrue
 codeSize: 384 - idx value: 166 - true
 CIL op: 0x07e (ldsfld)
 GetUnalignedU32: 0x400011c
 CIL op: 0x013 (stloc.s)
 CIL op: 0x02b (br.s)
+CIL_BR_S
+cilBr
 codeSize: 384 - idx value: 223 - true
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x02c (brfalse.s)
+CIL_BRFALSETRUE_S
+CIL_BRTRUE_S
+cilBrFalseTrue
 codeSize: 384 - idx value: 186 - true
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x011 (ldloc.s)
@@ -293,11 +340,16 @@ GetUnalignedU32: 0x60001a0
 cil-call(0) FormatHelper::Format
 CIL op: 0x013 (stloc.s)
 CIL op: 0x02b (br.s)
+CIL_BR_S
+cilBr
 codeSize: 384 - idx value: 223 - true
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x075 (isinst)
 GetUnalignedU32: 0x200003c
 CIL op: 0x02c (brfalse.s)
+CIL_BRFALSETRUE_S
+CIL_BRTRUE_S
+cilBrFalseTrue
 codeSize: 384 - idx value: 214 - true
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x074 (castclass)
@@ -309,6 +361,8 @@ GetUnalignedU32: 0x60001a4
 cil-call(0) FormatHelper::ToString
 CIL op: 0x013 (stloc.s)
 CIL op: 0x02b (br.s)
+CIL_BR_S
+cilBr
 codeSize: 384 - idx value: 223 - true
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x06f (callvirt)
@@ -321,6 +375,14 @@ CIL op: 0x06f (callvirt)
 GetUnalignedU32: 0x60002a0
 cil-call(0) FormatHelper::get_Length
 CIL op: 0x031 (ble.s)
+CIL_BLE_S
+CIL_BLT_S
+CIL_BNE_UN_S
+CIL_BGE_UN_S
+CIL_BGT_UN_S
+CIL_BLE_UN_S
+CIL_BLT_UN_S
+cilBrCond
 codeSize: 384 - idx value: 294 - true
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x011 (ldloc.s)
@@ -331,6 +393,9 @@ CIL op: 0x059 (sub)
 CIL op: 0x013 (stloc.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x02c (brfalse.s)
+CIL_BRFALSETRUE_S
+CIL_BRTRUE_S
+cilBrFalseTrue
 codeSize: 384 - idx value: 272 - true
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x011 (ldloc.s)
@@ -346,6 +411,8 @@ GetUnalignedU32: 0x6000447
 cil-call(0) FormatHelper::Append
 CIL op: 0x026 (pop)
 CIL op: 0x02b (br.s)
+CIL_BR_S
+cilBr
 codeSize: 384 - idx value: 303 - true
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x01f (ldc.i4.s)
@@ -361,6 +428,8 @@ GetUnalignedU32: 0x6000444
 cil-call(0) FormatHelper::Append
 CIL op: 0x026 (pop)
 CIL op: 0x02b (br.s)
+CIL_BR_S
+cilBr
 codeSize: 384 - idx value: 303 - true
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x011 (ldloc.s)
@@ -371,14 +440,32 @@ CIL op: 0x026 (pop)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x00b (stloc.1)
 CIL op: 0x02b (br.s)
+CIL_BR_S
+cilBr
 codeSize: 384 - idx value: 360 - true
 CIL op: 0x009 (ldloc.3)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x033 (bne.un.s)
+CIL_BNE_UN_S
+CIL_BGE_UN_S
+CIL_BGT_UN_S
+CIL_BLE_UN_S
+CIL_BLT_UN_S
+cilBrCond
 codeSize: 384 - idx value: 360 - true
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x008 (ldloc.2)
 CIL op: 0x02f (bge.s)
+CIL_BGE_S
+CIL_BGT_S
+CIL_BLE_S
+CIL_BLT_S
+CIL_BNE_UN_S
+CIL_BGE_UN_S
+CIL_BGT_UN_S
+CIL_BLE_UN_S
+CIL_BLT_UN_S
+cilBrCond
 codeSize: 384 - idx value: 349 - true
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x006 (ldloc.0)
@@ -387,6 +474,12 @@ GetUnalignedU32: 0x60002a1
 cil-call(0) FormatHelper::get_Chars
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x033 (bne.un.s)
+CIL_BNE_UN_S
+CIL_BGE_UN_S
+CIL_BGT_UN_S
+CIL_BLE_UN_S
+CIL_BLT_UN_S
+cilBrCond
 codeSize: 384 - idx value: 349 - true
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x004 (ldarg.2)
@@ -407,6 +500,8 @@ CIL op: 0x058 (add)
 CIL op: 0x00a (stloc.0)
 CIL op: 0x00b (stloc.1)
 CIL op: 0x02b (br.s)
+CIL_BR_S
+cilBr
 codeSize: 384 - idx value: 360 - true
 CIL op: 0x072 (ldstr)
 GetUnalignedU32: 0x70001143
@@ -416,11 +511,28 @@ CIL op: 0x07a (throw)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x008 (ldloc.2)
 CIL op: 0x03f (blt)
+CIL_BLT
+CIL_BNE_UN
+CIL_BGE_UN
+CIL_BGT_UN
+CIL_BLE_UN
+CIL_BLT_UN
 GetUnalignedU32: 0xfffffead
+cilBrCond
 codeSize: 384 - idx value: 28 - true
 CIL op: 0x007 (ldloc.1)
 CIL op: 0x008 (ldloc.2)
 CIL op: 0x02f (bge.s)
+CIL_BGE_S
+CIL_BGT_S
+CIL_BLE_S
+CIL_BLT_S
+CIL_BNE_UN_S
+CIL_BGE_UN_S
+CIL_BGT_UN_S
+CIL_BLE_UN_S
+CIL_BLT_UN_S
+cilBrCond
 codeSize: 384 - idx value: 383 - true
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x004 (ldarg.2)
@@ -773,16 +885,32 @@ Calling method: System.Text.StringBuilder.Append(String,Int32,Int32)
 MethodState_Direct: Append
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x02d (brtrue.s)
+CIL_BRTRUE_S
+cilBrFalseTrue
 codeSize: 84 - idx value: 5 - true
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x02a (ret)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x032 (blt.s)
+CIL_BLT_S
+CIL_BNE_UN_S
+CIL_BGE_UN_S
+CIL_BGT_UN_S
+CIL_BLE_UN_S
+CIL_BLT_UN_S
+cilBrCond
 codeSize: 84 - idx value: 24 - true
 CIL op: 0x005 (ldarg.3)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x032 (blt.s)
+CIL_BLT_S
+CIL_BNE_UN_S
+CIL_BGE_UN_S
+CIL_BGT_UN_S
+CIL_BLE_UN_S
+CIL_BLT_UN_S
+cilBrCond
 codeSize: 84 - idx value: 24 - true
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x06f (callvirt)
@@ -792,6 +920,16 @@ CIL op: 0x004 (ldarg.2)
 CIL op: 0x005 (ldarg.3)
 CIL op: 0x058 (add)
 CIL op: 0x02f (bge.s)
+CIL_BGE_S
+CIL_BGT_S
+CIL_BLE_S
+CIL_BLT_S
+CIL_BNE_UN_S
+CIL_BGE_UN_S
+CIL_BGT_UN_S
+CIL_BLE_UN_S
+CIL_BLT_UN_S
+cilBrCond
 codeSize: 84 - idx value: 30 - true
 CIL op: 0x073 (newobj)
 GetUnalignedU32: 0x6000028
@@ -804,6 +942,8 @@ cil-call(0) Append::EnsureSpace
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x00a (stloc.0)
 CIL op: 0x02b (br.s)
+CIL_BR_S
+cilBr
 codeSize: 84 - idx value: 78 - true
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
@@ -834,6 +974,13 @@ CIL op: 0x00a (stloc.0)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x005 (ldarg.3)
 CIL op: 0x032 (blt.s)
+CIL_BLT_S
+CIL_BNE_UN_S
+CIL_BGE_UN_S
+CIL_BGT_UN_S
+CIL_BLE_UN_S
+CIL_BLT_UN_S
+cilBrCond
 codeSize: 84 - idx value: 297 - false
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x02a (ret)
@@ -871,6 +1018,14 @@ CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
 GetUnalignedU32: 0x4000186
 CIL op: 0x031 (ble.s)
+CIL_BLE_S
+CIL_BLT_S
+CIL_BNE_UN_S
+CIL_BGE_UN_S
+CIL_BGT_UN_S
+CIL_BLE_UN_S
+CIL_BLT_UN_S
+cilBrCond
 codeSize: 86 - idx value: 85 - true
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x002 (ldarg.0)
@@ -889,6 +1044,13 @@ GetUnalignedU32: 0x4000185
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x058 (add)
 CIL op: 0x032 (blt.s)
+CIL_BLT_S
+CIL_BNE_UN_S
+CIL_BGE_UN_S
+CIL_BGT_UN_S
+CIL_BLE_UN_S
+CIL_BLT_UN_S
+cilBrCond
 codeSize: 86 - idx value: 272 - false
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
