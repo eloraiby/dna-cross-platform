@@ -34,9 +34,15 @@ void* mallocTrace(int s, char *pFile, int line);
 #define Assert(cond)
 #endif
 
+#ifdef WIN32
+#   define STREAM stdout
+#else
+#   define STREAM stderr
+#endif
+
 #ifdef DEBUG_PRINT
-#define dprintf(format, ...) printf(format, __VA_ARGS__)
-#define dprintfn(format, ...) printf(format "\n", __VA_ARGS__)
+#define dprintf(format, ...) fprintf(STREAM, format, __VA_ARGS__)
+#define dprintfn(format, ...) fprintf(STREAM, format "\n", __VA_ARGS__)
 #else
 #define dprintf(format, ...) ((void) 0)
 #define dprintfn(format, ...) ((void) 0)

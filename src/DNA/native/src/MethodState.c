@@ -127,7 +127,7 @@ tMethodState* MethodState_Direct(tThread *pThread, tMD_MethodDef *pMethod, tMeth
 		MetaData_Fill_TypeDef(pTypeDef, NULL, NULL);
 	}
 
-    fprintf(stdout, "MethodState_Direct: %s\n", pMethod->name);
+    dprintfn("MethodState_Direct: %s", pMethod->name);
 
 	pThis = (tMethodState*)Thread_StackAlloc(pThread, sizeof(tMethodState));
 	pThis->finalizerThis = NULL;
