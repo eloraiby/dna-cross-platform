@@ -1638,11 +1638,7 @@ JIT_BLT_I32I32_start:
 		}
 	}
 JIT_BLT_I32I32_end:
-    if (--numInst == 0) goto done;
-    //CHECK_FOR_BREAKPOINT();
-    goto **(void**)(pCurOp++);
-
-//	GO_NEXT_CHECK();
+    GO_NEXT_CHECK();
 
 JIT_BLT_I64I64_start:
 	OPCODE_USE(JIT_BLT_I64I64);

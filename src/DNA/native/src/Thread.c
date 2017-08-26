@@ -99,8 +99,11 @@ void* Thread_StackAlloc(tThread *pThread, U32 size) {
 	void *pAddr = pStack->memory + pStack->ofs;
 #if _DEBUG
 	*(U32*)pAddr = 0xabababab;
+#ifndef WIN32
     pAddr += 4;
-    //++((U32*)pAddr);
+#else
+    ++((U32*)pAddr);
+#endif
 	pStack->ofs += 4;
 #endif
 	pStack->ofs += size;
@@ -118,8 +121,11 @@ void* Thread_StackAlloc(tThread *pThread, U32 size) {
 void Thread_StackFree(tThread *pThread, void *pAddr) {
 	tThreadStack *pStack = pThread->pThreadStack;
 #if _DEBUG
-    //((U32*)pAddr)--;
+#ifdef WIN32
+    ((U32*)pAddr)--;
+#else
     pAddr -= 4;
+#endif
 	memset(pAddr, 0xfe, pStack->ofs - (U32)(((unsigned char*)pAddr) - pStack->memory));
 #endif
 	pStack->ofs = (U32)(((unsigned char*)pAddr) - pStack->memory);

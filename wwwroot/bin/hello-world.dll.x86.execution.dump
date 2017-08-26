@@ -1,27 +1,32 @@
 MethodState_Direct: Main
 CIL op: 0x000 (nop)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70000001
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x08c (box)
+GetUnalignedU32: 0x100000e
 CIL op: 0x028 (call)
+GetUnalignedU32: 0xa00000c
 cil-call(0) Main::WriteLine
 CIL op: 0x000 (nop)
 CIL op: 0x02a (ret)
-JIT op: 0x000 (NOP) - 0xCCCCCCCC
-JIT op: 0x004 (LOAD_STRING) - 0xCCCCCCCC
-JIT op: 0x139 (LOAD_I4_1) - 0xCCCCCCCC
-JIT op: 0x069 (BOX_INT32) - 0xCCCCCCCC
+JIT op: 0x000 (NOP) - 0x00
+JIT op: 0x004 (LOAD_STRING) - 0x00
+JIT op: 0x139 (LOAD_I4_1) - 0x00
+JIT op: 0x069 (BOX_INT32) - 0x00
 JIT op: 0x007 (CALL_O) - 0x01
 Calling method: System.Console.WriteLine(String,Object)
 MethodState_Direct: WriteLine
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x08d (newarr)
+GetUnalignedU32: 0x200004f
 CIL op: 0x025 (dup)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x0a2 (stelem.ref)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60000ec
 cil-call(0) WriteLine::WriteLine
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x01
@@ -37,8 +42,10 @@ MethodState_Direct: WriteLine
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60002bc
 cil-call(0) WriteLine::Format
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60000df
 cil-call(0) WriteLine::WriteLine
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x01
@@ -50,6 +57,7 @@ CIL op: 0x014 (ldnull)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60002bd
 cil-call(0) Format::Format
 CIL op: 0x02a (ret)
 JIT op: 0x010 (LOAD_NULL) - 0x01
@@ -59,13 +67,16 @@ JIT op: 0x007 (CALL_O) - 0x01
 Calling method: System.String.Format(IFormatProvider,String,Array)
 MethodState_Direct: Format
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x6000433
 CIL op: 0x025 (dup)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60002ed
 cil-call(0) Format::FormatHelper
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000245
 cil-call(0) Format::ToString
 CIL op: 0x02a (ret)
 JIT op: 0x008 (NEWOBJECT) - 0x01
@@ -73,7 +84,9 @@ MethodState_Direct: .ctor
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x020 (ldc.i4)
+GetUnalignedU32: 0x7fffffff
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000435
 cil-call(0) .ctor::.ctor
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x01
@@ -84,21 +97,28 @@ Calling method: System.Text.StringBuilder..ctor(Int32,Int32)
 MethodState_Direct: .ctor
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000240
 cil-call(0) .ctor::.ctor
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x018 (ldc.i4.2)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60001f6
 cil-call(0) .ctor::Max
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x4000186
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x4000185
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x4000186
 CIL op: 0x08d (newarr)
+GetUnalignedU32: 0x2000018
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x4000187
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x01
 JIT op: 0x007 (CALL_O) - 0x01
@@ -151,6 +171,7 @@ CIL op: 0x02c (brfalse.s)
 CIL op: 0x005 (ldarg.3)
 CIL op: 0x02d (brtrue.s)
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x6000024
 CIL op: 0x07a (throw)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x00a (stloc.0)
@@ -158,9 +179,11 @@ CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x00b (stloc.1)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a0
 cil-call(0) FormatHelper::get_Length
 CIL op: 0x00c (stloc.2)
 CIL op: 0x038 (br)
+GetUnalignedU32: 0x14c
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x025 (dup)
@@ -168,11 +191,13 @@ CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x058 (add)
 CIL op: 0x00a (stloc.0)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a1
 cil-call(0) FormatHelper::get_Chars
 CIL op: 0x00d (stloc.3)
 CIL op: 0x009 (ldloc.3)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x040 (bne.un)
+GetUnalignedU32: 0x103
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x007 (ldloc.1)
@@ -182,11 +207,13 @@ CIL op: 0x059 (sub)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x059 (sub)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000445
 cil-call(0) FormatHelper::Append
 CIL op: 0x026 (pop)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a1
 cil-call(0) FormatHelper::get_Chars
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x033 (bne.un.s)
@@ -197,6 +224,7 @@ CIL op: 0x058 (add)
 CIL op: 0x00a (stloc.0)
 CIL op: 0x00b (stloc.1)
 CIL op: 0x038 (br)
+GetUnalignedU32: 0x114
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x012 (ldloca.s)
 CIL op: 0x012 (ldloca.s)
@@ -204,6 +232,7 @@ CIL op: 0x012 (ldloca.s)
 CIL op: 0x012 (ldloca.s)
 CIL op: 0x012 (ldloca.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60002ec
 cil-call(0) FormatHelper::ParseFormatSpecifier
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x005 (ldarg.3)
@@ -211,7 +240,9 @@ CIL op: 0x08e (ldlen)
 CIL op: 0x069 (conv.i4)
 CIL op: 0x032 (blt.s)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70001076
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x6000177
 CIL op: 0x07a (throw)
 CIL op: 0x005 (ldarg.3)
 CIL op: 0x011 (ldloc.s)
@@ -223,15 +254,20 @@ CIL op: 0x003 (ldarg.1)
 CIL op: 0x02c (brfalse.s)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x0d0 (ldtoken)
+GetUnalignedU32: 0x2000038
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000384
 cil-call(0) FormatHelper::GetTypeFromHandle
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60001a3
 cil-call(0) FormatHelper::GetFormat
 CIL op: 0x075 (isinst)
+GetUnalignedU32: 0x2000038
 CIL op: 0x013 (stloc.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x02d (brtrue.s)
 CIL op: 0x07e (ldsfld)
+GetUnalignedU32: 0x400011c
 CIL op: 0x013 (stloc.s)
 CIL op: 0x02b (br.s)
 CIL op: 0x011 (ldloc.s)
@@ -241,32 +277,39 @@ CIL op: 0x011 (ldloc.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60001a0
 cil-call(0) FormatHelper::Format
 CIL op: 0x013 (stloc.s)
 CIL op: 0x02b (br.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x075 (isinst)
+GetUnalignedU32: 0x200003c
 CIL op: 0x02c (brfalse.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x074 (castclass)
+GetUnalignedU32: 0x200003c
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60001a4
 cil-call(0) FormatHelper::ToString
 CIL op: 0x013 (stloc.s)
 CIL op: 0x02b (br.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000245
 cil-call(0) FormatHelper::ToString
 CIL op: 0x013 (stloc.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a0
 cil-call(0) FormatHelper::get_Length
 CIL op: 0x031 (ble.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a0
 cil-call(0) FormatHelper::get_Length
 CIL op: 0x059 (sub)
 CIL op: 0x013 (stloc.s)
@@ -275,12 +318,14 @@ CIL op: 0x02c (brfalse.s)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000444
 cil-call(0) FormatHelper::Append
 CIL op: 0x026 (pop)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000447
 cil-call(0) FormatHelper::Append
 CIL op: 0x026 (pop)
 CIL op: 0x02b (br.s)
@@ -288,17 +333,20 @@ CIL op: 0x002 (ldarg.0)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000447
 cil-call(0) FormatHelper::Append
 CIL op: 0x026 (pop)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000444
 cil-call(0) FormatHelper::Append
 CIL op: 0x026 (pop)
 CIL op: 0x02b (br.s)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000444
 cil-call(0) FormatHelper::Append
 CIL op: 0x026 (pop)
 CIL op: 0x006 (ldloc.0)
@@ -313,6 +361,7 @@ CIL op: 0x02f (bge.s)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a1
 cil-call(0) FormatHelper::get_Chars
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x033 (bne.un.s)
@@ -325,6 +374,7 @@ CIL op: 0x059 (sub)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x059 (sub)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000445
 cil-call(0) FormatHelper::Append
 CIL op: 0x026 (pop)
 CIL op: 0x006 (ldloc.0)
@@ -335,11 +385,14 @@ CIL op: 0x00a (stloc.0)
 CIL op: 0x00b (stloc.1)
 CIL op: 0x02b (br.s)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70001143
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x6000177
 CIL op: 0x07a (throw)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x008 (ldloc.2)
 CIL op: 0x03f (blt)
+GetUnalignedU32: 0xfffffead
 CIL op: 0x007 (ldloc.1)
 CIL op: 0x008 (ldloc.2)
 CIL op: 0x02f (bge.s)
@@ -350,6 +403,7 @@ CIL op: 0x008 (ldloc.2)
 CIL op: 0x007 (ldloc.1)
 CIL op: 0x059 (sub)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000445
 cil-call(0) FormatHelper::Append
 CIL op: 0x026 (pop)
 CIL op: 0x02a (ret)
@@ -367,6 +421,7 @@ Calling method: System.String.get_Length()
 MethodState_Direct: get_Length
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x400011d
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
 JIT op: 0x13b (LOADFIELD_4) - 0x00
@@ -702,36 +757,43 @@ CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x032 (blt.s)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a0
 cil-call(0) Append::get_Length
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x005 (ldarg.3)
 CIL op: 0x058 (add)
 CIL op: 0x02f (bge.s)
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x6000028
 CIL op: 0x07a (throw)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x005 (ldarg.3)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x600043b
 cil-call(0) Append::EnsureSpace
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x00a (stloc.0)
 CIL op: 0x02b (br.s)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x4000187
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x4000185
 CIL op: 0x00b (stloc.1)
 CIL op: 0x007 (ldloc.1)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x058 (add)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x4000185
 CIL op: 0x007 (ldloc.1)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x058 (add)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a1
 cil-call(0) Append::get_Chars
 CIL op: 0x09d (stelem.i2)
 CIL op: 0x006 (ldloc.0)
@@ -770,40 +832,52 @@ Calling method: System.Text.StringBuilder.EnsureSpace(Int32)
 MethodState_Direct: EnsureSpace
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x4000185
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x058 (add)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x4000186
 CIL op: 0x031 (ble.s)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x4000186
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x062 (shl)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x4000186
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x4000186
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x4000185
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x058 (add)
 CIL op: 0x032 (blt.s)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x4000186
 CIL op: 0x08d (newarr)
+GetUnalignedU32: 0x2000018
 CIL op: 0x00a (stloc.0)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x4000187
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x4000185
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000046
 cil-call(0) EnsureSpace::Copy
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x4000187
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
 JIT op: 0x13b (LOADFIELD_4) - 0x04
@@ -1128,8 +1202,8 @@ JIT op: 0x080 (ADD_I32I32) - 0x04
 JIT op: 0x005 (CALLVIRT_O) - 0x04
 Calling method: System.String.get_Chars(Int32)
 MethodState_Direct: get_Chars
-JIT op: 0x006 (CALL_NATIVE) - 0xCCCCCCCC
-JIT op: 0x001 (RETURN) - 0xCCCCCCCC
+JIT op: 0x006 (CALL_NATIVE) - 0x00
+JIT op: 0x001 (RETURN) - 0x00
 ret -> System.Text.StringBuilder.Append(String,Int32,Int32)
 JIT op: 0x0de (STORE_ELEMENT_32) - 0x04
 JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
@@ -1224,6 +1298,7 @@ CIL op: 0x004 (ldarg.2)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60002eb
 cil-call(0) ParseFormatSpecifier::ParseDecimal
 CIL op: 0x054 (stind.i4)
 CIL op: 0x004 (ldarg.2)
@@ -1231,12 +1306,15 @@ CIL op: 0x04a (ldind.i4)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x02f (bge.s)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70001022
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x6000177
 CIL op: 0x07a (throw)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x04a (ldind.i4)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a1
 cil-call(0) ParseFormatSpecifier::get_Chars
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x033 (bne.un.s)
@@ -1257,8 +1335,10 @@ CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x04a (ldind.i4)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a1
 cil-call(0) ParseFormatSpecifier::get_Chars
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60000b4
 cil-call(0) ParseFormatSpecifier::IsWhiteSpace
 CIL op: 0x02d (brtrue.s)
 CIL op: 0x003 (ldarg.1)
@@ -1272,6 +1352,7 @@ CIL op: 0x04a (ldind.i4)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x059 (sub)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002b8
 cil-call(0) ParseFormatSpecifier::Substring
 CIL op: 0x051 (stind.ref)
 CIL op: 0x00e (ldarg.s)
@@ -1279,6 +1360,7 @@ CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x04a (ldind.i4)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a1
 cil-call(0) ParseFormatSpecifier::get_Chars
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x101 (ceq)
@@ -1296,6 +1378,7 @@ CIL op: 0x005 (ldarg.3)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60002eb
 cil-call(0) ParseFormatSpecifier::ParseDecimal
 CIL op: 0x054 (stind.i4)
 CIL op: 0x005 (ldarg.3)
@@ -1303,7 +1386,9 @@ CIL op: 0x04a (ldind.i4)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x02f (bge.s)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70001022
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x6000177
 CIL op: 0x07a (throw)
 CIL op: 0x005 (ldarg.3)
 CIL op: 0x016 (ldc.i4.0)
@@ -1313,11 +1398,13 @@ CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x052 (stind.i1)
 CIL op: 0x00e (ldarg.s)
 CIL op: 0x07e (ldsfld)
+GetUnalignedU32: 0x400011c
 CIL op: 0x051 (stind.ref)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x04a (ldind.i4)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a1
 cil-call(0) ParseFormatSpecifier::get_Chars
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x033 (bne.un.s)
@@ -1342,6 +1429,7 @@ CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x04a (ldind.i4)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a1
 cil-call(0) ParseFormatSpecifier::get_Chars
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x033 (bne.un.s)
@@ -1355,8 +1443,10 @@ CIL op: 0x04a (ldind.i4)
 CIL op: 0x007 (ldloc.1)
 CIL op: 0x059 (sub)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002b8
 cil-call(0) ParseFormatSpecifier::Substring
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60002aa
 cil-call(0) ParseFormatSpecifier::Concat
 CIL op: 0x051 (stind.ref)
 CIL op: 0x02b (br.s)
@@ -1374,16 +1464,21 @@ CIL op: 0x058 (add)
 CIL op: 0x054 (stind.i4)
 CIL op: 0x008 (ldloc.2)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a1
 cil-call(0) ParseFormatSpecifier::get_Chars
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x02e (beq.s)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70001022
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x6000177
 CIL op: 0x07a (throw)
 CIL op: 0x0de (leave.s)
 CIL op: 0x026 (pop)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70001022
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x6000177
 CIL op: 0x07a (throw)
 CIL op: 0x02a (ret)
 JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x04
@@ -1400,6 +1495,7 @@ CIL op: 0x00b (stloc.1)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a1
 cil-call(0) ParseDecimal::get_Chars
 CIL op: 0x00c (stloc.2)
 CIL op: 0x008 (ldloc.2)
@@ -1516,7 +1612,9 @@ JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x04
 JIT op: 0x051 (LOADSTATICFIELD_CHECKTYPEINIT_INT32) - 0x04
 MethodState_Direct: .cctor
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70001020
 CIL op: 0x080 (stsfld)
+GetUnalignedU32: 0x400011c
 CIL op: 0x02a (ret)
 JIT op: 0x004 (LOAD_STRING) - 0x04
 JIT op: 0x061 (STORESTATICFIELD_INT32) - 0x04
@@ -1588,6 +1686,7 @@ Calling method: System.IFormattable.ToString(String,IFormatProvider)
 MethodState_Direct: ToString
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000765
 cil-call(0) ToString::GetInstance
 CIL op: 0x00a (stloc.0)
 CIL op: 0x003 (ldarg.1)
@@ -1595,6 +1694,7 @@ CIL op: 0x002 (ldarg.0)
 CIL op: 0x04a (ldind.i4)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000229
 cil-call(0) ToString::NumberToString
 CIL op: 0x02a (ret)
 JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
@@ -1605,17 +1705,22 @@ CIL op: 0x002 (ldarg.0)
 CIL op: 0x02c (brfalse.s)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x0d0 (ldtoken)
+GetUnalignedU32: 0x20000ec
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000384
 cil-call(0) GetInstance::GetTypeFromHandle
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60001a3
 cil-call(0) GetInstance::GetFormat
 CIL op: 0x074 (castclass)
+GetUnalignedU32: 0x20000ec
 CIL op: 0x00a (stloc.0)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x02c (brfalse.s)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x02a (ret)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000763
 cil-call(0) GetInstance::get_CurrentInfo
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
@@ -1624,10 +1729,13 @@ JIT op: 0x007 (CALL_O) - 0x00
 Calling method: System.Globalization.NumberFormatInfo.get_CurrentInfo()
 MethodState_Direct: get_CurrentInfo
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60003f8
 cil-call(0) get_CurrentInfo::get_CurrentThread
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000401
 cil-call(0) get_CurrentInfo::get_CurrentCulture
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000724
 cil-call(0) get_CurrentInfo::get_NumberFormat
 CIL op: 0x02a (ret)
 JIT op: 0x007 (CALL_O) - 0x00
@@ -1641,13 +1749,17 @@ Calling method: System.Threading.Thread.get_CurrentCulture()
 MethodState_Direct: get_CurrentCulture
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x400016e
 CIL op: 0x02d (brtrue.s)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x600071d
 cil-call(0) get_CurrentCulture::get_InvariantCulture
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x400016e
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x400016e
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
 JIT op: 0x13b (LOADFIELD_4) - 0x04
@@ -1657,28 +1769,38 @@ JIT op: 0x007 (CALL_O) - 0x04
 Calling method: System.Globalization.CultureInfo.get_InvariantCulture()
 MethodState_Direct: get_InvariantCulture
 CIL op: 0x07e (ldsfld)
+GetUnalignedU32: 0x40002b8
 CIL op: 0x02d (brtrue.s)
 CIL op: 0x07e (ldsfld)
+GetUnalignedU32: 0x400011c
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x600071f
 CIL op: 0x080 (stsfld)
+GetUnalignedU32: 0x40002b8
 CIL op: 0x07e (ldsfld)
+GetUnalignedU32: 0x40002b8
 CIL op: 0x02a (ret)
 JIT op: 0x051 (LOADSTATICFIELD_CHECKTYPEINIT_INT32) - 0x04
 MethodState_Direct: .cctor
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0xa000185
 CIL op: 0x080 (stsfld)
+GetUnalignedU32: 0x40002b7
 CIL op: 0x014 (ldnull)
 CIL op: 0x080 (stsfld)
+GetUnalignedU32: 0x40002b8
 CIL op: 0x02a (ret)
 JIT op: 0x008 (NEWOBJECT) - 0x04
 MethodState_Direct: .ctor
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000240
 cil-call(0) .ctor::.ctor
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x014 (ldnull)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0xa00019b
 cil-call(0) .ctor::Init
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
@@ -1699,27 +1821,34 @@ CIL op: 0x025 (dup)
 CIL op: 0x02d (brtrue.s)
 CIL op: 0x026 (pop)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0xa0001a2
 cil-call(0) Init::get_Default
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0xa0001a3
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x015 (ldc.i4.m1)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0xa0001a4
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x00a (stloc.0)
 CIL op: 0x02b (br.s)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x07e (ldsfld)
+GetUnalignedU32: 0xa0001a5
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x094 (ldelem.i4)
 CIL op: 0x030 (bgt.s)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0xa0001a4
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07e (ldsfld)
+GetUnalignedU32: 0xa0001a5
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x094 (ldelem.i4)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0xa0001a6
 CIL op: 0x02b (br.s)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x017 (ldc.i4.1)
@@ -1727,23 +1856,29 @@ CIL op: 0x058 (add)
 CIL op: 0x00a (stloc.0)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x07e (ldsfld)
+GetUnalignedU32: 0xa0001a5
 CIL op: 0x08e (ldlen)
 CIL op: 0x069 (conv.i4)
 CIL op: 0x032 (blt.s)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0xa0001a4
 CIL op: 0x015 (ldc.i4.m1)
 CIL op: 0x033 (bne.un.s)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0xa0001a6
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07e (ldsfld)
+GetUnalignedU32: 0xa0001a5
 CIL op: 0x08e (ldlen)
 CIL op: 0x069 (conv.i4)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0xa0001a4
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0xa0001a7
 cil-call(0) Init::Clear
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
@@ -1755,17 +1890,21 @@ JIT op: 0x007 (CALL_O) - 0x00
 Calling method: System.Collections.Generic.EqualityComparer`1<System.String>.get_Default()
 MethodState_Direct: get_Default
 CIL op: 0x07e (ldsfld)
+GetUnalignedU32: 0xa0001c6
 CIL op: 0x02a (ret)
 JIT op: 0x051 (LOADSTATICFIELD_CHECKTYPEINIT_INT32) - 0x00
 MethodState_Direct: .cctor
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0xa0001c4
 CIL op: 0x028 (call)
+GetUnalignedU32: 0xa0001c5
 cil-call(0) .cctor::set_Default
 CIL op: 0x02a (ret)
 JIT op: 0x008 (NEWOBJECT) - 0x00
 MethodState_Direct: .ctor
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0xa0001ca
 cil-call(0) .ctor::.ctor
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
@@ -1774,6 +1913,7 @@ Calling method: System.Collections.Generic.EqualityComparer`1<System.String>..ct
 MethodState_Direct: .ctor
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000240
 cil-call(0) .ctor::.ctor
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
@@ -1791,6 +1931,7 @@ Calling method: System.Collections.Generic.EqualityComparer`1<System.String>.set
 MethodState_Direct: set_Default
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x080 (stsfld)
+GetUnalignedU32: 0xa0001c6
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
 JIT op: 0x061 (STORESTATICFIELD_INT32) - 0x00
@@ -1813,11 +1954,15 @@ JIT op: 0x051 (LOADSTATICFIELD_CHECKTYPEINIT_INT32) - 0x04
 MethodState_Direct: .cctor
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x08d (newarr)
+GetUnalignedU32: 0x200003f
 CIL op: 0x025 (dup)
 CIL op: 0x0d0 (ldtoken)
+GetUnalignedU32: 0x4000376
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60004d6
 cil-call(0) .cctor::InitializeArray
 CIL op: 0x080 (stsfld)
+GetUnalignedU32: 0xa0001a5
 CIL op: 0x02a (ret)
 JIT op: 0x002 (LOAD_I32) - 0x04
 JIT op: 0x00d (NEW_VECTOR) - 0x04
@@ -1861,16 +2006,23 @@ MethodState_Direct: Clear
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0xa0001a6
 CIL op: 0x08d (newarr)
+GetUnalignedU32: 0x1b0000dd
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0xa0001aa
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0xa0001a6
 CIL op: 0x08d (newarr)
+GetUnalignedU32: 0x1b0000de
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0xa0001ae
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0xa0001b0
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
@@ -1903,47 +2055,59 @@ JIT op: 0x008 (NEWOBJECT) - 0x00
 MethodState_Direct: .ctor
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000240
 cil-call(0) .ctor::.ctor
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x02d (brtrue.s)
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x6000024
 CIL op: 0x07a (throw)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a0
 cil-call(0) .ctor::get_Length
 CIL op: 0x02d (brtrue.s)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000720
 cil-call(0) .ctor::ConstructInvariant
 CIL op: 0x02a (ret)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002d9
 cil-call(0) .ctor::ToLowerInvariant
 CIL op: 0x00a (stloc.0)
 CIL op: 0x07e (ldsfld)
+GetUnalignedU32: 0x40002b7
 CIL op: 0x00b (stloc.1)
 CIL op: 0x007 (ldloc.1)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60003f0
 cil-call(0) .ctor::Enter
 CIL op: 0x07e (ldsfld)
+GetUnalignedU32: 0x40002b7
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x012 (ldloca.s)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0xa000180
 cil-call(0) .ctor::TryGetValue
 CIL op: 0x02c (brfalse.s)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x008 (ldloc.2)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000722
 cil-call(0) .ctor::CopyFrom
 CIL op: 0x0de (leave.s)
 CIL op: 0x0de (leave.s)
 CIL op: 0x007 (ldloc.1)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60003f2
 cil-call(0) .ctor::Exit
 CIL op: 0x0dc (endfinally)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000721
 cil-call(0) .ctor::ConstructFromFile
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
@@ -1969,31 +2133,42 @@ Calling method: System.Globalization.CultureInfo.ConstructInvariant()
 MethodState_Direct: ConstructInvariant
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07e (ldsfld)
+GetUnalignedU32: 0x400011c
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002b9
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70002568
 CIL op: 0x025 (dup)
 CIL op: 0x00a (stloc.0)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002bf
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x025 (dup)
 CIL op: 0x00a (stloc.0)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002be
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002bd
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002ba
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000764
 cil-call(0) ConstructInvariant::get_InvariantInfo
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002c6
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000736
 cil-call(0) ConstructInvariant::get_InvariantInfo
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002c8
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
 JIT op: 0x051 (LOADSTATICFIELD_CHECKTYPEINIT_INT32) - 0x04
@@ -2019,114 +2194,163 @@ JIT op: 0x007 (CALL_O) - 0x04
 Calling method: System.Globalization.NumberFormatInfo.get_InvariantInfo()
 MethodState_Direct: get_InvariantInfo
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x6000768
 CIL op: 0x025 (dup)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002fa
 CIL op: 0x02a (ret)
 JIT op: 0x008 (NEWOBJECT) - 0x04
 MethodState_Direct: .ctor
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000240
 cil-call(0) .ctor::.ctor
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002fa
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x018 (ldc.i4.2)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002fb
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70001557
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002fc
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x700029d9
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002fd
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x08d (newarr)
+GetUnalignedU32: 0x200003f
 CIL op: 0x025 (dup)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x019 (ldc.i4.3)
 CIL op: 0x09e (stelem.i4)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002fe
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002ff
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x4000300
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x700029dd
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x4000301
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x4000302
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x700009e6
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x4000303
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07e (ldsfld)
+GetUnalignedU32: 0x40002f9
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x4000304
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x700029e1
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x4000305
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x700029f5
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x4000306
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x018 (ldc.i4.2)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x4000307
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70001557
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x4000308
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x700029d9
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x4000309
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x08d (newarr)
+GetUnalignedU32: 0x200003f
 CIL op: 0x025 (dup)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x019 (ldc.i4.3)
 CIL op: 0x09e (stelem.i4)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x400030a
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x400030b
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x018 (ldc.i4.2)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x400030c
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70001557
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x400030d
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x700029d9
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x400030e
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x08d (newarr)
+GetUnalignedU32: 0x200003f
 CIL op: 0x025 (dup)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x019 (ldc.i4.3)
 CIL op: 0x09e (stelem.i4)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x400030f
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x4000310
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x4000311
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x700029f9
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x4000312
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x700029fd
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x4000313
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70002a01
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x4000314
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70002a13
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x4000315
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
 JIT op: 0x007 (CALL_O) - 0x04
@@ -2174,47 +2398,59 @@ JIT op: 0x051 (LOADSTATICFIELD_CHECKTYPEINIT_INT32) - 0x00
 MethodState_Direct: .cctor
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x08d (newarr)
+GetUnalignedU32: 0x2000060
 CIL op: 0x025 (dup)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70000ce7
 CIL op: 0x0a2 (stelem.ref)
 CIL op: 0x025 (dup)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70002a17
 CIL op: 0x0a2 (stelem.ref)
 CIL op: 0x025 (dup)
 CIL op: 0x018 (ldc.i4.2)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70002a1b
 CIL op: 0x0a2 (stelem.ref)
 CIL op: 0x025 (dup)
 CIL op: 0x019 (ldc.i4.3)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70002a1f
 CIL op: 0x0a2 (stelem.ref)
 CIL op: 0x025 (dup)
 CIL op: 0x01a (ldc.i4.4)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70002a23
 CIL op: 0x0a2 (stelem.ref)
 CIL op: 0x025 (dup)
 CIL op: 0x01b (ldc.i4.5)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70002a27
 CIL op: 0x0a2 (stelem.ref)
 CIL op: 0x025 (dup)
 CIL op: 0x01c (ldc.i4.6)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70002a2b
 CIL op: 0x0a2 (stelem.ref)
 CIL op: 0x025 (dup)
 CIL op: 0x01d (ldc.i4.7)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70002a2f
 CIL op: 0x0a2 (stelem.ref)
 CIL op: 0x025 (dup)
 CIL op: 0x01e (ldc.i4.8)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70002a33
 CIL op: 0x0a2 (stelem.ref)
 CIL op: 0x025 (dup)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70002a37
 CIL op: 0x0a2 (stelem.ref)
 CIL op: 0x080 (stsfld)
+GetUnalignedU32: 0x40002f9
 CIL op: 0x02a (ret)
 JIT op: 0x002 (LOAD_I32) - 0x00
 JIT op: 0x00d (NEW_VECTOR) - 0x00
@@ -2337,17 +2573,21 @@ JIT op: 0x007 (CALL_O) - 0x04
 Calling method: System.Globalization.DateTimeFormatInfo.get_InvariantInfo()
 MethodState_Direct: get_InvariantInfo
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x600073a
 CIL op: 0x025 (dup)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002d2
 CIL op: 0x02a (ret)
 JIT op: 0x008 (NEWOBJECT) - 0x04
 MethodState_Direct: .ctor
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000240
 cil-call(0) .ctor::.ctor
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x08d (newarr)
+GetUnalignedU32: 0x2000018
 CIL op: 0x025 (dup)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x01f (ldc.i4.s)
@@ -2356,102 +2596,158 @@ CIL op: 0x00a (stloc.0)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002d2
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70002632
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60002a6
 cil-call(0) .ctor::Split
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002d3
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x7000266a
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60002a6
 cil-call(0) .ctor::Split
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002d4
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x7000266a
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60002a6
 cil-call(0) .ctor::Split
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002d5
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x700026cc
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002d6
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002d7
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x700026d2
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002d8
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x700026d6
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60002a6
 cil-call(0) .ctor::Split
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002d9
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002da
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70002748
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002db
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70002780
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002dc
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x700027a6
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002dd
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x700027b8
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002de
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x700027c8
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60002a6
 cil-call(0) .ctor::Split
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002df
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x700027c8
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60002a6
 cil-call(0) .ctor::Split
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002e0
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70002877
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002e1
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x7000289d
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002e2
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x700028a3
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002e3
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x700028eb
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002e4
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70002901
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60002a6
 cil-call(0) .ctor::Split
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002e5
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x7000292b
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002e6
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70002937
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002e7
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70002973
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002e8
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70002977
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002e9
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x700029b5
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002ea
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x600075b
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002eb
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
 JIT op: 0x007 (CALL_O) - 0x04
@@ -2478,7 +2774,9 @@ MethodState_Direct: Split
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x020 (ldc.i4)
+GetUnalignedU32: 0x7fffffff
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60002a7
 cil-call(0) Split::Split
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
@@ -2491,12 +2789,15 @@ CIL op: 0x004 (ldarg.2)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x02f (bge.s)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70000fbe
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x600001f
 CIL op: 0x07a (throw)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x02d (brtrue.s)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x08d (newarr)
+GetUnalignedU32: 0x2000060
 CIL op: 0x02a (ret)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x02c (brfalse.s)
@@ -2504,8 +2805,10 @@ CIL op: 0x003 (ldarg.1)
 CIL op: 0x08e (ldlen)
 CIL op: 0x02d (brtrue.s)
 CIL op: 0x07e (ldsfld)
+GetUnalignedU32: 0x400001f
 CIL op: 0x010 (starg.s)
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0xa000040
 CIL op: 0x00a (stloc.0)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x00b (stloc.1)
@@ -2514,6 +2817,7 @@ CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x007 (ldloc.1)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60002d1
 cil-call(0) Split::IndexOfAny
 CIL op: 0x00c (stloc.2)
 CIL op: 0x008 (ldloc.2)
@@ -2524,10 +2828,13 @@ CIL op: 0x002 (ldarg.0)
 CIL op: 0x007 (ldloc.1)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x400011d
 CIL op: 0x007 (ldloc.1)
 CIL op: 0x059 (sub)
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x600029a
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0xa000041
 cil-call(0) Split::Add
 CIL op: 0x02b (br.s)
 CIL op: 0x006 (ldloc.0)
@@ -2537,7 +2844,9 @@ CIL op: 0x008 (ldloc.2)
 CIL op: 0x007 (ldloc.1)
 CIL op: 0x059 (sub)
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x600029a
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0xa000041
 cil-call(0) Split::Add
 CIL op: 0x008 (ldloc.2)
 CIL op: 0x017 (ldc.i4.1)
@@ -2552,6 +2861,7 @@ CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x030 (bgt.s)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0xa000042
 cil-call(0) Split::ToArray
 CIL op: 0x02a (ret)
 JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
@@ -2569,6 +2879,7 @@ MethodState_Direct: .ctor
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x01a (ldc.i4.4)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0xa0001b2
 cil-call(0) .ctor::.ctor
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
@@ -2578,20 +2889,26 @@ Calling method: System.Collections.Generic.List`1<System.String>..ctor(Int32)
 MethodState_Direct: .ctor
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000240
 cil-call(0) .ctor::.ctor
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x02f (bge.s)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70002b0b
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x6000029
 CIL op: 0x07a (throw)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x08d (newarr)
+GetUnalignedU32: 0x1b00004e
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0xa0001d9
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0xa0001da
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
 JIT op: 0x007 (CALL_O) - 0x00
@@ -2631,10 +2948,12 @@ CIL op: 0x003 (ldarg.1)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x400011d
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x059 (sub)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60002d6
 cil-call(0) IndexOfAny::IndexOfAny
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
@@ -2659,8 +2978,10 @@ CIL op: 0x005 (ldarg.3)
 CIL op: 0x058 (add)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x400011d
 CIL op: 0x031 (ble.s)
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x6000028
 CIL op: 0x07a (throw)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
@@ -2668,6 +2989,7 @@ CIL op: 0x004 (ldarg.2)
 CIL op: 0x005 (ldarg.3)
 CIL op: 0x00e (ldarg.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x600029f
 cil-call(0) IndexOfAny::InternalIndexOfAny
 CIL op: 0x02a (ret)
 JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
@@ -2718,20 +3040,25 @@ MethodState_Direct: Add
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0xa0001dd
 cil-call(0) Add::EnsureSpace
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0xa0001d9
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0xa0001da
 CIL op: 0x00a (stloc.0)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x058 (add)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0xa0001da
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x0a4 (unused)
+GetUnalignedU32: 0x1b00004e
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
 JIT op: 0x139 (LOAD_I4_1) - 0x04
@@ -2740,25 +3067,31 @@ Calling method: System.Collections.Generic.List`1<System.String>.EnsureSpace(Int
 MethodState_Direct: EnsureSpace
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0xa0001da
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x058 (add)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0xa0001d9
 CIL op: 0x08e (ldlen)
 CIL op: 0x069 (conv.i4)
 CIL op: 0x031 (ble.s)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07c (ldflda)
+GetUnalignedU32: 0xa0001d9
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0xa0001d9
 CIL op: 0x08e (ldlen)
 CIL op: 0x069 (conv.i4)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x062 (shl)
 CIL op: 0x01a (ldc.i4.4)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60001f6
 cil-call(0) EnsureSpace::Max
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x2b000067
 cil-call(0) EnsureSpace::Resize
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
@@ -2821,22 +3154,22 @@ JIT op: 0x094 (BLT_I32I32) - 0x00
 JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
 JIT op: 0x138 (LOAD_I4_0) - 0x00
 JIT op: 0x094 (BLT_I32I32) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0xCCCCCCCC
-JIT op: 0x12a (LOADPARAMLOCAL_3) - 0xCCCCCCCC
-JIT op: 0x080 (ADD_I32I32) - 0xCCCCCCCC
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0xCCCCCCCC
-JIT op: 0x13b (LOADFIELD_4) - 0xCCCCCCCC
-JIT op: 0x093 (BLE_I32I32) - 0xCCCCCCCC
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0xCCCCCCCC
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0xCCCCCCCC
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0xCCCCCCCC
-JIT op: 0x12a (LOADPARAMLOCAL_3) - 0xCCCCCCCC
-JIT op: 0x12b (LOADPARAMLOCAL_4) - 0xCCCCCCCC
-JIT op: 0x007 (CALL_O) - 0xCCCCCCCC
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
+JIT op: 0x080 (ADD_I32I32) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x13b (LOADFIELD_4) - 0x00
+JIT op: 0x093 (BLE_I32I32) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x00
+JIT op: 0x007 (CALL_O) - 0x00
 Calling method: System.String.InternalIndexOfAny(Array,Int32,Int32,Boolean)
 MethodState_Direct: InternalIndexOfAny
-JIT op: 0x006 (CALL_NATIVE) - 0xCCCCCCCC
-JIT op: 0x001 (RETURN) - 0xCCCCCCCC
+JIT op: 0x006 (CALL_NATIVE) - 0x00
+JIT op: 0x001 (RETURN) - 0x00
 ret -> System.String.IndexOfAny(Array,Int32,Int32,Boolean)
 JIT op: 0x001 (RETURN) - 0x04
 ret -> System.String.IndexOfAny(Array,Int32)
@@ -3443,14 +3776,19 @@ Calling method: System.Collections.Generic.List`1<System.String>.ToArray()
 MethodState_Direct: ToArray
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0xa0001da
 CIL op: 0x08d (newarr)
+GetUnalignedU32: 0x1b00004e
 CIL op: 0x00a (stloc.0)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0xa0001d9
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0xa0001da
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000047
 cil-call(0) ToArray::Copy
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x02a (ret)
@@ -3472,6 +3810,7 @@ CIL op: 0x003 (ldarg.1)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000046
 cil-call(0) Copy::Copy
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
@@ -3489,9 +3828,12 @@ CIL op: 0x02d (brtrue.s)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x02c (brfalse.s)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x700001b7
 CIL op: 0x02b (br.s)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x700001d9
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x6000025
 CIL op: 0x07a (throw)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x016 (ldc.i4.0)
@@ -3503,20 +3845,24 @@ CIL op: 0x00e (ldarg.s)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x02f (bge.s)
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x6000028
 CIL op: 0x07a (throw)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x00e (ldarg.s)
 CIL op: 0x058 (add)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x4000002
 CIL op: 0x030 (bgt.s)
 CIL op: 0x005 (ldarg.3)
 CIL op: 0x00e (ldarg.s)
 CIL op: 0x058 (add)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x4000002
 CIL op: 0x031 (ble.s)
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x600001e
 CIL op: 0x07a (throw)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
@@ -3524,6 +3870,7 @@ CIL op: 0x004 (ldarg.2)
 CIL op: 0x005 (ldarg.3)
 CIL op: 0x00e (ldarg.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x600003f
 cil-call(0) Copy::Internal_Copy
 CIL op: 0x02c (brfalse.s)
 CIL op: 0x02a (ret)
@@ -3553,6 +3900,7 @@ CIL op: 0x003 (ldarg.1)
 CIL op: 0x009 (ldloc.3)
 CIL op: 0x058 (add)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x600004b
 cil-call(0) Copy::GetValue
 CIL op: 0x013 (stloc.s)
 CIL op: 0x004 (ldarg.2)
@@ -3561,6 +3909,7 @@ CIL op: 0x005 (ldarg.3)
 CIL op: 0x009 (ldloc.3)
 CIL op: 0x058 (add)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x600004c
 cil-call(0) Copy::SetValue
 CIL op: 0x009 (ldloc.3)
 CIL op: 0x007 (ldloc.1)
@@ -3704,16 +4053,16 @@ JIT op: 0x080 (ADD_I32I32) - 0x00
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
 JIT op: 0x13b (LOADFIELD_4) - 0x00
 JIT op: 0x093 (BLE_I32I32) - 0x00
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0xCCCCCCCC
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0xCCCCCCCC
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0xCCCCCCCC
-JIT op: 0x12a (LOADPARAMLOCAL_3) - 0xCCCCCCCC
-JIT op: 0x12b (LOADPARAMLOCAL_4) - 0xCCCCCCCC
-JIT op: 0x007 (CALL_O) - 0xCCCCCCCC
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x00
+JIT op: 0x007 (CALL_O) - 0x00
 Calling method: System.String.InternalIndexOfAny(Array,Int32,Int32,Boolean)
 MethodState_Direct: InternalIndexOfAny
-JIT op: 0x006 (CALL_NATIVE) - 0xCCCCCCCC
-JIT op: 0x001 (RETURN) - 0xCCCCCCCC
+JIT op: 0x006 (CALL_NATIVE) - 0x00
+JIT op: 0x001 (RETURN) - 0x00
 ret -> System.String.IndexOfAny(Array,Int32,Int32,Boolean)
 JIT op: 0x001 (RETURN) - 0x04
 ret -> System.String.IndexOfAny(Array,Int32)
@@ -4568,8 +4917,8 @@ JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x00
 JIT op: 0x007 (CALL_O) - 0x00
 Calling method: System.String.InternalIndexOfAny(Array,Int32,Int32,Boolean)
 MethodState_Direct: InternalIndexOfAny
-JIT op: 0x006 (CALL_NATIVE) - 0xCCCCCCCC
-JIT op: 0x001 (RETURN) - 0xCCCCCCCC
+JIT op: 0x006 (CALL_NATIVE) - 0x00
+JIT op: 0x001 (RETURN) - 0x00
 ret -> System.String.IndexOfAny(Array,Int32,Int32,Boolean)
 JIT op: 0x001 (RETURN) - 0x04
 ret -> System.String.IndexOfAny(Array,Int32)
@@ -5347,16 +5696,16 @@ JIT op: 0x134 (STOREPARAMLOCAL_5) - 0x04
 JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x04
 JIT op: 0x138 (LOAD_I4_0) - 0x04
 JIT op: 0x091 (BGE_I32I32) - 0x04
-JIT op: 0x12a (LOADPARAMLOCAL_3) - 0xCCCCCCCC
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0xCCCCCCCC
-JIT op: 0x12b (LOADPARAMLOCAL_4) - 0xCCCCCCCC
-JIT op: 0x12c (LOADPARAMLOCAL_5) - 0xCCCCCCCC
-JIT op: 0x12b (LOADPARAMLOCAL_4) - 0xCCCCCCCC
-JIT op: 0x081 (SUB_I32I32) - 0xCCCCCCCC
-JIT op: 0x008 (NEWOBJECT) - 0xCCCCCCCC
+JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x00
+JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x00
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x00
+JIT op: 0x081 (SUB_I32I32) - 0x00
+JIT op: 0x008 (NEWOBJECT) - 0x00
 MethodState_Direct: .ctor
-JIT op: 0x006 (CALL_NATIVE) - 0xCCCCCCCC
-JIT op: 0x001 (RETURN) - 0xCCCCCCCC
+JIT op: 0x006 (CALL_NATIVE) - 0x00
+JIT op: 0x001 (RETURN) - 0x00
 ret -> System.String.Split(Array,Int32)
 JIT op: 0x005 (CALLVIRT_O) - 0x04
 Calling method: System.Collections.Generic.List`1<System.String>.Add(String)
@@ -6208,16 +6557,16 @@ JIT op: 0x080 (ADD_I32I32) - 0x00
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
 JIT op: 0x13b (LOADFIELD_4) - 0x00
 JIT op: 0x093 (BLE_I32I32) - 0x00
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0xCCCCCCCC
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0xCCCCCCCC
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0xCCCCCCCC
-JIT op: 0x12a (LOADPARAMLOCAL_3) - 0xCCCCCCCC
-JIT op: 0x12b (LOADPARAMLOCAL_4) - 0xCCCCCCCC
-JIT op: 0x007 (CALL_O) - 0xCCCCCCCC
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x00
+JIT op: 0x007 (CALL_O) - 0x00
 Calling method: System.String.InternalIndexOfAny(Array,Int32,Int32,Boolean)
 MethodState_Direct: InternalIndexOfAny
-JIT op: 0x006 (CALL_NATIVE) - 0xCCCCCCCC
-JIT op: 0x001 (RETURN) - 0xCCCCCCCC
+JIT op: 0x006 (CALL_NATIVE) - 0x00
+JIT op: 0x001 (RETURN) - 0x00
 ret -> System.String.IndexOfAny(Array,Int32,Int32,Boolean)
 JIT op: 0x001 (RETURN) - 0x04
 ret -> System.String.IndexOfAny(Array,Int32)
@@ -6994,21 +7343,21 @@ ret -> System.String.Split(Array,Int32)
 JIT op: 0x005 (CALLVIRT_O) - 0x04
 Calling method: System.Collections.Generic.List`1<System.String>.Add(String)
 MethodState_Direct: Add
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0xCCCCCCCC
-JIT op: 0x139 (LOAD_I4_1) - 0xCCCCCCCC
-JIT op: 0x007 (CALL_O) - 0xCCCCCCCC
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x139 (LOAD_I4_1) - 0x00
+JIT op: 0x007 (CALL_O) - 0x00
 Calling method: System.Collections.Generic.List`1<System.String>.EnsureSpace(Int32)
 MethodState_Direct: EnsureSpace
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0xCCCCCCCC
-JIT op: 0x13b (LOADFIELD_4) - 0xCCCCCCCC
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0xCCCCCCCC
-JIT op: 0x080 (ADD_I32I32) - 0xCCCCCCCC
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0xCCCCCCCC
-JIT op: 0x13b (LOADFIELD_4) - 0xCCCCCCCC
-JIT op: 0x01e (LOAD_VECTOR_LEN) - 0xCCCCCCCC
-JIT op: 0x140 (CONV_I32_I32) - 0xCCCCCCCC
-JIT op: 0x093 (BLE_I32I32) - 0xCCCCCCCC
-JIT op: 0x001 (RETURN) - 0xCCCCCCCC
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x13b (LOADFIELD_4) - 0x00
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
+JIT op: 0x080 (ADD_I32I32) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x13b (LOADFIELD_4) - 0x00
+JIT op: 0x01e (LOAD_VECTOR_LEN) - 0x00
+JIT op: 0x140 (CONV_I32_I32) - 0x00
+JIT op: 0x093 (BLE_I32I32) - 0x00
+JIT op: 0x001 (RETURN) - 0x00
 ret -> System.Collections.Generic.List`1<System.String>.Add(String)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
 JIT op: 0x13b (LOADFIELD_4) - 0x00
@@ -7782,16 +8131,16 @@ JIT op: 0x139 (LOAD_I4_1) - 0x04
 JIT op: 0x007 (CALL_O) - 0x04
 Calling method: System.Collections.Generic.List`1<System.String>.EnsureSpace(Int32)
 MethodState_Direct: EnsureSpace
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0xCCCCCCCC
-JIT op: 0x13b (LOADFIELD_4) - 0xCCCCCCCC
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0xCCCCCCCC
-JIT op: 0x080 (ADD_I32I32) - 0xCCCCCCCC
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0xCCCCCCCC
-JIT op: 0x13b (LOADFIELD_4) - 0xCCCCCCCC
-JIT op: 0x01e (LOAD_VECTOR_LEN) - 0xCCCCCCCC
-JIT op: 0x140 (CONV_I32_I32) - 0xCCCCCCCC
-JIT op: 0x093 (BLE_I32I32) - 0xCCCCCCCC
-JIT op: 0x001 (RETURN) - 0xCCCCCCCC
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x13b (LOADFIELD_4) - 0x00
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
+JIT op: 0x080 (ADD_I32I32) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x13b (LOADFIELD_4) - 0x00
+JIT op: 0x01e (LOAD_VECTOR_LEN) - 0x00
+JIT op: 0x140 (CONV_I32_I32) - 0x00
+JIT op: 0x093 (BLE_I32I32) - 0x00
+JIT op: 0x001 (RETURN) - 0x00
 ret -> System.Collections.Generic.List`1<System.String>.Add(String)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
 JIT op: 0x13b (LOADFIELD_4) - 0x00
@@ -8651,8 +9000,8 @@ JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
 JIT op: 0x081 (SUB_I32I32) - 0x04
 JIT op: 0x008 (NEWOBJECT) - 0x04
 MethodState_Direct: .ctor
-JIT op: 0x006 (CALL_NATIVE) - 0xCCCCCCCC
-JIT op: 0x001 (RETURN) - 0xCCCCCCCC
+JIT op: 0x006 (CALL_NATIVE) - 0x00
+JIT op: 0x001 (RETURN) - 0x00
 ret -> System.String.Split(Array,Int32)
 JIT op: 0x005 (CALLVIRT_O) - 0x04
 Calling method: System.Collections.Generic.List`1<System.String>.Add(String)
@@ -9443,446 +9792,6 @@ JIT op: 0x131 (STOREPARAMLOCAL_2) - 0x00
 JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
 JIT op: 0x138 (LOAD_I4_0) - 0x00
 JIT op: 0x092 (BGT_I32I32) - 0x00
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0xCCCCCCCC
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0xCCCCCCCC
-JIT op: 0x12b (LOADPARAMLOCAL_4) - 0xCCCCCCCC
-JIT op: 0x007 (CALL_O) - 0xCCCCCCCC
-Calling method: System.String.IndexOfAny(Array,Int32)
-MethodState_Direct: IndexOfAny
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0xCCCCCCCC
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0xCCCCCCCC
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0xCCCCCCCC
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0xCCCCCCCC
-JIT op: 0x13b (LOADFIELD_4) - 0xCCCCCCCC
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0xCCCCCCCC
-JIT op: 0x081 (SUB_I32I32) - 0xCCCCCCCC
-JIT op: 0x139 (LOAD_I4_1) - 0xCCCCCCCC
-JIT op: 0x007 (CALL_O) - 0xCCCCCCCC
-Calling method: System.String.IndexOfAny(Array,Int32,Int32,Boolean)
-MethodState_Direct: IndexOfAny
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0xCCCCCCCC
-JIT op: 0x138 (LOAD_I4_0) - 0xCCCCCCCC
-JIT op: 0x094 (BLT_I32I32) - 0xCCCCCCCC
-JIT op: 0x12a (LOADPARAMLOCAL_3) - 0xCCCCCCCC
-JIT op: 0x138 (LOAD_I4_0) - 0xCCCCCCCC
-JIT op: 0x094 (BLT_I32I32) - 0xCCCCCCCC
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0xCCCCCCCC
-JIT op: 0x12a (LOADPARAMLOCAL_3) - 0xCCCCCCCC
-JIT op: 0x080 (ADD_I32I32) - 0xCCCCCCCC
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0xCCCCCCCC
-JIT op: 0x13b (LOADFIELD_4) - 0xCCCCCCCC
-JIT op: 0x093 (BLE_I32I32) - 0xCCCCCCCC
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0xCCCCCCCC
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0xCCCCCCCC
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0xCCCCCCCC
-JIT op: 0x12a (LOADPARAMLOCAL_3) - 0xCCCCCCCC
-JIT op: 0x12b (LOADPARAMLOCAL_4) - 0xCCCCCCCC
-JIT op: 0x007 (CALL_O) - 0xCCCCCCCC
-Calling method: System.String.InternalIndexOfAny(Array,Int32,Int32,Boolean)
-MethodState_Direct: InternalIndexOfAny
-JIT op: 0x006 (CALL_NATIVE) - 0xCCCCCCCC
-JIT op: 0x001 (RETURN) - 0xCCCCCCCC
-ret -> System.String.IndexOfAny(Array,Int32,Int32,Boolean)
-JIT op: 0x001 (RETURN) - 0x04
-ret -> System.String.IndexOfAny(Array,Int32)
-JIT op: 0x001 (RETURN) - 0x04
-ret -> System.String.Split(Array,Int32)
-JIT op: 0x134 (STOREPARAMLOCAL_5) - 0x04
-JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x04
-JIT op: 0x138 (LOAD_I4_0) - 0x04
-JIT op: 0x091 (BGE_I32I32) - 0x04
-JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x04
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
-JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
-JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x04
-JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
-JIT op: 0x081 (SUB_I32I32) - 0x04
-JIT op: 0x008 (NEWOBJECT) - 0x04
-MethodState_Direct: .ctor
-JIT op: 0x006 (CALL_NATIVE) - 0x04
-JIT op: 0x001 (RETURN) - 0x04
-ret -> System.String.Split(Array,Int32)
-JIT op: 0x005 (CALLVIRT_O) - 0x04
-Calling method: System.Collections.Generic.List`1<System.String>.Add(String)
-MethodState_Direct: Add
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
-JIT op: 0x139 (LOAD_I4_1) - 0x04
-JIT op: 0x007 (CALL_O) - 0x04
-Calling method: System.Collections.Generic.List`1<System.String>.EnsureSpace(Int32)
-MethodState_Direct: EnsureSpace
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
-JIT op: 0x13b (LOADFIELD_4) - 0x04
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x04
-JIT op: 0x080 (ADD_I32I32) - 0x04
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
-JIT op: 0x13b (LOADFIELD_4) - 0x04
-JIT op: 0x01e (LOAD_VECTOR_LEN) - 0x04
-JIT op: 0x140 (CONV_I32_I32) - 0x04
-JIT op: 0x093 (BLE_I32I32) - 0x04
-JIT op: 0x001 (RETURN) - 0x04
-ret -> System.Collections.Generic.List`1<System.String>.Add(String)
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
-JIT op: 0x13b (LOADFIELD_4) - 0x00
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
-JIT op: 0x13b (LOADFIELD_4) - 0x00
-JIT op: 0x131 (STOREPARAMLOCAL_2) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x139 (LOAD_I4_1) - 0x00
-JIT op: 0x080 (ADD_I32I32) - 0x00
-JIT op: 0x049 (STOREFIELD_INT32) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
-JIT op: 0x018 (STORE_ELEMENT) - 0x00
-JIT op: 0x001 (RETURN) - 0x00
-ret -> System.String.Split(Array,Int32)
-JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x00
-JIT op: 0x139 (LOAD_I4_1) - 0x00
-JIT op: 0x080 (ADD_I32I32) - 0x00
-JIT op: 0x133 (STOREPARAMLOCAL_4) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x139 (LOAD_I4_1) - 0x00
-JIT op: 0x081 (SUB_I32I32) - 0x00
-JIT op: 0x131 (STOREPARAMLOCAL_2) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x138 (LOAD_I4_0) - 0x00
-JIT op: 0x092 (BGT_I32I32) - 0x00
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
-JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x00
-JIT op: 0x007 (CALL_O) - 0x00
-Calling method: System.String.IndexOfAny(Array,Int32)
-MethodState_Direct: IndexOfAny
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
-JIT op: 0x13b (LOADFIELD_4) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x081 (SUB_I32I32) - 0x00
-JIT op: 0x139 (LOAD_I4_1) - 0x00
-JIT op: 0x007 (CALL_O) - 0x00
-Calling method: System.String.IndexOfAny(Array,Int32,Int32,Boolean)
-MethodState_Direct: IndexOfAny
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x138 (LOAD_I4_0) - 0x00
-JIT op: 0x094 (BLT_I32I32) - 0x00
-JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
-JIT op: 0x138 (LOAD_I4_0) - 0x00
-JIT op: 0x094 (BLT_I32I32) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
-JIT op: 0x080 (ADD_I32I32) - 0x00
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
-JIT op: 0x13b (LOADFIELD_4) - 0x00
-JIT op: 0x093 (BLE_I32I32) - 0x00
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
-JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x00
-JIT op: 0x007 (CALL_O) - 0x00
-Calling method: System.String.InternalIndexOfAny(Array,Int32,Int32,Boolean)
-MethodState_Direct: InternalIndexOfAny
-JIT op: 0x006 (CALL_NATIVE) - 0x00
-JIT op: 0x001 (RETURN) - 0x00
-ret -> System.String.IndexOfAny(Array,Int32,Int32,Boolean)
-JIT op: 0x001 (RETURN) - 0x04
-ret -> System.String.IndexOfAny(Array,Int32)
-JIT op: 0x001 (RETURN) - 0x04
-ret -> System.String.Split(Array,Int32)
-JIT op: 0x134 (STOREPARAMLOCAL_5) - 0x04
-JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x04
-JIT op: 0x138 (LOAD_I4_0) - 0x04
-JIT op: 0x091 (BGE_I32I32) - 0x04
-JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x04
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
-JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
-JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x04
-JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
-JIT op: 0x081 (SUB_I32I32) - 0x04
-JIT op: 0x008 (NEWOBJECT) - 0x04
-MethodState_Direct: .ctor
-JIT op: 0x006 (CALL_NATIVE) - 0x04
-JIT op: 0x001 (RETURN) - 0x04
-ret -> System.String.Split(Array,Int32)
-JIT op: 0x005 (CALLVIRT_O) - 0x04
-Calling method: System.Collections.Generic.List`1<System.String>.Add(String)
-MethodState_Direct: Add
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
-JIT op: 0x139 (LOAD_I4_1) - 0x04
-JIT op: 0x007 (CALL_O) - 0x04
-Calling method: System.Collections.Generic.List`1<System.String>.EnsureSpace(Int32)
-MethodState_Direct: EnsureSpace
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
-JIT op: 0x13b (LOADFIELD_4) - 0x04
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x04
-JIT op: 0x080 (ADD_I32I32) - 0x04
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
-JIT op: 0x13b (LOADFIELD_4) - 0x04
-JIT op: 0x01e (LOAD_VECTOR_LEN) - 0x04
-JIT op: 0x140 (CONV_I32_I32) - 0x04
-JIT op: 0x093 (BLE_I32I32) - 0x04
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
-JIT op: 0x013 (LOAD_FIELD_ADDR) - 0x04
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
-JIT op: 0x13b (LOADFIELD_4) - 0x04
-JIT op: 0x01e (LOAD_VECTOR_LEN) - 0x04
-JIT op: 0x140 (CONV_I32_I32) - 0x04
-JIT op: 0x139 (LOAD_I4_1) - 0x04
-JIT op: 0x0a4 (SHL_I32) - 0x04
-JIT op: 0x002 (LOAD_I32) - 0x04
-JIT op: 0x007 (CALL_O) - 0x04
-Calling method: System.Math.Max(Int32,Int32)
-MethodState_Direct: Max
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x04
-JIT op: 0x092 (BGT_I32I32) - 0x04
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
-JIT op: 0x001 (RETURN) - 0x04
-ret -> System.Collections.Generic.List`1<System.String>.EnsureSpace(Int32)
-JIT op: 0x007 (CALL_O) - 0x04
-Calling method: System.Array.Resize(IntPtr,Int32)
-MethodState_Direct: Resize
-JIT op: 0x006 (CALL_NATIVE) - 0x04
-JIT op: 0x001 (RETURN) - 0x04
-ret -> System.Collections.Generic.List`1<System.String>.EnsureSpace(Int32)
-JIT op: 0x001 (RETURN) - 0x00
-ret -> System.Collections.Generic.List`1<System.String>.Add(String)
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
-JIT op: 0x13b (LOADFIELD_4) - 0x00
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
-JIT op: 0x13b (LOADFIELD_4) - 0x00
-JIT op: 0x131 (STOREPARAMLOCAL_2) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x139 (LOAD_I4_1) - 0x00
-JIT op: 0x080 (ADD_I32I32) - 0x00
-JIT op: 0x049 (STOREFIELD_INT32) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
-JIT op: 0x018 (STORE_ELEMENT) - 0x00
-JIT op: 0x001 (RETURN) - 0x00
-ret -> System.String.Split(Array,Int32)
-JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x00
-JIT op: 0x139 (LOAD_I4_1) - 0x00
-JIT op: 0x080 (ADD_I32I32) - 0x00
-JIT op: 0x133 (STOREPARAMLOCAL_4) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x139 (LOAD_I4_1) - 0x00
-JIT op: 0x081 (SUB_I32I32) - 0x00
-JIT op: 0x131 (STOREPARAMLOCAL_2) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x138 (LOAD_I4_0) - 0x00
-JIT op: 0x092 (BGT_I32I32) - 0x00
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
-JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x00
-JIT op: 0x007 (CALL_O) - 0x00
-Calling method: System.String.IndexOfAny(Array,Int32)
-MethodState_Direct: IndexOfAny
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
-JIT op: 0x13b (LOADFIELD_4) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x081 (SUB_I32I32) - 0x00
-JIT op: 0x139 (LOAD_I4_1) - 0x00
-JIT op: 0x007 (CALL_O) - 0x00
-Calling method: System.String.IndexOfAny(Array,Int32,Int32,Boolean)
-MethodState_Direct: IndexOfAny
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x138 (LOAD_I4_0) - 0x00
-JIT op: 0x094 (BLT_I32I32) - 0x00
-JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
-JIT op: 0x138 (LOAD_I4_0) - 0x00
-JIT op: 0x094 (BLT_I32I32) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
-JIT op: 0x080 (ADD_I32I32) - 0x00
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
-JIT op: 0x13b (LOADFIELD_4) - 0x00
-JIT op: 0x093 (BLE_I32I32) - 0x00
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
-JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x00
-JIT op: 0x007 (CALL_O) - 0x00
-Calling method: System.String.InternalIndexOfAny(Array,Int32,Int32,Boolean)
-MethodState_Direct: InternalIndexOfAny
-JIT op: 0x006 (CALL_NATIVE) - 0x00
-JIT op: 0x001 (RETURN) - 0x00
-ret -> System.String.IndexOfAny(Array,Int32,Int32,Boolean)
-JIT op: 0x001 (RETURN) - 0x04
-ret -> System.String.IndexOfAny(Array,Int32)
-JIT op: 0x001 (RETURN) - 0x04
-ret -> System.String.Split(Array,Int32)
-JIT op: 0x134 (STOREPARAMLOCAL_5) - 0x04
-JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x04
-JIT op: 0x138 (LOAD_I4_0) - 0x04
-JIT op: 0x091 (BGE_I32I32) - 0x04
-JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x04
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
-JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
-JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x04
-JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
-JIT op: 0x081 (SUB_I32I32) - 0x04
-JIT op: 0x008 (NEWOBJECT) - 0x04
-MethodState_Direct: .ctor
-JIT op: 0x006 (CALL_NATIVE) - 0x04
-JIT op: 0x001 (RETURN) - 0x04
-ret -> System.String.Split(Array,Int32)
-JIT op: 0x005 (CALLVIRT_O) - 0x04
-Calling method: System.Collections.Generic.List`1<System.String>.Add(String)
-MethodState_Direct: Add
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
-JIT op: 0x139 (LOAD_I4_1) - 0x04
-JIT op: 0x007 (CALL_O) - 0x04
-Calling method: System.Collections.Generic.List`1<System.String>.EnsureSpace(Int32)
-MethodState_Direct: EnsureSpace
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
-JIT op: 0x13b (LOADFIELD_4) - 0x04
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x04
-JIT op: 0x080 (ADD_I32I32) - 0x04
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
-JIT op: 0x13b (LOADFIELD_4) - 0x04
-JIT op: 0x01e (LOAD_VECTOR_LEN) - 0x04
-JIT op: 0x140 (CONV_I32_I32) - 0x04
-JIT op: 0x093 (BLE_I32I32) - 0x04
-JIT op: 0x001 (RETURN) - 0x04
-ret -> System.Collections.Generic.List`1<System.String>.Add(String)
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
-JIT op: 0x13b (LOADFIELD_4) - 0x00
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
-JIT op: 0x13b (LOADFIELD_4) - 0x00
-JIT op: 0x131 (STOREPARAMLOCAL_2) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x139 (LOAD_I4_1) - 0x00
-JIT op: 0x080 (ADD_I32I32) - 0x00
-JIT op: 0x049 (STOREFIELD_INT32) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
-JIT op: 0x018 (STORE_ELEMENT) - 0x00
-JIT op: 0x001 (RETURN) - 0x00
-ret -> System.String.Split(Array,Int32)
-JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x00
-JIT op: 0x139 (LOAD_I4_1) - 0x00
-JIT op: 0x080 (ADD_I32I32) - 0x00
-JIT op: 0x133 (STOREPARAMLOCAL_4) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x139 (LOAD_I4_1) - 0x00
-JIT op: 0x081 (SUB_I32I32) - 0x00
-JIT op: 0x131 (STOREPARAMLOCAL_2) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x138 (LOAD_I4_0) - 0x00
-JIT op: 0x092 (BGT_I32I32) - 0x00
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
-JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x00
-JIT op: 0x007 (CALL_O) - 0x00
-Calling method: System.String.IndexOfAny(Array,Int32)
-MethodState_Direct: IndexOfAny
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
-JIT op: 0x13b (LOADFIELD_4) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x081 (SUB_I32I32) - 0x00
-JIT op: 0x139 (LOAD_I4_1) - 0x00
-JIT op: 0x007 (CALL_O) - 0x00
-Calling method: System.String.IndexOfAny(Array,Int32,Int32,Boolean)
-MethodState_Direct: IndexOfAny
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x138 (LOAD_I4_0) - 0x00
-JIT op: 0x094 (BLT_I32I32) - 0x00
-JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
-JIT op: 0x138 (LOAD_I4_0) - 0x00
-JIT op: 0x094 (BLT_I32I32) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
-JIT op: 0x080 (ADD_I32I32) - 0x00
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
-JIT op: 0x13b (LOADFIELD_4) - 0x00
-JIT op: 0x093 (BLE_I32I32) - 0x00
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
-JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x00
-JIT op: 0x007 (CALL_O) - 0x00
-Calling method: System.String.InternalIndexOfAny(Array,Int32,Int32,Boolean)
-MethodState_Direct: InternalIndexOfAny
-JIT op: 0x006 (CALL_NATIVE) - 0x00
-JIT op: 0x001 (RETURN) - 0x00
-ret -> System.String.IndexOfAny(Array,Int32,Int32,Boolean)
-JIT op: 0x001 (RETURN) - 0x04
-ret -> System.String.IndexOfAny(Array,Int32)
-JIT op: 0x001 (RETURN) - 0x04
-ret -> System.String.Split(Array,Int32)
-JIT op: 0x134 (STOREPARAMLOCAL_5) - 0x04
-JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x04
-JIT op: 0x138 (LOAD_I4_0) - 0x04
-JIT op: 0x091 (BGE_I32I32) - 0x04
-JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x04
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
-JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
-JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x04
-JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
-JIT op: 0x081 (SUB_I32I32) - 0x04
-JIT op: 0x008 (NEWOBJECT) - 0x04
-MethodState_Direct: .ctor
-JIT op: 0x006 (CALL_NATIVE) - 0x04
-JIT op: 0x001 (RETURN) - 0x04
-ret -> System.String.Split(Array,Int32)
-JIT op: 0x005 (CALLVIRT_O) - 0x04
-Calling method: System.Collections.Generic.List`1<System.String>.Add(String)
-MethodState_Direct: Add
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
-JIT op: 0x139 (LOAD_I4_1) - 0x04
-JIT op: 0x007 (CALL_O) - 0x04
-Calling method: System.Collections.Generic.List`1<System.String>.EnsureSpace(Int32)
-MethodState_Direct: EnsureSpace
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
-JIT op: 0x13b (LOADFIELD_4) - 0x04
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x04
-JIT op: 0x080 (ADD_I32I32) - 0x04
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
-JIT op: 0x13b (LOADFIELD_4) - 0x04
-JIT op: 0x01e (LOAD_VECTOR_LEN) - 0x04
-JIT op: 0x140 (CONV_I32_I32) - 0x04
-JIT op: 0x093 (BLE_I32I32) - 0x04
-JIT op: 0x001 (RETURN) - 0x04
-ret -> System.Collections.Generic.List`1<System.String>.Add(String)
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
-JIT op: 0x13b (LOADFIELD_4) - 0x00
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
-JIT op: 0x13b (LOADFIELD_4) - 0x00
-JIT op: 0x131 (STOREPARAMLOCAL_2) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x139 (LOAD_I4_1) - 0x00
-JIT op: 0x080 (ADD_I32I32) - 0x00
-JIT op: 0x049 (STOREFIELD_INT32) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
-JIT op: 0x018 (STORE_ELEMENT) - 0x00
-JIT op: 0x001 (RETURN) - 0x00
-ret -> System.String.Split(Array,Int32)
-JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x00
-JIT op: 0x139 (LOAD_I4_1) - 0x00
-JIT op: 0x080 (ADD_I32I32) - 0x00
-JIT op: 0x133 (STOREPARAMLOCAL_4) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x139 (LOAD_I4_1) - 0x00
-JIT op: 0x081 (SUB_I32I32) - 0x00
-JIT op: 0x131 (STOREPARAMLOCAL_2) - 0x00
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
-JIT op: 0x138 (LOAD_I4_0) - 0x00
-JIT op: 0x092 (BGT_I32I32) - 0x00
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
 JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
 JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x00
@@ -10286,16 +10195,456 @@ JIT op: 0x139 (LOAD_I4_1) - 0x04
 JIT op: 0x007 (CALL_O) - 0x04
 Calling method: System.Collections.Generic.List`1<System.String>.EnsureSpace(Int32)
 MethodState_Direct: EnsureSpace
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0xCCCCCCCC
-JIT op: 0x13b (LOADFIELD_4) - 0xCCCCCCCC
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0xCCCCCCCC
-JIT op: 0x080 (ADD_I32I32) - 0xCCCCCCCC
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0xCCCCCCCC
-JIT op: 0x13b (LOADFIELD_4) - 0xCCCCCCCC
-JIT op: 0x01e (LOAD_VECTOR_LEN) - 0xCCCCCCCC
-JIT op: 0x140 (CONV_I32_I32) - 0xCCCCCCCC
-JIT op: 0x093 (BLE_I32I32) - 0xCCCCCCCC
-JIT op: 0x001 (RETURN) - 0xCCCCCCCC
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
+JIT op: 0x13b (LOADFIELD_4) - 0x04
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x04
+JIT op: 0x080 (ADD_I32I32) - 0x04
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
+JIT op: 0x13b (LOADFIELD_4) - 0x04
+JIT op: 0x01e (LOAD_VECTOR_LEN) - 0x04
+JIT op: 0x140 (CONV_I32_I32) - 0x04
+JIT op: 0x093 (BLE_I32I32) - 0x04
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.Collections.Generic.List`1<System.String>.Add(String)
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x13b (LOADFIELD_4) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x13b (LOADFIELD_4) - 0x00
+JIT op: 0x131 (STOREPARAMLOCAL_2) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x139 (LOAD_I4_1) - 0x00
+JIT op: 0x080 (ADD_I32I32) - 0x00
+JIT op: 0x049 (STOREFIELD_INT32) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
+JIT op: 0x018 (STORE_ELEMENT) - 0x00
+JIT op: 0x001 (RETURN) - 0x00
+ret -> System.String.Split(Array,Int32)
+JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x00
+JIT op: 0x139 (LOAD_I4_1) - 0x00
+JIT op: 0x080 (ADD_I32I32) - 0x00
+JIT op: 0x133 (STOREPARAMLOCAL_4) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x139 (LOAD_I4_1) - 0x00
+JIT op: 0x081 (SUB_I32I32) - 0x00
+JIT op: 0x131 (STOREPARAMLOCAL_2) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x138 (LOAD_I4_0) - 0x00
+JIT op: 0x092 (BGT_I32I32) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x00
+JIT op: 0x007 (CALL_O) - 0x00
+Calling method: System.String.IndexOfAny(Array,Int32)
+MethodState_Direct: IndexOfAny
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x13b (LOADFIELD_4) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x081 (SUB_I32I32) - 0x00
+JIT op: 0x139 (LOAD_I4_1) - 0x00
+JIT op: 0x007 (CALL_O) - 0x00
+Calling method: System.String.IndexOfAny(Array,Int32,Int32,Boolean)
+MethodState_Direct: IndexOfAny
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x138 (LOAD_I4_0) - 0x00
+JIT op: 0x094 (BLT_I32I32) - 0x00
+JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
+JIT op: 0x138 (LOAD_I4_0) - 0x00
+JIT op: 0x094 (BLT_I32I32) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
+JIT op: 0x080 (ADD_I32I32) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x13b (LOADFIELD_4) - 0x00
+JIT op: 0x093 (BLE_I32I32) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x00
+JIT op: 0x007 (CALL_O) - 0x00
+Calling method: System.String.InternalIndexOfAny(Array,Int32,Int32,Boolean)
+MethodState_Direct: InternalIndexOfAny
+JIT op: 0x006 (CALL_NATIVE) - 0x00
+JIT op: 0x001 (RETURN) - 0x00
+ret -> System.String.IndexOfAny(Array,Int32,Int32,Boolean)
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.String.IndexOfAny(Array,Int32)
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.String.Split(Array,Int32)
+JIT op: 0x134 (STOREPARAMLOCAL_5) - 0x04
+JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x04
+JIT op: 0x138 (LOAD_I4_0) - 0x04
+JIT op: 0x091 (BGE_I32I32) - 0x04
+JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x04
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x081 (SUB_I32I32) - 0x04
+JIT op: 0x008 (NEWOBJECT) - 0x04
+MethodState_Direct: .ctor
+JIT op: 0x006 (CALL_NATIVE) - 0x04
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.String.Split(Array,Int32)
+JIT op: 0x005 (CALLVIRT_O) - 0x04
+Calling method: System.Collections.Generic.List`1<System.String>.Add(String)
+MethodState_Direct: Add
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
+JIT op: 0x139 (LOAD_I4_1) - 0x04
+JIT op: 0x007 (CALL_O) - 0x04
+Calling method: System.Collections.Generic.List`1<System.String>.EnsureSpace(Int32)
+MethodState_Direct: EnsureSpace
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
+JIT op: 0x13b (LOADFIELD_4) - 0x04
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x04
+JIT op: 0x080 (ADD_I32I32) - 0x04
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
+JIT op: 0x13b (LOADFIELD_4) - 0x04
+JIT op: 0x01e (LOAD_VECTOR_LEN) - 0x04
+JIT op: 0x140 (CONV_I32_I32) - 0x04
+JIT op: 0x093 (BLE_I32I32) - 0x04
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.Collections.Generic.List`1<System.String>.Add(String)
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x13b (LOADFIELD_4) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x13b (LOADFIELD_4) - 0x00
+JIT op: 0x131 (STOREPARAMLOCAL_2) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x139 (LOAD_I4_1) - 0x00
+JIT op: 0x080 (ADD_I32I32) - 0x00
+JIT op: 0x049 (STOREFIELD_INT32) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
+JIT op: 0x018 (STORE_ELEMENT) - 0x00
+JIT op: 0x001 (RETURN) - 0x00
+ret -> System.String.Split(Array,Int32)
+JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x00
+JIT op: 0x139 (LOAD_I4_1) - 0x00
+JIT op: 0x080 (ADD_I32I32) - 0x00
+JIT op: 0x133 (STOREPARAMLOCAL_4) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x139 (LOAD_I4_1) - 0x00
+JIT op: 0x081 (SUB_I32I32) - 0x00
+JIT op: 0x131 (STOREPARAMLOCAL_2) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x138 (LOAD_I4_0) - 0x00
+JIT op: 0x092 (BGT_I32I32) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x00
+JIT op: 0x007 (CALL_O) - 0x00
+Calling method: System.String.IndexOfAny(Array,Int32)
+MethodState_Direct: IndexOfAny
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x13b (LOADFIELD_4) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x081 (SUB_I32I32) - 0x00
+JIT op: 0x139 (LOAD_I4_1) - 0x00
+JIT op: 0x007 (CALL_O) - 0x00
+Calling method: System.String.IndexOfAny(Array,Int32,Int32,Boolean)
+MethodState_Direct: IndexOfAny
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x138 (LOAD_I4_0) - 0x00
+JIT op: 0x094 (BLT_I32I32) - 0x00
+JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
+JIT op: 0x138 (LOAD_I4_0) - 0x00
+JIT op: 0x094 (BLT_I32I32) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
+JIT op: 0x080 (ADD_I32I32) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x13b (LOADFIELD_4) - 0x00
+JIT op: 0x093 (BLE_I32I32) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x00
+JIT op: 0x007 (CALL_O) - 0x00
+Calling method: System.String.InternalIndexOfAny(Array,Int32,Int32,Boolean)
+MethodState_Direct: InternalIndexOfAny
+JIT op: 0x006 (CALL_NATIVE) - 0x00
+JIT op: 0x001 (RETURN) - 0x00
+ret -> System.String.IndexOfAny(Array,Int32,Int32,Boolean)
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.String.IndexOfAny(Array,Int32)
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.String.Split(Array,Int32)
+JIT op: 0x134 (STOREPARAMLOCAL_5) - 0x04
+JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x04
+JIT op: 0x138 (LOAD_I4_0) - 0x04
+JIT op: 0x091 (BGE_I32I32) - 0x04
+JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x04
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x081 (SUB_I32I32) - 0x04
+JIT op: 0x008 (NEWOBJECT) - 0x04
+MethodState_Direct: .ctor
+JIT op: 0x006 (CALL_NATIVE) - 0x04
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.String.Split(Array,Int32)
+JIT op: 0x005 (CALLVIRT_O) - 0x04
+Calling method: System.Collections.Generic.List`1<System.String>.Add(String)
+MethodState_Direct: Add
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
+JIT op: 0x139 (LOAD_I4_1) - 0x04
+JIT op: 0x007 (CALL_O) - 0x04
+Calling method: System.Collections.Generic.List`1<System.String>.EnsureSpace(Int32)
+MethodState_Direct: EnsureSpace
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
+JIT op: 0x13b (LOADFIELD_4) - 0x04
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x04
+JIT op: 0x080 (ADD_I32I32) - 0x04
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
+JIT op: 0x13b (LOADFIELD_4) - 0x04
+JIT op: 0x01e (LOAD_VECTOR_LEN) - 0x04
+JIT op: 0x140 (CONV_I32_I32) - 0x04
+JIT op: 0x093 (BLE_I32I32) - 0x04
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
+JIT op: 0x013 (LOAD_FIELD_ADDR) - 0x04
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
+JIT op: 0x13b (LOADFIELD_4) - 0x04
+JIT op: 0x01e (LOAD_VECTOR_LEN) - 0x04
+JIT op: 0x140 (CONV_I32_I32) - 0x04
+JIT op: 0x139 (LOAD_I4_1) - 0x04
+JIT op: 0x0a4 (SHL_I32) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x007 (CALL_O) - 0x04
+Calling method: System.Math.Max(Int32,Int32)
+MethodState_Direct: Max
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x04
+JIT op: 0x092 (BGT_I32I32) - 0x04
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.Collections.Generic.List`1<System.String>.EnsureSpace(Int32)
+JIT op: 0x007 (CALL_O) - 0x04
+Calling method: System.Array.Resize(IntPtr,Int32)
+MethodState_Direct: Resize
+JIT op: 0x006 (CALL_NATIVE) - 0x04
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.Collections.Generic.List`1<System.String>.EnsureSpace(Int32)
+JIT op: 0x001 (RETURN) - 0x00
+ret -> System.Collections.Generic.List`1<System.String>.Add(String)
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x13b (LOADFIELD_4) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x13b (LOADFIELD_4) - 0x00
+JIT op: 0x131 (STOREPARAMLOCAL_2) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x139 (LOAD_I4_1) - 0x00
+JIT op: 0x080 (ADD_I32I32) - 0x00
+JIT op: 0x049 (STOREFIELD_INT32) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
+JIT op: 0x018 (STORE_ELEMENT) - 0x00
+JIT op: 0x001 (RETURN) - 0x00
+ret -> System.String.Split(Array,Int32)
+JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x00
+JIT op: 0x139 (LOAD_I4_1) - 0x00
+JIT op: 0x080 (ADD_I32I32) - 0x00
+JIT op: 0x133 (STOREPARAMLOCAL_4) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x139 (LOAD_I4_1) - 0x00
+JIT op: 0x081 (SUB_I32I32) - 0x00
+JIT op: 0x131 (STOREPARAMLOCAL_2) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x138 (LOAD_I4_0) - 0x00
+JIT op: 0x092 (BGT_I32I32) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x00
+JIT op: 0x007 (CALL_O) - 0x00
+Calling method: System.String.IndexOfAny(Array,Int32)
+MethodState_Direct: IndexOfAny
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x13b (LOADFIELD_4) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x081 (SUB_I32I32) - 0x00
+JIT op: 0x139 (LOAD_I4_1) - 0x00
+JIT op: 0x007 (CALL_O) - 0x00
+Calling method: System.String.IndexOfAny(Array,Int32,Int32,Boolean)
+MethodState_Direct: IndexOfAny
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x138 (LOAD_I4_0) - 0x00
+JIT op: 0x094 (BLT_I32I32) - 0x00
+JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
+JIT op: 0x138 (LOAD_I4_0) - 0x00
+JIT op: 0x094 (BLT_I32I32) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
+JIT op: 0x080 (ADD_I32I32) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x13b (LOADFIELD_4) - 0x00
+JIT op: 0x093 (BLE_I32I32) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x00
+JIT op: 0x007 (CALL_O) - 0x00
+Calling method: System.String.InternalIndexOfAny(Array,Int32,Int32,Boolean)
+MethodState_Direct: InternalIndexOfAny
+JIT op: 0x006 (CALL_NATIVE) - 0x00
+JIT op: 0x001 (RETURN) - 0x00
+ret -> System.String.IndexOfAny(Array,Int32,Int32,Boolean)
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.String.IndexOfAny(Array,Int32)
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.String.Split(Array,Int32)
+JIT op: 0x134 (STOREPARAMLOCAL_5) - 0x04
+JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x04
+JIT op: 0x138 (LOAD_I4_0) - 0x04
+JIT op: 0x091 (BGE_I32I32) - 0x04
+JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x04
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x081 (SUB_I32I32) - 0x04
+JIT op: 0x008 (NEWOBJECT) - 0x04
+MethodState_Direct: .ctor
+JIT op: 0x006 (CALL_NATIVE) - 0x04
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.String.Split(Array,Int32)
+JIT op: 0x005 (CALLVIRT_O) - 0x04
+Calling method: System.Collections.Generic.List`1<System.String>.Add(String)
+MethodState_Direct: Add
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
+JIT op: 0x139 (LOAD_I4_1) - 0x04
+JIT op: 0x007 (CALL_O) - 0x04
+Calling method: System.Collections.Generic.List`1<System.String>.EnsureSpace(Int32)
+MethodState_Direct: EnsureSpace
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
+JIT op: 0x13b (LOADFIELD_4) - 0x04
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x04
+JIT op: 0x080 (ADD_I32I32) - 0x04
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
+JIT op: 0x13b (LOADFIELD_4) - 0x04
+JIT op: 0x01e (LOAD_VECTOR_LEN) - 0x04
+JIT op: 0x140 (CONV_I32_I32) - 0x04
+JIT op: 0x093 (BLE_I32I32) - 0x04
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.Collections.Generic.List`1<System.String>.Add(String)
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x13b (LOADFIELD_4) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x13b (LOADFIELD_4) - 0x00
+JIT op: 0x131 (STOREPARAMLOCAL_2) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x139 (LOAD_I4_1) - 0x00
+JIT op: 0x080 (ADD_I32I32) - 0x00
+JIT op: 0x049 (STOREFIELD_INT32) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
+JIT op: 0x018 (STORE_ELEMENT) - 0x00
+JIT op: 0x001 (RETURN) - 0x00
+ret -> System.String.Split(Array,Int32)
+JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x00
+JIT op: 0x139 (LOAD_I4_1) - 0x00
+JIT op: 0x080 (ADD_I32I32) - 0x00
+JIT op: 0x133 (STOREPARAMLOCAL_4) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x139 (LOAD_I4_1) - 0x00
+JIT op: 0x081 (SUB_I32I32) - 0x00
+JIT op: 0x131 (STOREPARAMLOCAL_2) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x138 (LOAD_I4_0) - 0x00
+JIT op: 0x092 (BGT_I32I32) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x00
+JIT op: 0x007 (CALL_O) - 0x00
+Calling method: System.String.IndexOfAny(Array,Int32)
+MethodState_Direct: IndexOfAny
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x13b (LOADFIELD_4) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x081 (SUB_I32I32) - 0x00
+JIT op: 0x139 (LOAD_I4_1) - 0x00
+JIT op: 0x007 (CALL_O) - 0x00
+Calling method: System.String.IndexOfAny(Array,Int32,Int32,Boolean)
+MethodState_Direct: IndexOfAny
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x138 (LOAD_I4_0) - 0x00
+JIT op: 0x094 (BLT_I32I32) - 0x00
+JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
+JIT op: 0x138 (LOAD_I4_0) - 0x00
+JIT op: 0x094 (BLT_I32I32) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
+JIT op: 0x080 (ADD_I32I32) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x13b (LOADFIELD_4) - 0x00
+JIT op: 0x093 (BLE_I32I32) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x00
+JIT op: 0x007 (CALL_O) - 0x00
+Calling method: System.String.InternalIndexOfAny(Array,Int32,Int32,Boolean)
+MethodState_Direct: InternalIndexOfAny
+JIT op: 0x006 (CALL_NATIVE) - 0x00
+JIT op: 0x001 (RETURN) - 0x00
+ret -> System.String.IndexOfAny(Array,Int32,Int32,Boolean)
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.String.IndexOfAny(Array,Int32)
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.String.Split(Array,Int32)
+JIT op: 0x134 (STOREPARAMLOCAL_5) - 0x04
+JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x04
+JIT op: 0x138 (LOAD_I4_0) - 0x04
+JIT op: 0x091 (BGE_I32I32) - 0x04
+JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x04
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x081 (SUB_I32I32) - 0x04
+JIT op: 0x008 (NEWOBJECT) - 0x04
+MethodState_Direct: .ctor
+JIT op: 0x006 (CALL_NATIVE) - 0x04
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.String.Split(Array,Int32)
+JIT op: 0x005 (CALLVIRT_O) - 0x04
+Calling method: System.Collections.Generic.List`1<System.String>.Add(String)
+MethodState_Direct: Add
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
+JIT op: 0x139 (LOAD_I4_1) - 0x04
+JIT op: 0x007 (CALL_O) - 0x04
+Calling method: System.Collections.Generic.List`1<System.String>.EnsureSpace(Int32)
+MethodState_Direct: EnsureSpace
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x13b (LOADFIELD_4) - 0x00
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
+JIT op: 0x080 (ADD_I32I32) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x13b (LOADFIELD_4) - 0x00
+JIT op: 0x01e (LOAD_VECTOR_LEN) - 0x00
+JIT op: 0x140 (CONV_I32_I32) - 0x00
+JIT op: 0x093 (BLE_I32I32) - 0x00
+JIT op: 0x001 (RETURN) - 0x00
 ret -> System.Collections.Generic.List`1<System.String>.Add(String)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
 JIT op: 0x13b (LOADFIELD_4) - 0x00
@@ -11096,28 +11445,28 @@ JIT op: 0x139 (LOAD_I4_1) - 0x00
 JIT op: 0x007 (CALL_O) - 0x00
 Calling method: System.String.IndexOfAny(Array,Int32,Int32,Boolean)
 MethodState_Direct: IndexOfAny
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0xCCCCCCCC
-JIT op: 0x138 (LOAD_I4_0) - 0xCCCCCCCC
-JIT op: 0x094 (BLT_I32I32) - 0xCCCCCCCC
-JIT op: 0x12a (LOADPARAMLOCAL_3) - 0xCCCCCCCC
-JIT op: 0x138 (LOAD_I4_0) - 0xCCCCCCCC
-JIT op: 0x094 (BLT_I32I32) - 0xCCCCCCCC
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0xCCCCCCCC
-JIT op: 0x12a (LOADPARAMLOCAL_3) - 0xCCCCCCCC
-JIT op: 0x080 (ADD_I32I32) - 0xCCCCCCCC
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0xCCCCCCCC
-JIT op: 0x13b (LOADFIELD_4) - 0xCCCCCCCC
-JIT op: 0x093 (BLE_I32I32) - 0xCCCCCCCC
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0xCCCCCCCC
-JIT op: 0x128 (LOADPARAMLOCAL_1) - 0xCCCCCCCC
-JIT op: 0x129 (LOADPARAMLOCAL_2) - 0xCCCCCCCC
-JIT op: 0x12a (LOADPARAMLOCAL_3) - 0xCCCCCCCC
-JIT op: 0x12b (LOADPARAMLOCAL_4) - 0xCCCCCCCC
-JIT op: 0x007 (CALL_O) - 0xCCCCCCCC
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x138 (LOAD_I4_0) - 0x00
+JIT op: 0x094 (BLT_I32I32) - 0x00
+JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
+JIT op: 0x138 (LOAD_I4_0) - 0x00
+JIT op: 0x094 (BLT_I32I32) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
+JIT op: 0x080 (ADD_I32I32) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x13b (LOADFIELD_4) - 0x00
+JIT op: 0x093 (BLE_I32I32) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x00
+JIT op: 0x007 (CALL_O) - 0x00
 Calling method: System.String.InternalIndexOfAny(Array,Int32,Int32,Boolean)
 MethodState_Direct: InternalIndexOfAny
-JIT op: 0x006 (CALL_NATIVE) - 0xCCCCCCCC
-JIT op: 0x001 (RETURN) - 0xCCCCCCCC
+JIT op: 0x006 (CALL_NATIVE) - 0x00
+JIT op: 0x001 (RETURN) - 0x00
 ret -> System.String.IndexOfAny(Array,Int32,Int32,Boolean)
 JIT op: 0x001 (RETURN) - 0x04
 ret -> System.String.IndexOfAny(Array,Int32)
@@ -11500,6 +11849,7 @@ MethodState_Direct: .ctor
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x600075c
 cil-call(0) .ctor::.ctor
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
@@ -11509,26 +11859,34 @@ Calling method: System.Globalization.GregorianCalendar..ctor(GregorianCalendarTy
 MethodState_Direct: .ctor
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60006fb
 cil-call(0) .ctor::.ctor
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x08d (newarr)
+GetUnalignedU32: 0x2000060
 CIL op: 0x025 (dup)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x700029c9
 CIL op: 0x0a2 (stelem.ref)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002b0
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x08d (newarr)
+GetUnalignedU32: 0x2000060
 CIL op: 0x025 (dup)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x700029d3
 CIL op: 0x0a2 (stelem.ref)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002b1
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40002f1
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
 JIT op: 0x007 (CALL_O) - 0x04
@@ -11536,6 +11894,7 @@ Calling method: System.Globalization.Calendar..ctor()
 MethodState_Direct: .ctor
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000240
 cil-call(0) .ctor::.ctor
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
@@ -11596,12 +11955,16 @@ Calling method: System.Globalization.CultureInfo.get_NumberFormat()
 MethodState_Direct: get_NumberFormat
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x40002c6
 CIL op: 0x02d (brtrue.s)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x700025ec
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x6000215
 CIL op: 0x07a (throw)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x40002c6
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
 JIT op: 0x13b (LOADFIELD_4) - 0x04
@@ -11627,6 +11990,7 @@ CIL op: 0x012 (ldloca.s)
 CIL op: 0x012 (ldloca.s)
 CIL op: 0x012 (ldloca.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000230
 cil-call(0) NumberToString::ParseBasicFormat
 CIL op: 0x008 (ldloc.2)
 CIL op: 0x02d (brtrue.s)
@@ -11656,16 +12020,19 @@ CIL op: 0x006 (ldloc.0)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x101 (ceq)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x600023b
 cil-call(0) NumberToString::FormatHexadecimal
 CIL op: 0x02a (ret)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x60008eb
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x007 (ldloc.1)
 CIL op: 0x008 (ldloc.2)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x600022f
 cil-call(0) NumberToString::NumberToString
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
@@ -11679,6 +12046,7 @@ CIL op: 0x002 (ldarg.0)
 CIL op: 0x02c (brfalse.s)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a0
 cil-call(0) ParseBasicFormat::get_Length
 CIL op: 0x02d (brtrue.s)
 CIL op: 0x004 (ldarg.2)
@@ -11698,6 +12066,7 @@ CIL op: 0x003 (ldarg.1)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a1
 cil-call(0) ParseBasicFormat::get_Chars
 CIL op: 0x053 (stind.i2)
 CIL op: 0x005 (ldarg.3)
@@ -11706,10 +12075,12 @@ CIL op: 0x052 (stind.i1)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x049 (ldind.u2)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60000b6
 cil-call(0) ParseBasicFormat::IsLetter
 CIL op: 0x02c (brfalse.s)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a0
 cil-call(0) ParseBasicFormat::get_Length
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x033 (bne.un.s)
@@ -11725,10 +12096,12 @@ CIL op: 0x02b (br.s)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x007 (ldloc.1)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a1
 cil-call(0) ParseBasicFormat::get_Chars
 CIL op: 0x00c (stloc.2)
 CIL op: 0x008 (ldloc.2)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60000b8
 cil-call(0) ParseBasicFormat::IsDigit
 CIL op: 0x02c (brfalse.s)
 CIL op: 0x004 (ldarg.2)
@@ -11758,6 +12131,7 @@ CIL op: 0x00b (stloc.1)
 CIL op: 0x007 (ldloc.1)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a0
 cil-call(0) ParseBasicFormat::get_Length
 CIL op: 0x032 (blt.s)
 CIL op: 0x006 (ldloc.0)
@@ -11798,19 +12172,24 @@ CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x025 (dup)
 CIL op: 0x00d (stloc.3)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x400039a
 CIL op: 0x009 (ldloc.3)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x400039b
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x01a (ldc.i4.4)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40003a0
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x025 (dup)
 CIL op: 0x013 (stloc.s)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x400039e
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x400039f
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x016 (ldc.i4.0)
@@ -11818,18 +12197,23 @@ CIL op: 0x104 (clt)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x101 (ceq)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x400039c
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x02d (brtrue.s)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x08d (newarr)
+GetUnalignedU32: 0x2000017
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40003a1
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x400039d
 CIL op: 0x02a (ret)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x400039c
 CIL op: 0x02d (brtrue.s)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x065 (neg)
@@ -11854,42 +12238,49 @@ CIL op: 0x00b (stloc.1)
 CIL op: 0x02b (br.s)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x020 (ldc.i4)
+GetUnalignedU32: 0x3e8
 CIL op: 0x034 (bge.un.s)
 CIL op: 0x018 (ldc.i4.2)
 CIL op: 0x00b (stloc.1)
 CIL op: 0x02b (br.s)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x020 (ldc.i4)
+GetUnalignedU32: 0x2710
 CIL op: 0x034 (bge.un.s)
 CIL op: 0x019 (ldc.i4.3)
 CIL op: 0x00b (stloc.1)
 CIL op: 0x02b (br.s)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x020 (ldc.i4)
+GetUnalignedU32: 0x186a0
 CIL op: 0x034 (bge.un.s)
 CIL op: 0x01a (ldc.i4.4)
 CIL op: 0x00b (stloc.1)
 CIL op: 0x02b (br.s)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x020 (ldc.i4)
+GetUnalignedU32: 0xf4240
 CIL op: 0x034 (bge.un.s)
 CIL op: 0x01b (ldc.i4.5)
 CIL op: 0x00b (stloc.1)
 CIL op: 0x02b (br.s)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x020 (ldc.i4)
+GetUnalignedU32: 0x989680
 CIL op: 0x034 (bge.un.s)
 CIL op: 0x01c (ldc.i4.6)
 CIL op: 0x00b (stloc.1)
 CIL op: 0x02b (br.s)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x020 (ldc.i4)
+GetUnalignedU32: 0x5f5e100
 CIL op: 0x034 (bge.un.s)
 CIL op: 0x01d (ldc.i4.7)
 CIL op: 0x00b (stloc.1)
 CIL op: 0x02b (br.s)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x020 (ldc.i4)
+GetUnalignedU32: 0x3b9aca00
 CIL op: 0x034 (bge.un.s)
 CIL op: 0x01e (ldc.i4.8)
 CIL op: 0x00b (stloc.1)
@@ -11901,15 +12292,19 @@ CIL op: 0x007 (ldloc.1)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x058 (add)
 CIL op: 0x08d (newarr)
+GetUnalignedU32: 0x2000017
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x40003a1
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x07e (ldsfld)
+GetUnalignedU32: 0x40003a2
 CIL op: 0x007 (ldloc.1)
 CIL op: 0x095 (ldelem.u4)
 CIL op: 0x05c (div.un)
 CIL op: 0x013 (stloc.s)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x40003a1
 CIL op: 0x008 (ldloc.2)
 CIL op: 0x025 (dup)
 CIL op: 0x017 (ldc.i4.1)
@@ -11920,6 +12315,7 @@ CIL op: 0x0d2 (conv.u1)
 CIL op: 0x09c (stelem.i1)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x07e (ldsfld)
+GetUnalignedU32: 0x40003a2
 CIL op: 0x007 (ldloc.1)
 CIL op: 0x025 (dup)
 CIL op: 0x017 (ldc.i4.1)
@@ -11936,9 +12332,11 @@ CIL op: 0x02f (bge.s)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x40003a1
 CIL op: 0x08e (ldlen)
 CIL op: 0x069 (conv.i4)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x400039d
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
@@ -11994,18 +12392,26 @@ JIT op: 0x051 (LOADSTATICFIELD_CHECKTYPEINIT_INT32) - 0x00
 MethodState_Direct: .cctor
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x08d (newarr)
+GetUnalignedU32: 0x2000070
 CIL op: 0x025 (dup)
 CIL op: 0x0d0 (ldtoken)
+GetUnalignedU32: 0x4000372
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60004d6
 cil-call(0) .cctor::InitializeArray
 CIL op: 0x080 (stsfld)
+GetUnalignedU32: 0x40003a2
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x08d (newarr)
+GetUnalignedU32: 0x2000071
 CIL op: 0x025 (dup)
 CIL op: 0x0d0 (ldtoken)
+GetUnalignedU32: 0x400036e
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60004d6
 cil-call(0) .cctor::InitializeArray
 CIL op: 0x080 (stsfld)
+GetUnalignedU32: 0x40003a3
 CIL op: 0x02a (ret)
 JIT op: 0x002 (LOAD_I32) - 0x00
 JIT op: 0x00d (NEW_VECTOR) - 0x00
@@ -12078,57 +12484,70 @@ Calling method: System.NumberFormatter.NumberToString(String,NumberStore,NumberF
 MethodState_Direct: NumberToString
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60008f7
 cil-call(0) NumberToString::get_IsNaN
 CIL op: 0x02c (brfalse.s)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000772
 cil-call(0) NumberToString::get_NaNSymbol
 CIL op: 0x02a (ret)
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60008f8
 cil-call(0) NumberToString::get_IsInfinity
 CIL op: 0x02c (brfalse.s)
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60008fa
 cil-call(0) NumberToString::get_Positive
 CIL op: 0x02c (brfalse.s)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000783
 cil-call(0) NumberToString::get_PositiveInfinitySymbol
 CIL op: 0x02a (ret)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000774
 cil-call(0) NumberToString::get_NegativeInfinitySymbol
 CIL op: 0x02a (ret)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x02d (brtrue.s)
 CIL op: 0x014 (ldnull)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000765
 cil-call(0) NumberToString::GetInstance
 CIL op: 0x010 (starg.s)
 CIL op: 0x00e (ldarg.s)
 CIL op: 0x02c (brfalse.s)
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000902
 cil-call(0) NumberToString::get_IsFloatingSource
 CIL op: 0x02c (brfalse.s)
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60008fc
 cil-call(0) NumberToString::get_DefaultPrecision
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x600090b
 cil-call(0) NumberToString::RoundEffectiveDigits
 CIL op: 0x026 (pop)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x600023d
 cil-call(0) NumberToString::FormatCustom
 CIL op: 0x02a (ret)
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000902
 cil-call(0) NumberToString::get_IsFloatingSource
 CIL op: 0x039 (brfalse)
+GetUnalignedU32: 0x0f6
 CIL op: 0x005 (ldarg.3)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x035 (bgt.un.s)
@@ -12136,25 +12555,52 @@ CIL op: 0x005 (ldarg.3)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x059 (sub)
 CIL op: 0x045 (switch)
+GetUnalignedU32: 0x005
+GetUnalignedU32: 0x05e
+GetUnalignedU32: 0x0aa
+GetUnalignedU32: 0x0aa
+GetUnalignedU32: 0x05e
+GetUnalignedU32: 0x06f
 CIL op: 0x005 (ldarg.3)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x059 (sub)
 CIL op: 0x045 (switch)
+GetUnalignedU32: 0x005
+GetUnalignedU32: 0x041
+GetUnalignedU32: 0x08d
+GetUnalignedU32: 0x041
+GetUnalignedU32: 0x08d
+GetUnalignedU32: 0x07c
 CIL op: 0x038 (br)
+GetUnalignedU32: 0x088
 CIL op: 0x005 (ldarg.3)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x059 (sub)
 CIL op: 0x045 (switch)
+GetUnalignedU32: 0x005
+GetUnalignedU32: 0x01f
+GetUnalignedU32: 0x06b
+GetUnalignedU32: 0x06b
+GetUnalignedU32: 0x01f
+GetUnalignedU32: 0x030
 CIL op: 0x005 (ldarg.3)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x059 (sub)
 CIL op: 0x045 (switch)
+GetUnalignedU32: 0x005
+GetUnalignedU32: 0x002
+GetUnalignedU32: 0x04e
+GetUnalignedU32: 0x002
+GetUnalignedU32: 0x04e
+GetUnalignedU32: 0x03d
 CIL op: 0x02b (br.s)
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60008fc
 cil-call(0) NumberToString::get_DefaultPrecision
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x600090b
 cil-call(0) NumberToString::RoundEffectiveDigits
 CIL op: 0x026 (pop)
 CIL op: 0x02b (br.s)
@@ -12164,32 +12610,39 @@ CIL op: 0x030 (bgt.s)
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60008fc
 cil-call(0) NumberToString::get_DefaultPrecision
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000904
 cil-call(0) NumberToString::get_IsBankerApplicable
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x600090c
 cil-call(0) NumberToString::RoundEffectiveDigits
 CIL op: 0x026 (pop)
 CIL op: 0x02b (br.s)
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x00e (ldarg.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x600090b
 cil-call(0) NumberToString::RoundEffectiveDigits
 CIL op: 0x026 (pop)
 CIL op: 0x02b (br.s)
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60008fd
 cil-call(0) NumberToString::get_DefaultMaxPrecision
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x600090b
 cil-call(0) NumberToString::RoundEffectiveDigits
 CIL op: 0x026 (pop)
 CIL op: 0x02b (br.s)
 CIL op: 0x00e (ldarg.s)
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60008fc
 cil-call(0) NumberToString::get_DefaultPrecision
 CIL op: 0x031 (ble.s)
 CIL op: 0x00f (ldarga.s)
@@ -12197,16 +12650,19 @@ CIL op: 0x00e (ldarg.s)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x058 (add)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x600090b
 cil-call(0) NumberToString::RoundEffectiveDigits
 CIL op: 0x026 (pop)
 CIL op: 0x02b (br.s)
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60008fc
 cil-call(0) NumberToString::get_DefaultPrecision
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x058 (add)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x600090b
 cil-call(0) NumberToString::RoundEffectiveDigits
 CIL op: 0x026 (pop)
 CIL op: 0x005 (ldarg.3)
@@ -12216,30 +12672,58 @@ CIL op: 0x005 (ldarg.3)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x059 (sub)
 CIL op: 0x045 (switch)
+GetUnalignedU32: 0x005
+GetUnalignedU32: 0x061
+GetUnalignedU32: 0x06b
+GetUnalignedU32: 0x075
+GetUnalignedU32: 0x084
+GetUnalignedU32: 0x08e
 CIL op: 0x005 (ldarg.3)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x059 (sub)
 CIL op: 0x045 (switch)
+GetUnalignedU32: 0x005
+GetUnalignedU32: 0x0a2
+GetUnalignedU32: 0x0db
+GetUnalignedU32: 0x0ac
+GetUnalignedU32: 0x0db
+GetUnalignedU32: 0x0b6
 CIL op: 0x038 (br)
+GetUnalignedU32: 0x0d6
 CIL op: 0x005 (ldarg.3)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x059 (sub)
 CIL op: 0x045 (switch)
+GetUnalignedU32: 0x005
+GetUnalignedU32: 0x022
+GetUnalignedU32: 0x02c
+GetUnalignedU32: 0x036
+GetUnalignedU32: 0x045
+GetUnalignedU32: 0x04f
 CIL op: 0x005 (ldarg.3)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x059 (sub)
 CIL op: 0x045 (switch)
+GetUnalignedU32: 0x005
+GetUnalignedU32: 0x063
+GetUnalignedU32: 0x09c
+GetUnalignedU32: 0x06d
+GetUnalignedU32: 0x09c
+GetUnalignedU32: 0x077
 CIL op: 0x038 (br)
+GetUnalignedU32: 0x097
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x00e (ldarg.s)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000233
 cil-call(0) NumberToString::FormatCurrency
 CIL op: 0x02a (ret)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x00e (ldarg.s)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000234
 cil-call(0) NumberToString::FormatDecimal
 CIL op: 0x02a (ret)
 CIL op: 0x003 (ldarg.1)
@@ -12249,20 +12733,24 @@ CIL op: 0x005 (ldarg.3)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x101 (ceq)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x600023c
 cil-call(0) NumberToString::FormatExponential
 CIL op: 0x02a (ret)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x00e (ldarg.s)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000235
 cil-call(0) NumberToString::FormatFixedPoint
 CIL op: 0x02a (ret)
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000902
 cil-call(0) NumberToString::get_IsFloatingSource
 CIL op: 0x02d (brtrue.s)
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000903
 cil-call(0) NumberToString::get_IsDecimalSource
 CIL op: 0x02d (brtrue.s)
 CIL op: 0x00e (ldarg.s)
@@ -12276,49 +12764,62 @@ CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x101 (ceq)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000238
 cil-call(0) NumberToString::FormatGeneral
 CIL op: 0x02a (ret)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x00e (ldarg.s)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000234
 cil-call(0) NumberToString::FormatDecimal
 CIL op: 0x02a (ret)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x00e (ldarg.s)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000239
 cil-call(0) NumberToString::FormatNumber
 CIL op: 0x02a (ret)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x00e (ldarg.s)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x600023a
 cil-call(0) NumberToString::FormatPercent
 CIL op: 0x02a (ret)
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000902
 cil-call(0) NumberToString::get_IsFloatingSource
 CIL op: 0x02c (brfalse.s)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60008fc
 cil-call(0) NumberToString::get_DefaultPrecision
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000238
 cil-call(0) NumberToString::FormatGeneral
 CIL op: 0x02a (ret)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70000c35
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x6000177
 CIL op: 0x07a (throw)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70000c9f
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70000ccd
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60002ab
 cil-call(0) NumberToString::Concat
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x6000177
 CIL op: 0x07a (throw)
 JIT op: 0x009 (LOAD_PARAMLOCAL_ADDR) - 0x00
 JIT op: 0x00a (CALL_PTR) - 0x00
@@ -12326,6 +12827,7 @@ Calling method: System.NumberStore.get_IsNaN()
 MethodState_Direct: get_IsNaN
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x400039a
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
 JIT op: 0x13b (LOADFIELD_4) - 0x00
@@ -12338,6 +12840,7 @@ Calling method: System.NumberStore.get_IsInfinity()
 MethodState_Direct: get_IsInfinity
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x400039b
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
 JIT op: 0x13b (LOADFIELD_4) - 0x04
@@ -12354,10 +12857,12 @@ Calling method: System.NumberStore.get_IsFloatingSource()
 MethodState_Direct: get_IsFloatingSource
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x400039e
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x02e (beq.s)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x400039e
 CIL op: 0x01d (ldc.i4.7)
 CIL op: 0x101 (ceq)
 CIL op: 0x02a (ret)
@@ -12402,6 +12907,7 @@ Calling method: System.NumberStore.get_IsDecimalSource()
 MethodState_Direct: get_IsDecimalSource
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x400039e
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x102 (cgt)
 CIL op: 0x02a (ret)
@@ -12423,13 +12929,16 @@ Calling method: System.NumberFormatter.FormatDecimal(NumberStore,Int32,NumberFor
 MethodState_Direct: FormatDecimal
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000902
 cil-call(0) FormatDecimal::get_IsFloatingSource
 CIL op: 0x02d (brtrue.s)
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000903
 cil-call(0) FormatDecimal::get_IsDecimalSource
 CIL op: 0x02c (brfalse.s)
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x6000176
 CIL op: 0x07a (throw)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x016 (ldc.i4.0)
@@ -12440,6 +12949,7 @@ CIL op: 0x003 (ldarg.1)
 CIL op: 0x010 (starg.s)
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000900
 cil-call(0) FormatDecimal::get_IntegerDigits
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x030 (bgt.s)
@@ -12447,39 +12957,49 @@ CIL op: 0x003 (ldarg.1)
 CIL op: 0x02b (br.s)
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000900
 cil-call(0) FormatDecimal::get_IntegerDigits
 CIL op: 0x010 (starg.s)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000775
 cil-call(0) FormatDecimal::get_NegativeSign
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a0
 cil-call(0) FormatDecimal::get_Length
 CIL op: 0x058 (add)
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x6000434
 CIL op: 0x00a (stloc.0)
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60008fa
 cil-call(0) FormatDecimal::get_Positive
 CIL op: 0x02d (brtrue.s)
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000914
 cil-call(0) FormatDecimal::CheckZeroOnlyInteger
 CIL op: 0x02d (brtrue.s)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000775
 cil-call(0) FormatDecimal::get_NegativeSign
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000444
 cil-call(0) FormatDecimal::Append
 CIL op: 0x026 (pop)
 CIL op: 0x00f (ldarga.s)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000910
 cil-call(0) FormatDecimal::AppendIntegerString
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000245
 cil-call(0) FormatDecimal::ToString
 CIL op: 0x02a (ret)
 JIT op: 0x009 (LOAD_PARAMLOCAL_ADDR) - 0x04
@@ -12520,12 +13040,14 @@ Calling method: System.NumberStore.get_IntegerDigits()
 MethodState_Direct: get_IntegerDigits
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x400039d
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x030 (bgt.s)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x02a (ret)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x400039d
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
 JIT op: 0x13b (LOADFIELD_4) - 0x04
@@ -12539,18 +13061,19 @@ JIT op: 0x031 (LOADPARAMLOCAL_INT32) - 0x04
 JIT op: 0x092 (BGT_I32I32) - 0x04
 JIT op: 0x031 (LOADPARAMLOCAL_INT32) - 0x04
 JIT op: 0x003 (BRANCH) - 0x04
-JIT op: 0x039 (STOREPARAMLOCAL_INT32) - 0xCCCCCCCC
-JIT op: 0x031 (LOADPARAMLOCAL_INT32) - 0xCCCCCCCC
-JIT op: 0x031 (LOADPARAMLOCAL_INT32) - 0xCCCCCCCC
-JIT op: 0x005 (CALLVIRT_O) - 0xCCCCCCCC
+JIT op: 0x039 (STOREPARAMLOCAL_INT32) - 0x00
+JIT op: 0x031 (LOADPARAMLOCAL_INT32) - 0x00
+JIT op: 0x031 (LOADPARAMLOCAL_INT32) - 0x00
+JIT op: 0x005 (CALLVIRT_O) - 0x00
 Calling method: System.Globalization.NumberFormatInfo.get_NegativeSign()
 MethodState_Direct: get_NegativeSign
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x4000306
 CIL op: 0x02a (ret)
-JIT op: 0x127 (LOADPARAMLOCAL_0) - 0xCCCCCCCC
-JIT op: 0x13b (LOADFIELD_4) - 0xCCCCCCCC
-JIT op: 0x001 (RETURN) - 0xCCCCCCCC
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x13b (LOADFIELD_4) - 0x00
+JIT op: 0x001 (RETURN) - 0x00
 ret -> System.NumberFormatter.FormatDecimal(NumberStore,Int32,NumberFormatInfo)
 JIT op: 0x005 (CALLVIRT_O) - 0x04
 Calling method: System.String.get_Length()
@@ -12565,7 +13088,9 @@ MethodState_Direct: .ctor
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x020 (ldc.i4)
+GetUnalignedU32: 0x7fffffff
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000435
 cil-call(0) .ctor::.ctor
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
@@ -12612,6 +13137,7 @@ Calling method: System.NumberStore.get_Positive()
 MethodState_Direct: get_Positive
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x400039c
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
 JIT op: 0x13b (LOADFIELD_4) - 0x00
@@ -12626,28 +13152,33 @@ Calling method: System.NumberStore.AppendIntegerString(Int32,StringBuilder)
 MethodState_Direct: AppendIntegerString
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000900
 cil-call(0) AppendIntegerString::get_IntegerDigits
 CIL op: 0x02d (brtrue.s)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000447
 cil-call(0) AppendIntegerString::Append
 CIL op: 0x026 (pop)
 CIL op: 0x02a (ret)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x400039d
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x030 (bgt.s)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000447
 cil-call(0) AppendIntegerString::Append
 CIL op: 0x026 (pop)
 CIL op: 0x02a (ret)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x400039d
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x02f (bge.s)
 CIL op: 0x004 (ldarg.2)
@@ -12655,8 +13186,10 @@ CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x400039d
 CIL op: 0x059 (sub)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000447
 cil-call(0) AppendIntegerString::Append
 CIL op: 0x026 (pop)
 CIL op: 0x016 (ldc.i4.0)
@@ -12665,6 +13198,7 @@ CIL op: 0x02b (br.s)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x40003a1
 CIL op: 0x08e (ldlen)
 CIL op: 0x069 (conv.i4)
 CIL op: 0x02f (bge.s)
@@ -12672,17 +13206,20 @@ CIL op: 0x004 (ldarg.2)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x40003a1
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x091 (ldelem.u1)
 CIL op: 0x058 (add)
 CIL op: 0x0d1 (conv.u2)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000446
 cil-call(0) AppendIntegerString::Append
 CIL op: 0x026 (pop)
 CIL op: 0x02b (br.s)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x6000446
 cil-call(0) AppendIntegerString::Append
 CIL op: 0x026 (pop)
 CIL op: 0x006 (ldloc.0)
@@ -12692,6 +13229,7 @@ CIL op: 0x00a (stloc.0)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x400039d
 CIL op: 0x032 (blt.s)
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
@@ -12742,17 +13280,21 @@ MethodState_Direct: Append
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x600043b
 cil-call(0) Append::EnsureSpace
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x4000187
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x4000185
 CIL op: 0x00a (stloc.0)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x058 (add)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x4000185
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x09d (stelem.i2)
@@ -12806,10 +13348,13 @@ Calling method: System.Object.ToString()
 MethodState_Direct: ToString
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x4000187
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x4000185
 CIL op: 0x073 (newobj)
+GetUnalignedU32: 0x6000299
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
 JIT op: 0x13b (LOADFIELD_4) - 0x00
@@ -12850,29 +13395,35 @@ Calling method: System.Text.StringBuilder.Append(String)
 MethodState_Direct: Append
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a0
 cil-call(0) Append::get_Length
 CIL op: 0x00a (stloc.0)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x600043b
 cil-call(0) Append::EnsureSpace
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x00b (stloc.1)
 CIL op: 0x02b (br.s)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x4000187
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
+GetUnalignedU32: 0x4000185
 CIL op: 0x00c (stloc.2)
 CIL op: 0x008 (ldloc.2)
 CIL op: 0x017 (ldc.i4.1)
 CIL op: 0x058 (add)
 CIL op: 0x07d (stfld)
+GetUnalignedU32: 0x4000185
 CIL op: 0x008 (ldloc.2)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x007 (ldloc.1)
 CIL op: 0x06f (callvirt)
+GetUnalignedU32: 0x60002a1
 cil-call(0) Append::get_Chars
 CIL op: 0x09d (stelem.i2)
 CIL op: 0x007 (ldloc.1)
@@ -12979,10 +13530,13 @@ Calling method: System.Console.WriteLine(String)
 MethodState_Direct: WriteLine
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60000d3
 cil-call(0) WriteLine::Write
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000165
 cil-call(0) WriteLine::get_NewLine
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x60000d3
 cil-call(0) WriteLine::Write
 CIL op: 0x02a (ret)
 JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
@@ -12996,12 +13550,15 @@ JIT op: 0x007 (CALL_O) - 0x00
 Calling method: System.Environment.get_NewLine()
 MethodState_Direct: get_NewLine
 CIL op: 0x028 (call)
+GetUnalignedU32: 0x6000168
 cil-call(0) get_NewLine::get_Platform
 CIL op: 0x01a (ldc.i4.4)
 CIL op: 0x02e (beq.s)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x7000074d
 CIL op: 0x02a (ret)
 CIL op: 0x072 (ldstr)
+GetUnalignedU32: 0x70000753
 CIL op: 0x02a (ret)
 JIT op: 0x007 (CALL_O) - 0x00
 Calling method: System.Environment.get_Platform()
