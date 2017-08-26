@@ -108,7 +108,7 @@ static U32 Translate(U32 op, U32 getDynamic) {
 #define PopStackTypeMulti(number) typeStack.ofs -= number
 #define PopStackTypeAll() typeStack.ofs = 0;
 
-#define MayCopyTypeStack() dprintfn("codeSize: %d", codeSize); if (u32Value > cilOfs) ppTypeStacks[u32Value] = DeepCopyTypeStack(&typeStack)
+#define MayCopyTypeStack() dprintfn("codeSize: %d - idx value: %d - %s", codeSize, u32Value, u32Value <= codeSize ? "true" : "false"); if (u32Value > cilOfs) ppTypeStacks[u32Value] = DeepCopyTypeStack(&typeStack)
 
 static void PushStackType_(tTypeStack *pTypeStack, tMD_TypeDef *pType) {
 	U32 i, size;
