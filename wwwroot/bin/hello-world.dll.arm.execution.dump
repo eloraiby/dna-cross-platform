@@ -1,0 +1,764 @@
+MethodState_Direct: Main
+CIL op: 0x000 (nop)
+CIL op: 0x072 (ldstr)
+CIL op: 0x017 (ldc.i4.1)
+CIL op: 0x08c (box)
+CIL op: 0x028 (call)
+cil-call(0) Main::WriteLine
+CIL op: 0x000 (nop)
+CIL op: 0x02a (ret)
+JIT op: 0x000 (NOP) - 0x00
+JIT op: 0x004 (LOAD_STRING) - 0x00
+JIT op: 0x139 (LOAD_I4_1) - 0x00
+JIT op: 0x069 (BOX_INT32) - 0x00
+JIT op: 0x007 (CALL_O) - 0x01
+Calling method: System.Console.WriteLine(String,Object)
+MethodState_Direct: WriteLine
+CIL op: 0x002 (ldarg.0)
+CIL op: 0x017 (ldc.i4.1)
+CIL op: 0x08d (newarr)
+CIL op: 0x025 (dup)
+CIL op: 0x016 (ldc.i4.0)
+CIL op: 0x003 (ldarg.1)
+CIL op: 0x0a2 (stelem.ref)
+CIL op: 0x028 (call)
+cil-call(0) WriteLine::WriteLine
+CIL op: 0x02a (ret)
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x01
+JIT op: 0x139 (LOAD_I4_1) - 0x01
+JIT op: 0x00d (NEW_VECTOR) - 0x01
+JIT op: 0x02b (DUP_4) - 0x01
+JIT op: 0x138 (LOAD_I4_0) - 0x01
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x01
+JIT op: 0x0de (STORE_ELEMENT_32) - 0x01
+JIT op: 0x007 (CALL_O) - 0x01
+Calling method: System.Console.WriteLine(String,Array)
+MethodState_Direct: WriteLine
+CIL op: 0x002 (ldarg.0)
+CIL op: 0x003 (ldarg.1)
+CIL op: 0x028 (call)
+cil-call(0) WriteLine::Format
+CIL op: 0x028 (call)
+cil-call(0) WriteLine::WriteLine
+CIL op: 0x02a (ret)
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x01
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x01
+JIT op: 0x007 (CALL_O) - 0x01
+Calling method: System.String.Format(String,Array)
+MethodState_Direct: Format
+CIL op: 0x014 (ldnull)
+CIL op: 0x002 (ldarg.0)
+CIL op: 0x003 (ldarg.1)
+CIL op: 0x028 (call)
+cil-call(0) Format::Format
+CIL op: 0x02a (ret)
+JIT op: 0x010 (LOAD_NULL) - 0x01
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x01
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x01
+JIT op: 0x007 (CALL_O) - 0x01
+Calling method: System.String.Format(IFormatProvider,String,Array)
+MethodState_Direct: Format
+CIL op: 0x073 (newobj)
+CIL op: 0x025 (dup)
+CIL op: 0x002 (ldarg.0)
+CIL op: 0x003 (ldarg.1)
+CIL op: 0x004 (ldarg.2)
+CIL op: 0x028 (call)
+cil-call(0) Format::FormatHelper
+CIL op: 0x06f (callvirt)
+cil-call(0) Format::ToString
+CIL op: 0x02a (ret)
+JIT op: 0x008 (NEWOBJECT) - 0x01
+MethodState_Direct: .ctor
+CIL op: 0x002 (ldarg.0)
+CIL op: 0x01f (ldc.i4.s)
+CIL op: 0x020 (ldc.i4)
+CIL op: 0x028 (call)
+cil-call(0) .ctor::.ctor
+CIL op: 0x02a (ret)
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x01
+JIT op: 0x002 (LOAD_I32) - 0x01
+JIT op: 0x002 (LOAD_I32) - 0x01
+JIT op: 0x007 (CALL_O) - 0x01
+Calling method: System.Text.StringBuilder..ctor(Int32,Int32)
+MethodState_Direct: .ctor
+CIL op: 0x002 (ldarg.0)
+CIL op: 0x028 (call)
+cil-call(0) .ctor::.ctor
+CIL op: 0x002 (ldarg.0)
+CIL op: 0x003 (ldarg.1)
+CIL op: 0x018 (ldc.i4.2)
+CIL op: 0x028 (call)
+cil-call(0) .ctor::Max
+CIL op: 0x07d (stfld)
+CIL op: 0x002 (ldarg.0)
+CIL op: 0x016 (ldc.i4.0)
+CIL op: 0x07d (stfld)
+CIL op: 0x002 (ldarg.0)
+CIL op: 0x002 (ldarg.0)
+CIL op: 0x07b (ldfld)
+CIL op: 0x08d (newarr)
+CIL op: 0x07d (stfld)
+CIL op: 0x02a (ret)
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x01
+JIT op: 0x007 (CALL_O) - 0x01
+Calling method: System.Object..ctor()
+MethodState_Direct: .ctor
+CIL op: 0x02a (ret)
+JIT op: 0x001 (RETURN) - 0x01
+ret -> System.Text.StringBuilder..ctor(Int32,Int32)
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
+JIT op: 0x13a (LOAD_I4_2) - 0x00
+JIT op: 0x007 (CALL_O) - 0x00
+Calling method: System.Math.Max(Int32,Int32)
+MethodState_Direct: Max
+CIL op: 0x002 (ldarg.0)
+CIL op: 0x003 (ldarg.1)
+CIL op: 0x030 (bgt.s)
+CIL op: 0x003 (ldarg.1)
+CIL op: 0x02a (ret)
+CIL op: 0x002 (ldarg.0)
+CIL op: 0x02a (ret)
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
+JIT op: 0x092 (BGT_I32I32) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x001 (RETURN) - 0x00
+ret -> System.Text.StringBuilder..ctor(Int32,Int32)
+JIT op: 0x049 (STOREFIELD_INT32) - 0x04
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
+JIT op: 0x138 (LOAD_I4_0) - 0x04
+JIT op: 0x049 (STOREFIELD_INT32) - 0x04
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
+JIT op: 0x13b (LOADFIELD_4) - 0x04
+JIT op: 0x00d (NEW_VECTOR) - 0x04
+JIT op: 0x049 (STOREFIELD_INT32) - 0x04
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.Text.StringBuilder..ctor()
+JIT op: 0x001 (RETURN) - 0x00
+ret -> System.String.Format(IFormatProvider,String,Array)
+JIT op: 0x02b (DUP_4) - 0x00
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x007 (CALL_O) - 0x00
+Calling method: System.StringHelper.FormatHelper(StringBuilder,IFormatProvider,String,Array)
+MethodState_Direct: FormatHelper
+CIL op: 0x004 (ldarg.2)
+CIL op: 0x02c (brfalse.s)
+CIL op: 0x005 (ldarg.3)
+CIL op: 0x02d (brtrue.s)
+CIL op: 0x073 (newobj)
+CIL op: 0x07a (throw)
+CIL op: 0x016 (ldc.i4.0)
+CIL op: 0x00a (stloc.0)
+CIL op: 0x016 (ldc.i4.0)
+CIL op: 0x00b (stloc.1)
+CIL op: 0x004 (ldarg.2)
+CIL op: 0x06f (callvirt)
+cil-call(0) FormatHelper::get_Length
+CIL op: 0x00c (stloc.2)
+CIL op: 0x038 (br)
+CIL op: 0x004 (ldarg.2)
+CIL op: 0x006 (ldloc.0)
+CIL op: 0x025 (dup)
+CIL op: 0x017 (ldc.i4.1)
+CIL op: 0x058 (add)
+CIL op: 0x00a (stloc.0)
+CIL op: 0x06f (callvirt)
+cil-call(0) FormatHelper::get_Chars
+CIL op: 0x00d (stloc.3)
+CIL op: 0x009 (ldloc.3)
+CIL op: 0x01f (ldc.i4.s)
+CIL op: 0x040 (bne.un)
+CIL op: 0x002 (ldarg.0)
+CIL op: 0x004 (ldarg.2)
+CIL op: 0x007 (ldloc.1)
+CIL op: 0x006 (ldloc.0)
+CIL op: 0x007 (ldloc.1)
+CIL op: 0x059 (sub)
+CIL op: 0x017 (ldc.i4.1)
+CIL op: 0x059 (sub)
+CIL op: 0x06f (callvirt)
+cil-call(0) FormatHelper::Append
+CIL op: 0x026 (pop)
+CIL op: 0x004 (ldarg.2)
+CIL op: 0x006 (ldloc.0)
+CIL op: 0x06f (callvirt)
+cil-call(0) FormatHelper::get_Chars
+CIL op: 0x01f (ldc.i4.s)
+CIL op: 0x033 (bne.un.s)
+CIL op: 0x006 (ldloc.0)
+CIL op: 0x025 (dup)
+CIL op: 0x017 (ldc.i4.1)
+CIL op: 0x058 (add)
+CIL op: 0x00a (stloc.0)
+CIL op: 0x00b (stloc.1)
+CIL op: 0x038 (br)
+CIL op: 0x004 (ldarg.2)
+CIL op: 0x012 (ldloca.s)
+CIL op: 0x012 (ldloca.s)
+CIL op: 0x012 (ldloca.s)
+CIL op: 0x012 (ldloca.s)
+CIL op: 0x012 (ldloca.s)
+CIL op: 0x028 (call)
+cil-call(0) FormatHelper::ParseFormatSpecifier
+CIL op: 0x011 (ldloc.s)
+CIL op: 0x005 (ldarg.3)
+CIL op: 0x08e (ldlen)
+CIL op: 0x069 (conv.i4)
+CIL op: 0x032 (blt.s)
+CIL op: 0x072 (ldstr)
+CIL op: 0x073 (newobj)
+CIL op: 0x07a (throw)
+CIL op: 0x005 (ldarg.3)
+CIL op: 0x011 (ldloc.s)
+CIL op: 0x09a (ldelem.ref)
+CIL op: 0x013 (stloc.s)
+CIL op: 0x014 (ldnull)
+CIL op: 0x013 (stloc.s)
+CIL op: 0x003 (ldarg.1)
+CIL op: 0x02c (brfalse.s)
+CIL op: 0x003 (ldarg.1)
+CIL op: 0x0d0 (ldtoken)
+CIL op: 0x028 (call)
+cil-call(0) FormatHelper::GetTypeFromHandle
+CIL op: 0x06f (callvirt)
+cil-call(0) FormatHelper::GetFormat
+CIL op: 0x075 (isinst)
+CIL op: 0x013 (stloc.s)
+CIL op: 0x011 (ldloc.s)
+CIL op: 0x02d (brtrue.s)
+CIL op: 0x07e (ldsfld)
+CIL op: 0x013 (stloc.s)
+CIL op: 0x02b (br.s)
+CIL op: 0x011 (ldloc.s)
+CIL op: 0x02c (brfalse.s)
+CIL op: 0x011 (ldloc.s)
+CIL op: 0x011 (ldloc.s)
+CIL op: 0x011 (ldloc.s)
+CIL op: 0x003 (ldarg.1)
+CIL op: 0x06f (callvirt)
+cil-call(0) FormatHelper::Format
+CIL op: 0x013 (stloc.s)
+CIL op: 0x02b (br.s)
+CIL op: 0x011 (ldloc.s)
+CIL op: 0x075 (isinst)
+CIL op: 0x02c (brfalse.s)
+CIL op: 0x011 (ldloc.s)
+CIL op: 0x074 (castclass)
+CIL op: 0x011 (ldloc.s)
+CIL op: 0x003 (ldarg.1)
+CIL op: 0x06f (callvirt)
+cil-call(0) FormatHelper::ToString
+CIL op: 0x013 (stloc.s)
+CIL op: 0x02b (br.s)
+CIL op: 0x011 (ldloc.s)
+CIL op: 0x06f (callvirt)
+cil-call(0) FormatHelper::ToString
+CIL op: 0x013 (stloc.s)
+CIL op: 0x011 (ldloc.s)
+CIL op: 0x011 (ldloc.s)
+CIL op: 0x06f (callvirt)
+cil-call(0) FormatHelper::get_Length
+CIL op: 0x031 (ble.s)
+CIL op: 0x011 (ldloc.s)
+CIL op: 0x011 (ldloc.s)
+CIL op: 0x06f (callvirt)
+cil-call(0) FormatHelper::get_Length
+CIL op: 0x059 (sub)
+CIL op: 0x013 (stloc.s)
+CIL op: 0x011 (ldloc.s)
+CIL op: 0x02c (brfalse.s)
+CIL op: 0x002 (ldarg.0)
+CIL op: 0x011 (ldloc.s)
+CIL op: 0x06f (callvirt)
+cil-call(0) FormatHelper::Append
+CIL op: 0x026 (pop)
+CIL op: 0x002 (ldarg.0)
+CIL op: 0x01f (ldc.i4.s)
+CIL op: 0x011 (ldloc.s)
+CIL op: 0x06f (callvirt)
+cil-call(0) FormatHelper::Append
+CIL op: 0x026 (pop)
+CIL op: 0x02b (br.s)
+CIL op: 0x002 (ldarg.0)
+CIL op: 0x01f (ldc.i4.s)
+CIL op: 0x011 (ldloc.s)
+CIL op: 0x06f (callvirt)
+cil-call(0) FormatHelper::Append
+CIL op: 0x026 (pop)
+CIL op: 0x002 (ldarg.0)
+CIL op: 0x011 (ldloc.s)
+CIL op: 0x06f (callvirt)
+cil-call(0) FormatHelper::Append
+CIL op: 0x026 (pop)
+CIL op: 0x02b (br.s)
+CIL op: 0x002 (ldarg.0)
+CIL op: 0x011 (ldloc.s)
+CIL op: 0x06f (callvirt)
+cil-call(0) FormatHelper::Append
+CIL op: 0x026 (pop)
+CIL op: 0x006 (ldloc.0)
+CIL op: 0x00b (stloc.1)
+CIL op: 0x02b (br.s)
+CIL op: 0x009 (ldloc.3)
+CIL op: 0x01f (ldc.i4.s)
+CIL op: 0x033 (bne.un.s)
+CIL op: 0x006 (ldloc.0)
+CIL op: 0x008 (ldloc.2)
+CIL op: 0x02f (bge.s)
+CIL op: 0x004 (ldarg.2)
+CIL op: 0x006 (ldloc.0)
+CIL op: 0x06f (callvirt)
+cil-call(0) FormatHelper::get_Chars
+CIL op: 0x01f (ldc.i4.s)
+CIL op: 0x033 (bne.un.s)
+CIL op: 0x002 (ldarg.0)
+CIL op: 0x004 (ldarg.2)
+CIL op: 0x007 (ldloc.1)
+CIL op: 0x006 (ldloc.0)
+CIL op: 0x007 (ldloc.1)
+CIL op: 0x059 (sub)
+CIL op: 0x017 (ldc.i4.1)
+CIL op: 0x059 (sub)
+CIL op: 0x06f (callvirt)
+cil-call(0) FormatHelper::Append
+CIL op: 0x026 (pop)
+CIL op: 0x006 (ldloc.0)
+CIL op: 0x025 (dup)
+CIL op: 0x017 (ldc.i4.1)
+CIL op: 0x058 (add)
+CIL op: 0x00a (stloc.0)
+CIL op: 0x00b (stloc.1)
+CIL op: 0x02b (br.s)
+CIL op: 0x072 (ldstr)
+CIL op: 0x073 (newobj)
+CIL op: 0x07a (throw)
+CIL op: 0x006 (ldloc.0)
+CIL op: 0x008 (ldloc.2)
+CIL op: 0x03f (blt)
+CIL op: 0x007 (ldloc.1)
+CIL op: 0x008 (ldloc.2)
+CIL op: 0x02f (bge.s)
+CIL op: 0x002 (ldarg.0)
+CIL op: 0x004 (ldarg.2)
+CIL op: 0x007 (ldloc.1)
+CIL op: 0x008 (ldloc.2)
+CIL op: 0x007 (ldloc.1)
+CIL op: 0x059 (sub)
+CIL op: 0x06f (callvirt)
+cil-call(0) FormatHelper::Append
+CIL op: 0x026 (pop)
+CIL op: 0x02a (ret)
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x0aa (BRANCH_FALSE) - 0x00
+JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
+JIT op: 0x0ab (BRANCH_TRUE) - 0x00
+JIT op: 0x138 (LOAD_I4_0) - 0x00
+JIT op: 0x133 (STOREPARAMLOCAL_4) - 0x00
+JIT op: 0x138 (LOAD_I4_0) - 0x00
+JIT op: 0x134 (STOREPARAMLOCAL_5) - 0x00
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x00
+JIT op: 0x005 (CALLVIRT_O) - 0x00
+Calling method: System.String.get_Length()
+MethodState_Direct: get_Length
+CIL op: 0x002 (ldarg.0)
+CIL op: 0x07b (ldfld)
+CIL op: 0x02a (ret)
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x00
+JIT op: 0x13b (LOADFIELD_4) - 0x00
+JIT op: 0x001 (RETURN) - 0x00
+ret -> System.StringHelper.FormatHelper(StringBuilder,IFormatProvider,String,Array)
+JIT op: 0x135 (STOREPARAMLOCAL_6) - 0x04
+JIT op: 0x003 (BRANCH) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x12d (LOADPARAMLOCAL_6) - 0x04
+JIT op: 0x094 (BLT_I32I32) - 0x04
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x02b (DUP_4) - 0x04
+JIT op: 0x139 (LOAD_I4_1) - 0x04
+JIT op: 0x080 (ADD_I32I32) - 0x04
+JIT op: 0x133 (STOREPARAMLOCAL_4) - 0x04
+JIT op: 0x005 (CALLVIRT_O) - 0x04
+Calling method: System.String.get_Chars(Int32)
+MethodState_Direct: get_Chars
+JIT op: 0x006 (CALL_NATIVE) - 0x04
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.StringHelper.FormatHelper(StringBuilder,IFormatProvider,String,Array)
+JIT op: 0x136 (STOREPARAMLOCAL_7) - 0x04
+JIT op: 0x12e (LOADPARAMLOCAL_7) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x095 (BNE_UN_I32I32) - 0x04
+JIT op: 0x12e (LOADPARAMLOCAL_7) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x095 (BNE_UN_I32I32) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x12d (LOADPARAMLOCAL_6) - 0x04
+JIT op: 0x094 (BLT_I32I32) - 0x04
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x02b (DUP_4) - 0x04
+JIT op: 0x139 (LOAD_I4_1) - 0x04
+JIT op: 0x080 (ADD_I32I32) - 0x04
+JIT op: 0x133 (STOREPARAMLOCAL_4) - 0x04
+JIT op: 0x005 (CALLVIRT_O) - 0x04
+Calling method: System.String.get_Chars(Int32)
+MethodState_Direct: get_Chars
+JIT op: 0x006 (CALL_NATIVE) - 0x04
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.StringHelper.FormatHelper(StringBuilder,IFormatProvider,String,Array)
+JIT op: 0x136 (STOREPARAMLOCAL_7) - 0x04
+JIT op: 0x12e (LOADPARAMLOCAL_7) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x095 (BNE_UN_I32I32) - 0x04
+JIT op: 0x12e (LOADPARAMLOCAL_7) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x095 (BNE_UN_I32I32) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x12d (LOADPARAMLOCAL_6) - 0x04
+JIT op: 0x094 (BLT_I32I32) - 0x04
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x02b (DUP_4) - 0x04
+JIT op: 0x139 (LOAD_I4_1) - 0x04
+JIT op: 0x080 (ADD_I32I32) - 0x04
+JIT op: 0x133 (STOREPARAMLOCAL_4) - 0x04
+JIT op: 0x005 (CALLVIRT_O) - 0x04
+Calling method: System.String.get_Chars(Int32)
+MethodState_Direct: get_Chars
+JIT op: 0x006 (CALL_NATIVE) - 0x04
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.StringHelper.FormatHelper(StringBuilder,IFormatProvider,String,Array)
+JIT op: 0x136 (STOREPARAMLOCAL_7) - 0x04
+JIT op: 0x12e (LOADPARAMLOCAL_7) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x095 (BNE_UN_I32I32) - 0x04
+JIT op: 0x12e (LOADPARAMLOCAL_7) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x095 (BNE_UN_I32I32) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x12d (LOADPARAMLOCAL_6) - 0x04
+JIT op: 0x094 (BLT_I32I32) - 0x04
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x02b (DUP_4) - 0x04
+JIT op: 0x139 (LOAD_I4_1) - 0x04
+JIT op: 0x080 (ADD_I32I32) - 0x04
+JIT op: 0x133 (STOREPARAMLOCAL_4) - 0x04
+JIT op: 0x005 (CALLVIRT_O) - 0x04
+Calling method: System.String.get_Chars(Int32)
+MethodState_Direct: get_Chars
+JIT op: 0x006 (CALL_NATIVE) - 0x04
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.StringHelper.FormatHelper(StringBuilder,IFormatProvider,String,Array)
+JIT op: 0x136 (STOREPARAMLOCAL_7) - 0x04
+JIT op: 0x12e (LOADPARAMLOCAL_7) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x095 (BNE_UN_I32I32) - 0x04
+JIT op: 0x12e (LOADPARAMLOCAL_7) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x095 (BNE_UN_I32I32) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x12d (LOADPARAMLOCAL_6) - 0x04
+JIT op: 0x094 (BLT_I32I32) - 0x04
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x02b (DUP_4) - 0x04
+JIT op: 0x139 (LOAD_I4_1) - 0x04
+JIT op: 0x080 (ADD_I32I32) - 0x04
+JIT op: 0x133 (STOREPARAMLOCAL_4) - 0x04
+JIT op: 0x005 (CALLVIRT_O) - 0x04
+Calling method: System.String.get_Chars(Int32)
+MethodState_Direct: get_Chars
+JIT op: 0x006 (CALL_NATIVE) - 0x04
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.StringHelper.FormatHelper(StringBuilder,IFormatProvider,String,Array)
+JIT op: 0x136 (STOREPARAMLOCAL_7) - 0x04
+JIT op: 0x12e (LOADPARAMLOCAL_7) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x095 (BNE_UN_I32I32) - 0x04
+JIT op: 0x12e (LOADPARAMLOCAL_7) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x095 (BNE_UN_I32I32) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x12d (LOADPARAMLOCAL_6) - 0x04
+JIT op: 0x094 (BLT_I32I32) - 0x04
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x02b (DUP_4) - 0x04
+JIT op: 0x139 (LOAD_I4_1) - 0x04
+JIT op: 0x080 (ADD_I32I32) - 0x04
+JIT op: 0x133 (STOREPARAMLOCAL_4) - 0x04
+JIT op: 0x005 (CALLVIRT_O) - 0x04
+Calling method: System.String.get_Chars(Int32)
+MethodState_Direct: get_Chars
+JIT op: 0x006 (CALL_NATIVE) - 0x04
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.StringHelper.FormatHelper(StringBuilder,IFormatProvider,String,Array)
+JIT op: 0x136 (STOREPARAMLOCAL_7) - 0x04
+JIT op: 0x12e (LOADPARAMLOCAL_7) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x095 (BNE_UN_I32I32) - 0x04
+JIT op: 0x12e (LOADPARAMLOCAL_7) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x095 (BNE_UN_I32I32) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x12d (LOADPARAMLOCAL_6) - 0x04
+JIT op: 0x094 (BLT_I32I32) - 0x04
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x02b (DUP_4) - 0x04
+JIT op: 0x139 (LOAD_I4_1) - 0x04
+JIT op: 0x080 (ADD_I32I32) - 0x04
+JIT op: 0x133 (STOREPARAMLOCAL_4) - 0x04
+JIT op: 0x005 (CALLVIRT_O) - 0x04
+Calling method: System.String.get_Chars(Int32)
+MethodState_Direct: get_Chars
+JIT op: 0x006 (CALL_NATIVE) - 0x04
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.StringHelper.FormatHelper(StringBuilder,IFormatProvider,String,Array)
+JIT op: 0x136 (STOREPARAMLOCAL_7) - 0x04
+JIT op: 0x12e (LOADPARAMLOCAL_7) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x095 (BNE_UN_I32I32) - 0x04
+JIT op: 0x12e (LOADPARAMLOCAL_7) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x095 (BNE_UN_I32I32) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x12d (LOADPARAMLOCAL_6) - 0x04
+JIT op: 0x094 (BLT_I32I32) - 0x04
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x02b (DUP_4) - 0x04
+JIT op: 0x139 (LOAD_I4_1) - 0x04
+JIT op: 0x080 (ADD_I32I32) - 0x04
+JIT op: 0x133 (STOREPARAMLOCAL_4) - 0x04
+JIT op: 0x005 (CALLVIRT_O) - 0x04
+Calling method: System.String.get_Chars(Int32)
+MethodState_Direct: get_Chars
+JIT op: 0x006 (CALL_NATIVE) - 0x04
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.StringHelper.FormatHelper(StringBuilder,IFormatProvider,String,Array)
+JIT op: 0x136 (STOREPARAMLOCAL_7) - 0x04
+JIT op: 0x12e (LOADPARAMLOCAL_7) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x095 (BNE_UN_I32I32) - 0x04
+JIT op: 0x12e (LOADPARAMLOCAL_7) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x095 (BNE_UN_I32I32) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x12d (LOADPARAMLOCAL_6) - 0x04
+JIT op: 0x094 (BLT_I32I32) - 0x04
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x02b (DUP_4) - 0x04
+JIT op: 0x139 (LOAD_I4_1) - 0x04
+JIT op: 0x080 (ADD_I32I32) - 0x04
+JIT op: 0x133 (STOREPARAMLOCAL_4) - 0x04
+JIT op: 0x005 (CALLVIRT_O) - 0x04
+Calling method: System.String.get_Chars(Int32)
+MethodState_Direct: get_Chars
+JIT op: 0x006 (CALL_NATIVE) - 0x04
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.StringHelper.FormatHelper(StringBuilder,IFormatProvider,String,Array)
+JIT op: 0x136 (STOREPARAMLOCAL_7) - 0x04
+JIT op: 0x12e (LOADPARAMLOCAL_7) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x095 (BNE_UN_I32I32) - 0x04
+JIT op: 0x12e (LOADPARAMLOCAL_7) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x095 (BNE_UN_I32I32) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x12d (LOADPARAMLOCAL_6) - 0x04
+JIT op: 0x094 (BLT_I32I32) - 0x04
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x02b (DUP_4) - 0x04
+JIT op: 0x139 (LOAD_I4_1) - 0x04
+JIT op: 0x080 (ADD_I32I32) - 0x04
+JIT op: 0x133 (STOREPARAMLOCAL_4) - 0x04
+JIT op: 0x005 (CALLVIRT_O) - 0x04
+Calling method: System.String.get_Chars(Int32)
+MethodState_Direct: get_Chars
+JIT op: 0x006 (CALL_NATIVE) - 0x04
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.StringHelper.FormatHelper(StringBuilder,IFormatProvider,String,Array)
+JIT op: 0x136 (STOREPARAMLOCAL_7) - 0x04
+JIT op: 0x12e (LOADPARAMLOCAL_7) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x095 (BNE_UN_I32I32) - 0x04
+JIT op: 0x12e (LOADPARAMLOCAL_7) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x095 (BNE_UN_I32I32) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x12d (LOADPARAMLOCAL_6) - 0x04
+JIT op: 0x094 (BLT_I32I32) - 0x04
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x02b (DUP_4) - 0x04
+JIT op: 0x139 (LOAD_I4_1) - 0x04
+JIT op: 0x080 (ADD_I32I32) - 0x04
+JIT op: 0x133 (STOREPARAMLOCAL_4) - 0x04
+JIT op: 0x005 (CALLVIRT_O) - 0x04
+Calling method: System.String.get_Chars(Int32)
+MethodState_Direct: get_Chars
+JIT op: 0x006 (CALL_NATIVE) - 0x04
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.StringHelper.FormatHelper(StringBuilder,IFormatProvider,String,Array)
+JIT op: 0x136 (STOREPARAMLOCAL_7) - 0x04
+JIT op: 0x12e (LOADPARAMLOCAL_7) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x095 (BNE_UN_I32I32) - 0x04
+JIT op: 0x12e (LOADPARAMLOCAL_7) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x095 (BNE_UN_I32I32) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x12d (LOADPARAMLOCAL_6) - 0x04
+JIT op: 0x094 (BLT_I32I32) - 0x04
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x02b (DUP_4) - 0x04
+JIT op: 0x139 (LOAD_I4_1) - 0x04
+JIT op: 0x080 (ADD_I32I32) - 0x04
+JIT op: 0x133 (STOREPARAMLOCAL_4) - 0x04
+JIT op: 0x005 (CALLVIRT_O) - 0x04
+Calling method: System.String.get_Chars(Int32)
+MethodState_Direct: get_Chars
+JIT op: 0x006 (CALL_NATIVE) - 0x04
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.StringHelper.FormatHelper(StringBuilder,IFormatProvider,String,Array)
+JIT op: 0x136 (STOREPARAMLOCAL_7) - 0x04
+JIT op: 0x12e (LOADPARAMLOCAL_7) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x095 (BNE_UN_I32I32) - 0x04
+JIT op: 0x12e (LOADPARAMLOCAL_7) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x095 (BNE_UN_I32I32) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x12d (LOADPARAMLOCAL_6) - 0x04
+JIT op: 0x094 (BLT_I32I32) - 0x04
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x02b (DUP_4) - 0x04
+JIT op: 0x139 (LOAD_I4_1) - 0x04
+JIT op: 0x080 (ADD_I32I32) - 0x04
+JIT op: 0x133 (STOREPARAMLOCAL_4) - 0x04
+JIT op: 0x005 (CALLVIRT_O) - 0x04
+Calling method: System.String.get_Chars(Int32)
+MethodState_Direct: get_Chars
+JIT op: 0x006 (CALL_NATIVE) - 0x04
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.StringHelper.FormatHelper(StringBuilder,IFormatProvider,String,Array)
+JIT op: 0x136 (STOREPARAMLOCAL_7) - 0x04
+JIT op: 0x12e (LOADPARAMLOCAL_7) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x095 (BNE_UN_I32I32) - 0x04
+JIT op: 0x12e (LOADPARAMLOCAL_7) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x095 (BNE_UN_I32I32) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x12d (LOADPARAMLOCAL_6) - 0x04
+JIT op: 0x094 (BLT_I32I32) - 0x04
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x02b (DUP_4) - 0x04
+JIT op: 0x139 (LOAD_I4_1) - 0x04
+JIT op: 0x080 (ADD_I32I32) - 0x04
+JIT op: 0x133 (STOREPARAMLOCAL_4) - 0x04
+JIT op: 0x005 (CALLVIRT_O) - 0x04
+Calling method: System.String.get_Chars(Int32)
+MethodState_Direct: get_Chars
+JIT op: 0x006 (CALL_NATIVE) - 0x04
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.StringHelper.FormatHelper(StringBuilder,IFormatProvider,String,Array)
+JIT op: 0x136 (STOREPARAMLOCAL_7) - 0x04
+JIT op: 0x12e (LOADPARAMLOCAL_7) - 0x04
+JIT op: 0x002 (LOAD_I32) - 0x04
+JIT op: 0x095 (BNE_UN_I32I32) - 0x04
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x04
+JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x04
+JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x04
+JIT op: 0x12c (LOADPARAMLOCAL_5) - 0x04
+JIT op: 0x081 (SUB_I32I32) - 0x04
+JIT op: 0x139 (LOAD_I4_1) - 0x04
+JIT op: 0x081 (SUB_I32I32) - 0x04
+JIT op: 0x005 (CALLVIRT_O) - 0x04
+Calling method: System.Text.StringBuilder.Append(String,Int32,Int32)
+MethodState_Direct: Append
+CIL op: 0x003 (ldarg.1)
+CIL op: 0x02d (brtrue.s)
+CIL op: 0x002 (ldarg.0)
+CIL op: 0x02a (ret)
+CIL op: 0x004 (ldarg.2)
+CIL op: 0x016 (ldc.i4.0)
+CIL op: 0x032 (blt.s)
+CIL op: 0x005 (ldarg.3)
+CIL op: 0x016 (ldc.i4.0)
+CIL op: 0x032 (blt.s)
+CIL op: 0x003 (ldarg.1)
+CIL op: 0x06f (callvirt)
+cil-call(0) Append::get_Length
+CIL op: 0x004 (ldarg.2)
+CIL op: 0x005 (ldarg.3)
+CIL op: 0x058 (add)
+CIL op: 0x02f (bge.s)
+CIL op: 0x073 (newobj)
+CIL op: 0x07a (throw)
+CIL op: 0x002 (ldarg.0)
+CIL op: 0x005 (ldarg.3)
+CIL op: 0x028 (call)
+cil-call(0) Append::EnsureSpace
+CIL op: 0x016 (ldc.i4.0)
+CIL op: 0x00a (stloc.0)
+CIL op: 0x02b (br.s)
+CIL op: 0x002 (ldarg.0)
+CIL op: 0x07b (ldfld)
+CIL op: 0x002 (ldarg.0)
+CIL op: 0x002 (ldarg.0)
+CIL op: 0x07b (ldfld)
+CIL op: 0x00b (stloc.1)
+CIL op: 0x007 (ldloc.1)
+CIL op: 0x017 (ldc.i4.1)
+CIL op: 0x058 (add)
+CIL op: 0x07d (stfld)
+CIL op: 0x007 (ldloc.1)
+CIL op: 0x003 (ldarg.1)
+CIL op: 0x004 (ldarg.2)
+CIL op: 0x006 (ldloc.0)
+CIL op: 0x058 (add)
+CIL op: 0x06f (callvirt)
+cil-call(0) Append::get_Chars
+CIL op: 0x09d (stelem.i2)
+CIL op: 0x006 (ldloc.0)
+CIL op: 0x017 (ldc.i4.1)
+CIL op: 0x058 (add)
+CIL op: 0x00a (stloc.0)
+CIL op: 0x006 (ldloc.0)
+CIL op: 0x005 (ldarg.3)
+CIL op: 0x032 (blt.s)
+CIL op: 0x002 (ldarg.0)
+CIL op: 0x02a (ret)
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x04
+JIT op: 0x0ab (BRANCH_TRUE) - 0x04
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x04
+JIT op: 0x138 (LOAD_I4_0) - 0x04
+JIT op: 0x094 (BLT_I32I32) - 0x04
+JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x04
+JIT op: 0x138 (LOAD_I4_0) - 0x04
+JIT op: 0x094 (BLT_I32I32) - 0x04
+JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x04
+JIT op: 0x005 (CALLVIRT_O) - 0x04
+Calling method: System.String.get_Length()
+MethodState_Direct: get_Length
+JIT op: 0x127 (LOADPARAMLOCAL_0) - 0x04
+JIT op: 0x13b (LOADFIELD_4) - 0x04
+JIT op: 0x001 (RETURN) - 0x04
+ret -> System.Text.StringBuilder.Append(String,Int32,Int32)
+JIT op: 0x129 (LOADPARAMLOCAL_2) - 0x04
+JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x04
+JIT op: 0x080 (ADD_I32I32) 
