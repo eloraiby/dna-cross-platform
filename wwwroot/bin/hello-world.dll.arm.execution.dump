@@ -1,3 +1,4 @@
+Starting /home/aifu/Projects/dotnet-cross-platform/src/DNA/native/build-dna-cross-Desktop-Debug/dna-cross...
 MethodState_Direct: Main
 CIL op: 0x000 (nop)
 CIL op: 0x072 (ldstr)
@@ -136,6 +137,7 @@ MethodState_Direct: Max
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x030 (bgt.s)
+codeSize: 8
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x02a (ret)
 CIL op: 0x002 (ldarg.0)
@@ -168,8 +170,10 @@ Calling method: System.StringHelper.FormatHelper(StringBuilder,IFormatProvider,S
 MethodState_Direct: FormatHelper
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x02c (brfalse.s)
+codeSize: 384
 CIL op: 0x005 (ldarg.3)
 CIL op: 0x02d (brtrue.s)
+codeSize: 384
 CIL op: 0x073 (newobj)
 GetUnalignedU32: 0x6000024
 CIL op: 0x07a (throw)
@@ -184,6 +188,7 @@ cil-call(0) FormatHelper::get_Length
 CIL op: 0x00c (stloc.2)
 CIL op: 0x038 (br)
 GetUnalignedU32: 0x14c
+codeSize: 384
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x025 (dup)
@@ -198,6 +203,7 @@ CIL op: 0x009 (ldloc.3)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x040 (bne.un)
 GetUnalignedU32: 0x103
+codeSize: 384
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x007 (ldloc.1)
@@ -217,6 +223,7 @@ GetUnalignedU32: 0x60002a1
 cil-call(0) FormatHelper::get_Chars
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x033 (bne.un.s)
+codeSize: 384
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x025 (dup)
 CIL op: 0x017 (ldc.i4.1)
@@ -225,6 +232,7 @@ CIL op: 0x00a (stloc.0)
 CIL op: 0x00b (stloc.1)
 CIL op: 0x038 (br)
 GetUnalignedU32: 0x114
+codeSize: 384
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x012 (ldloca.s)
 CIL op: 0x012 (ldloca.s)
@@ -239,6 +247,7 @@ CIL op: 0x005 (ldarg.3)
 CIL op: 0x08e (ldlen)
 CIL op: 0x069 (conv.i4)
 CIL op: 0x032 (blt.s)
+codeSize: 384
 CIL op: 0x072 (ldstr)
 GetUnalignedU32: 0x70001076
 CIL op: 0x073 (newobj)
@@ -252,6 +261,7 @@ CIL op: 0x014 (ldnull)
 CIL op: 0x013 (stloc.s)
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x02c (brfalse.s)
+codeSize: 384
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x0d0 (ldtoken)
 GetUnalignedU32: 0x2000038
@@ -266,12 +276,15 @@ GetUnalignedU32: 0x2000038
 CIL op: 0x013 (stloc.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x02d (brtrue.s)
+codeSize: 384
 CIL op: 0x07e (ldsfld)
 GetUnalignedU32: 0x400011c
 CIL op: 0x013 (stloc.s)
 CIL op: 0x02b (br.s)
+codeSize: 384
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x02c (brfalse.s)
+codeSize: 384
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x011 (ldloc.s)
@@ -281,10 +294,12 @@ GetUnalignedU32: 0x60001a0
 cil-call(0) FormatHelper::Format
 CIL op: 0x013 (stloc.s)
 CIL op: 0x02b (br.s)
+codeSize: 384
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x075 (isinst)
 GetUnalignedU32: 0x200003c
 CIL op: 0x02c (brfalse.s)
+codeSize: 384
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x074 (castclass)
 GetUnalignedU32: 0x200003c
@@ -295,6 +310,7 @@ GetUnalignedU32: 0x60001a4
 cil-call(0) FormatHelper::ToString
 CIL op: 0x013 (stloc.s)
 CIL op: 0x02b (br.s)
+codeSize: 384
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x06f (callvirt)
 GetUnalignedU32: 0x6000245
@@ -306,6 +322,7 @@ CIL op: 0x06f (callvirt)
 GetUnalignedU32: 0x60002a0
 cil-call(0) FormatHelper::get_Length
 CIL op: 0x031 (ble.s)
+codeSize: 384
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x06f (callvirt)
@@ -315,6 +332,7 @@ CIL op: 0x059 (sub)
 CIL op: 0x013 (stloc.s)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x02c (brfalse.s)
+codeSize: 384
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x06f (callvirt)
@@ -329,6 +347,7 @@ GetUnalignedU32: 0x6000447
 cil-call(0) FormatHelper::Append
 CIL op: 0x026 (pop)
 CIL op: 0x02b (br.s)
+codeSize: 384
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x011 (ldloc.s)
@@ -343,6 +362,7 @@ GetUnalignedU32: 0x6000444
 cil-call(0) FormatHelper::Append
 CIL op: 0x026 (pop)
 CIL op: 0x02b (br.s)
+codeSize: 384
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x011 (ldloc.s)
 CIL op: 0x06f (callvirt)
@@ -352,12 +372,15 @@ CIL op: 0x026 (pop)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x00b (stloc.1)
 CIL op: 0x02b (br.s)
+codeSize: 384
 CIL op: 0x009 (ldloc.3)
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x033 (bne.un.s)
+codeSize: 384
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x008 (ldloc.2)
 CIL op: 0x02f (bge.s)
+codeSize: 384
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x06f (callvirt)
@@ -365,6 +388,7 @@ GetUnalignedU32: 0x60002a1
 cil-call(0) FormatHelper::get_Chars
 CIL op: 0x01f (ldc.i4.s)
 CIL op: 0x033 (bne.un.s)
+codeSize: 384
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x007 (ldloc.1)
@@ -384,6 +408,7 @@ CIL op: 0x058 (add)
 CIL op: 0x00a (stloc.0)
 CIL op: 0x00b (stloc.1)
 CIL op: 0x02b (br.s)
+codeSize: 384
 CIL op: 0x072 (ldstr)
 GetUnalignedU32: 0x70001143
 CIL op: 0x073 (newobj)
@@ -393,9 +418,11 @@ CIL op: 0x006 (ldloc.0)
 CIL op: 0x008 (ldloc.2)
 CIL op: 0x03f (blt)
 GetUnalignedU32: 0xfffffead
+codeSize: 384
 CIL op: 0x007 (ldloc.1)
 CIL op: 0x008 (ldloc.2)
 CIL op: 0x02f (bge.s)
+codeSize: 384
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x007 (ldloc.1)
@@ -747,14 +774,17 @@ Calling method: System.Text.StringBuilder.Append(String,Int32,Int32)
 MethodState_Direct: Append
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x02d (brtrue.s)
+codeSize: 84
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x02a (ret)
 CIL op: 0x004 (ldarg.2)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x032 (blt.s)
+codeSize: 84
 CIL op: 0x005 (ldarg.3)
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x032 (blt.s)
+codeSize: 84
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x06f (callvirt)
 GetUnalignedU32: 0x60002a0
@@ -763,6 +793,7 @@ CIL op: 0x004 (ldarg.2)
 CIL op: 0x005 (ldarg.3)
 CIL op: 0x058 (add)
 CIL op: 0x02f (bge.s)
+codeSize: 84
 CIL op: 0x073 (newobj)
 GetUnalignedU32: 0x6000028
 CIL op: 0x07a (throw)
@@ -774,6 +805,7 @@ cil-call(0) Append::EnsureSpace
 CIL op: 0x016 (ldc.i4.0)
 CIL op: 0x00a (stloc.0)
 CIL op: 0x02b (br.s)
+codeSize: 84
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
 GetUnalignedU32: 0x4000187
@@ -803,6 +835,7 @@ CIL op: 0x00a (stloc.0)
 CIL op: 0x006 (ldloc.0)
 CIL op: 0x005 (ldarg.3)
 CIL op: 0x032 (blt.s)
+codeSize: 84
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x02a (ret)
 JIT op: 0x128 (LOADPARAMLOCAL_1) - 0x04
@@ -839,6 +872,7 @@ CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
 GetUnalignedU32: 0x4000186
 CIL op: 0x031 (ble.s)
+codeSize: 86
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
@@ -856,6 +890,7 @@ GetUnalignedU32: 0x4000185
 CIL op: 0x003 (ldarg.1)
 CIL op: 0x058 (add)
 CIL op: 0x032 (blt.s)
+codeSize: 86
 CIL op: 0x002 (ldarg.0)
 CIL op: 0x07b (ldfld)
 GetUnalignedU32: 0x4000186
@@ -895,3 +930,4 @@ JIT op: 0x12b (LOADPARAMLOCAL_4) - 0x00
 JIT op: 0x12a (LOADPARAMLOCAL_3) - 0x00
 JIT op: 0x094 (BLT_I32I32) - 0x00
 The program has unexpectedly finished.
+/home/aifu/Projects/dotnet-cross-platform/src/DNA/native/build-dna-cross-Desktop-Debug/dna-cross crashed.

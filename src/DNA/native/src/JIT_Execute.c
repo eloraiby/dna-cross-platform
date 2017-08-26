@@ -203,10 +203,13 @@ U32 opcodeNumUses[JIT_OPCODE_MAXNUM];
 #ifdef __GNUC__
 
 #define GET_LABEL(var, label) var = &&label
-
+/*
 #define GO_NEXT() \
     CHECK_FOR_BREAKPOINT(); \
 	goto **(void**)(pCurOp++)
+*/
+#define GO_NEXT() \
+    goto **(void**)(pCurOp++)
 
 #else
 #ifdef _WIN32
