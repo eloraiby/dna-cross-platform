@@ -304,10 +304,11 @@ static U32* JITit(tMD_MethodDef *pMethodDef, U8 *pCIL, U32 codeSize, tParameter 
 	pJITOffsets = malloc(codeSize * sizeof(U32));
 	// + 1 to handle cases where the stack is being restored at the last instruction in a method
 	ppTypeStacks = malloc((codeSize + 1) * sizeof(tTypeStack*));
-	memset(ppTypeStacks, 0, (codeSize + 1) * sizeof(tTypeStack*));
+    memset(ppTypeStacks, 0x00, (codeSize + 1) * sizeof(tTypeStack*));
 	typeStack.maxBytes = 0;
 	typeStack.ofs = 0;
-	typeStack.ppTypes = malloc(maxStack * sizeof(tMD_TypeDef*));
+    typeStack.ppTypes = malloc(maxStack * sizeof(tMD_TypeDef*));
+    memset(typeStack.ppTypes, 0x00, maxStack * sizeof(tMD_TypeDef*));
     sequencePointIndex = 0;
 
 	// Set up all exception 'catch' blocks with the correct stack information,
@@ -740,15 +741,12 @@ cilCallAll:
 				break;
 
 			case CIL_BR_S: // unconditional branch
-                dprintfn("CIL_BR_S", 0);
 				u32Value = (I8)pCIL[cilOfs++];
 				goto cilBr;
 
 			case CIL_BR:
-                dprintfn("CIL_BR", 0);
 				u32Value = GetUnalignedU32(pCIL, &cilOfs);
 cilBr:
-                dprintfn("cilBr", 0);
 				// Put a temporary CIL offset value into the JITted code. This will be updated later
 				u32Value = cilOfs + (I32)u32Value;
 				MayCopyTypeStack();
@@ -779,21 +777,16 @@ cilBr:
 				break;
 
 			case CIL_BRFALSE_S:
-                dprintfn("CIL_BRFALSETRUE_S", 0);
             case CIL_BRTRUE_S:
-                dprintfn("CIL_BRTRUE_S", 0);
 				u32Value = (I8)pCIL[cilOfs++];
 				u32Value2 = (op - CIL_BRFALSE_S);
 				goto cilBrFalseTrue;
 
 			case CIL_BRFALSE:
-                dprintfn("CIL_BRFALSE", 0);
             case CIL_BRTRUE:
-                dprintfn("CIL_BRTRUE", 0);
                 u32Value = GetUnalignedU32(pCIL, &cilOfs);
 				u32Value2 = (op - CIL_BRFALSE);
 cilBrFalseTrue:
-                dprintfn("cilBrFalseTrue", 0);
 				pStackType = PopStackType();
 				if (pStackType->stackSize > 8) {
 					Crash("JITit(): Cannot perform branch operation on type: %s", pStackType->name);
@@ -808,55 +801,34 @@ cilBrFalseTrue:
 				break;
 
 			case CIL_BEQ_S:
-                dprintfn("CIL_BEQ_S", 0);
             case CIL_BGE_S:
-                dprintfn("CIL_BGE_S", 0);
             case CIL_BGT_S:
-                dprintfn("CIL_BGT_S", 0);
             case CIL_BLE_S:
-                dprintfn("CIL_BLE_S", 0);
             case CIL_BLT_S:
-                dprintfn("CIL_BLT_S", 0);
             case CIL_BNE_UN_S:
-                dprintfn("CIL_BNE_UN_S", 0);
             case CIL_BGE_UN_S:
-                dprintfn("CIL_BGE_UN_S", 0);
             case CIL_BGT_UN_S:
-                dprintfn("CIL_BGT_UN_S", 0);
             case CIL_BLE_UN_S:
-                dprintfn("CIL_BLE_UN_S", 0);
             case CIL_BLT_UN_S:
-                dprintfn("CIL_BLT_UN_S", 0);
-                { U8 i8 = pCIL[cilOfs++];
-                  u32Value = i8 & 0xFF; }
-                //u32Value = (I8)pCIL[cilOfs++];
+                //{ I8 i8 = pCIL[cilOfs++];
+                //  u32Value = i8; }
+                u32Value = (I8)pCIL[cilOfs++];
 				u32Value2 = CIL_BEQ_S;
 				goto cilBrCond;
 
 			case CIL_BEQ:
-                dprintfn("CIL_BEQ", 0);
             case CIL_BGE:
-                dprintfn("CIL_BGE", 0);
             case CIL_BGT:
-                dprintfn("CIL_BGT", 0);
             case CIL_BLE:
-                dprintfn("CIL_BLE", 0);
             case CIL_BLT:
-                dprintfn("CIL_BLT", 0);
             case CIL_BNE_UN:
-                dprintfn("CIL_BNE_UN", 0);
             case CIL_BGE_UN:
-                dprintfn("CIL_BGE_UN", 0);
             case CIL_BGT_UN:
-                dprintfn("CIL_BGT_UN", 0);
             case CIL_BLE_UN:
-                dprintfn("CIL_BLE_UN", 0);
             case CIL_BLT_UN:
-                dprintfn("CIL_BLT_UN", 0);
 				u32Value = GetUnalignedU32(pCIL, &cilOfs);
 				u32Value2 = CIL_BEQ;
 cilBrCond:
-                dprintfn("cilBrCond", 0);
 				pTypeB = PopStackType();
 				pTypeA = PopStackType();
 				u32Value = cilOfs + (I32)u32Value;
